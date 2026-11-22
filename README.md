@@ -149,9 +149,31 @@ flowchart TD
     E3 -- "failures found become<br/>corrections and new sessions<br/>for the next round" --> D2
 ```
 
-## Where it stands (honestly)
+## Current state (November 2026)
 
-Each number below comes from a single test run, so it is a signal, not a stable result.
+### Done
+- **The app** (release 1.4.0, built privately) for iPhone, Android, Mac and Linux: text sessions and voice calls with
+  the therapist, the first session that builds a plan and the plan view in every session, the therapist's name and
+  personality, the check-in before a session, practices, Help me start, insights and the monthly letter, memory the
+  person can read, edit, pause and erase, encryption at rest behind the app's own passcode, and the encrypted
+  transfer between the person's own devices.
+- **Privacy:** the standard builds contain no network code and no network permission, enforced by tests on every
+  build.
+- **The models:** Gemma 4 E4B (Standard) and E2B (Light), fine-tuned on judged sessions written to the therapist
+  standard, exported as small phone files and checked for drift against the full models. Model files are verified
+  against a signed list, so a better model can be added later without a new version of the app.
+- **Evaluation:** live conversations with a simulated person who answers each reply, simulated hard users, and blind
+  judging against hand-written reference sessions.
+- **Solace Home (first version):** a separate build and a small home server for Mac and Linux, so a phone with too
+  little memory can use the model on the person's own computer, paired with a one-time code over the home network or
+  a private VPN only.
+
+### In progress
+- **Two further training rounds** after 1.4.0: one on more judged sessions aimed at the failures the tests found, and
+  one on corrections of the model's own mistakes. In the hard-user test the Standard model improved (table below);
+  it still has to pass live conversations read by a blind judge before it replaces the 1.4.0 model.
+- **Preference training** (DPO) on the model's own faulty replies has so far made no measurable difference in three
+  attempts, so the gains come from better supervised data.
 
 | | Replies ending in a question (median) | Judge score, 1 to 5 |
 |---|---|---|
@@ -160,10 +182,27 @@ Each number below comes from a single test run, so it is a signal, not a stable 
 | Current training round, Standard | 30% | 4.6 |
 | Hand-written reference sessions | about 27% | |
 
-The current round was trained on sessions written to fix the failures these hard-user scenarios expose, so part of
-its gain may not carry over to new situations; live conversations read by a blind judge are the real check. Known
-gaps: the Light model still asks too many questions and sometimes hands the work back to the person, plans are not
-always given their length until asked, and the record written after a session can state things that did not happen.
+Each number comes from a single test run of 16 conversations, so it is a signal, not a stable result. The current
+round was trained on sessions written to fix the failures these scenarios expose, so part of its gain may not carry
+over to new situations.
+
+### Open issues
+- **Solace Home does not work end to end yet.** In 1.4.0 the phone pairs with the home server, but when the person
+  talks to or calls the therapist, the phone does not yet recognise the replies the server sends back, so the
+  conversation cannot go through the home server.
+- **The Light model is weaker than Standard:** it still ends too many replies with a question, sometimes hands the
+  work back to the person, and can agree with a belief it should gently challenge.
+- **Plans and urgent problems:** the Standard model sometimes gives a plan's length only when asked, and can put an
+  urgent practical problem off to a later phase.
+- **The record after a session** can state something that did not happen (for example a number the person never
+  gave); the person can read and correct it.
+- **Questions:** both models still end more replies with a question than the hand-written standard.
+- **Voice:** a more natural therapist voice is wanted.
+- **The call screen on Intel Macs** had visual glitches; the app now draws with a different renderer to remove them,
+  which still has to be confirmed on a real device.
+- **Small phones** (3 to 4 GB of memory) cannot hold even the Light model; Solace Home is meant for them, once it
+  works end to end.
+- **iPhone builds** are not yet signed for distribution.
 
 ## What is in this copy
 
