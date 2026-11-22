@@ -21,6 +21,7 @@ Nothing the person says leaves the device.
 </p>
 
 > Solace is not a medical device, a licensed clinician or an emergency service. It does not diagnose or prescribe.
+> Anyone in danger should call their local emergency number; Solace shows the crisis lines for their country.
 
 ## Why it exists
 
@@ -34,6 +35,20 @@ session, and keeps working through that plan with them over weeks or months.
 
 Solace supports people with everyday mental-health problems; it does not replace clinical care, diagnosis or
 emergency help.
+
+## When someone is in danger
+
+- **A safety check reads every message before the model sees it,** on the device: precise rules, plus a trained
+  classifier as a second check. It is tuned for precision, so everyday sentences ("I'm dying to see that film") do not
+  set it off.
+- **On a sign of crisis, support opens at once:** a support card appears in the conversation, and a full support
+  screen gives the emergency number and the crisis lines for the person's country (stored on the device and checked
+  against official sources), including lines for young people. The person can also keep a safety plan, written while
+  they feel steadier, for hard moments.
+- **Solace never contacts anyone** on the person's behalf; it points them to people who can help.
+- **Honest limits:** the current models were trained without crisis conversations, so crisis support comes from the
+  app's safety check and its support screens, not from the therapist's own words, and a check based on precise
+  signals can miss a sign that is put indirectly. Solace is not a crisis service and says so.
 
 ## What the work involved
 
