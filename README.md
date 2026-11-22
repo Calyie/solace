@@ -22,12 +22,32 @@ Nothing the person says leaves the device.
 
 > Solace is not a medical device, a licensed clinician or an emergency service. It does not diagnose or prescribe.
 
-## Why it exists
+## Why it exists: the gaps in traditional therapy
 
-Many people who try therapy find it slow and passive: a lot of listening, few concrete tools, and no clear plan. Solace
-is built around the opposite idea. When someone brings a problem, the therapist names the method that fits, explains
-why it works, and shows exactly how to do it in their life. It asks a question only when it needs the answer, it does
-not simply agree when the person is wrong, and the person, never the therapist, decides when a session ends.
+Many people who try therapy find it slow, costly and passive: weeks on a waiting list, a fixed hour, a lot of
+listening, few concrete tools and no clear plan. Solace is built to close those gaps, one by one.
+
+| The gap | How Solace is built to close it |
+|---|---|
+| **Listening without solving.** Sessions can turn into question after question with few concrete tools. | The therapist is solution-based. When someone brings a problem or asks what to do, it names the research-backed method that fits, explains plainly why it works, and shows step by step how to do it in their life, then does the work with them in the session. It asks a question only when it needs the answer, and never answers a request for help with a question. |
+| **No clear plan.** Therapy can drift from week to week without a shared direction. | The first session builds a full plan with the person: what will change, the method, phases over weeks or months, how long it should take, the first tasks and how progress will be seen. The plan stays visible in every session, and each later session reviews it and moves it forward, adjusting it when something does not work. |
+| **Forgetting between sessions.** Details, homework and progress get lost. | Solace keeps its own notes and a therapy record of the plan, the methods in use, the tasks, what helped and what did not. The person can read and correct them, and every session starts from them. |
+| **The fixed hour.** A session ends when the clock says so. | There are no time limits. The person decides when a session ends, and the therapist never wraps up for them. |
+| **A sounding board.** Agreeing with everything feels kind but does not help. | The therapist is an expert, not an echo. When the person is wrong or stuck in a belief that hurts them, it says so kindly, with its reason, and shows a better path. |
+| **Uneven use of the evidence.** Not every practitioner uses the methods that work best for a given problem. | Each of the 31 problems Solace covers has an expert playbook grounded in the published evidence (CBT, behavioural activation, exposure and response prevention, CBT for insomnia, DBT skills, ACT, problem solving, self-compassion, motivational interviewing, habit design and coaching), and the therapist picks what fits the person and says why. |
+| **Cost, waiting lists and stigma.** Help is often expensive, slow to reach and hard to ask for. | Solace runs entirely on the person's own device: no appointment, no waiting list, no account, and nothing they say ever leaves the device. |
+| **Feeling like a form, not a person.** | The therapist has a name and one steady, warm personality, uses the person's name, and remembers their story. |
+
+**How we are building it.** These gaps were written down as the therapist standard before anything was trained. The
+standard became the app's system prompt and a rulebook for writing training sessions; the training sessions were
+written to that rulebook and kept only when a strict judge passed them. Each version of the model is then tested the
+way it will be used: in live conversations where a simulated person answers each reply as a real person would, with
+hard users who push back, and with transcripts read by a blind judge beside hand-written reference sessions. Every
+failure those tests find (a run of questions, a plan without a length, an urgent problem put off) becomes the target
+of the next training round.
+
+Solace supports people with everyday mental-health problems; it does not replace clinical care, diagnosis or
+emergency help.
 
 ## What the work involved
 
