@@ -52,29 +52,28 @@ emergency help.
   An optional separate build can use the model on the person's own computer, only over their home network or a
   private VPN, never the open internet (`home_server/`).
 
-## Screenshots
+## What makes Solace different, in screenshots
 
-From the app's screenshot tests (all people and data in them are fictional).
+From the app's screenshot tests; all people and data in them are fictional.
+
+| | |
+|---|---|
+| <img src="app/test/goldens/13_call.png" width="230" alt="A voice call"> | **A voice call with a therapist that runs on the phone itself.** Speech recognition, the therapist model and its voice all run on the device, so a person can talk out loud, at any hour, with nothing leaving the phone. |
+| <img src="app/test/goldens/18_choose_therapist.png" width="230" alt="The first session"> | **A named therapist who builds a plan with you.** The person chooses a face and a voice and says what the therapist should call them; the first session is for getting to know each other and building the plan together, with no time limit. |
+| <img src="app/test/goldens/16_plan_today.png" width="230" alt="Today's part of the plan"> | **The plan turns into today's steps.** Steps and habits agreed in sessions appear on Today. When one slips, Solace offers a smaller version that still counts ("never miss twice") and brings it to the next session instead of letting it quietly drop. |
+| <img src="app/test/goldens/17_help_me_start.png" width="230" alt="Help me start"> | **Help me start.** For the moment a person is stuck, a task is broken into a few small, timed steps, one at a time, with a place to park a distracting thought. |
+| <img src="app/test/goldens/07_you.png" width="230" alt="What Solace remembers"> | **Memory the person controls.** Everything Solace remembers is in one place to read, change or delete; memory can be paused; and something the app noticed (a value, a goal) is kept only after the person says yes. |
+| <img src="app/test/goldens/27_insights.png" width="230" alt="Patterns worth noticing"> | **Patterns worked out on the device, honestly.** Solace points out what tends to go together in the person's own records, with how many days it rests on, and says plainly that a pattern is worth noticing, not proof. |
+| <img src="app/test/goldens/29_month_letter.png" width="230" alt="A letter for your month"> | **A letter for the month.** Written on the device from the month's summary; every number in it comes from the person's own records. |
+| <img src="app/test/goldens/31_your_data.png" width="230" alt="Your data"> | **The records belong to the person.** Everything inside Solace is encrypted with a key only the device holds. When the person chooses, they can make a summary for their GP, counsellor or psychologist, with standard questionnaires and only the notes they tick. |
+
+The same app on a computer, a tablet and in a dark theme:
 
 <p align="center">
-  <img src="app/test/goldens/21_today_mac.png" width="720" alt="Today on a computer">
+  <img src="app/test/goldens/21_today_mac.png" width="520" alt="Today on a computer">
+  <img src="app/test/goldens/22_today_ipad.png" width="300" alt="Today on a tablet">
+  <img src="app/test/goldens/20_today_dark_plum.png" width="150" alt="A dark theme">
 </p>
-
-<p align="center">
-  <img src="app/test/goldens/18_choose_therapist.png" width="200" alt="Choosing the therapist and the first session">
-  <img src="app/test/goldens/16_plan_today.png" width="200" alt="Today's part of the plan">
-  <img src="app/test/goldens/27_insights.png" width="200" alt="Patterns worth noticing">
-  <img src="app/test/goldens/32_first_run_welcome.png" width="200" alt="First run">
-</p>
-
-<p align="center">
-  <img src="app/test/goldens/22_today_ipad.png" width="420" alt="Today on a tablet">
-  <img src="app/test/goldens/20_today_dark_plum.png" width="200" alt="A dark theme">
-</p>
-
-Left to right: the first session, where the person names the therapist's voice and what it should call them and then
-builds the plan; today's steps from that plan, with a gentler version when one slips; patterns the app notices on the
-device; the first run; the same app on a tablet and in a dark theme.
 
 ## Training data and architecture
 
