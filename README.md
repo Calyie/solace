@@ -98,56 +98,9 @@ trained on. The current round trains on 145 judged sessions (867 rows with their
 
 **The training architecture.**
 
-```mermaid
-flowchart TD
-    subgraph Standard["The therapist standard"]
-        S1["Owner's requirements:<br/>solution-based, plan over months,<br/>never a questionnaire"]
-        S2["App system prompt<br/>+ writing rulebook"]
-        S3["31 evidence-based<br/>service playbooks"]
-        S1 --> S2
-        S3 --> S2
-    end
-    subgraph Data["Training data"]
-        D1["Simulated people<br/>(seeded from CACTUS,<br/>Thousand Voices, Graph2Counsel)"]
-        D2["Multi-session series:<br/>first session builds the plan,<br/>later sessions work it,<br/>note + record after each"]
-        D3["Code gates<br/>(question runs, time talk,<br/>mood numbers, lists)"]
-        D4["Strict judge<br/>(only passes are kept)"]
-        D1 --> D2 --> D3 --> D4
-    end
-    subgraph Train["Training"]
-        T1["Gemma 4 QAT base<br/>E4B Standard / E2B Light"]
-        T2["Supervised fine-tuning<br/>4-bit LoRA, rank 32"]
-        T3["Merge into bf16"]
-        T4["Preference pairs:<br/>the model's own faulty replies<br/>vs the judged reply"]
-        T5["Optional DPO round"]
-        T1 --> T2 --> T3
-        T3 --> T4 --> T5
-    end
-    subgraph Ship["Phone file"]
-        P1["GGUF Q5_K_M<br/>with importance matrix"]
-        P2["Drift check:<br/>KL divergence vs full model"]
-        P3["Signed model list<br/>(Ed25519)"]
-        P4["On the device:<br/>llama.cpp, fully offline"]
-        P1 --> P2 --> P3 --> P4
-    end
-    subgraph Eval["Evaluation"]
-        E1["Live conversations:<br/>a simulated person answers<br/>each reply"]
-        E2["Simulated hard users"]
-        E3["Blind judge vs<br/>hand-written references"]
-        E4["Held-out public benchmarks"]
-    end
-    S2 --> D2
-    S3 --> D2
-    D4 --> T2
-    T3 --> P1
-    T5 --> P1
-    P1 --> E1
-    P1 --> E2
-    E1 --> E3
-    E2 --> E3
-    P1 --> E4
-    E3 -- "failures found become<br/>corrections and new sessions<br/>for the next round" --> D2
-```
+<p align="center">
+  <img src="docs/images/training_architecture.svg" width="100%" alt="How Solace's therapist model is built: the therapist standard, training data, training, the phone file and evaluation, with test failures feeding the next round">
+</p>
 
 ## Current state (November 2026)
 

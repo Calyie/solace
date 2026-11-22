@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 800" width="1400" height="800" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#475569"/></marker><marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b45309"/></marker></defs>
+<rect x="0" y="0" width="1400" height="800" rx="18" fill="#ffffff"/>
+<text x="700.0" y="52" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">How Solace's therapist model is built</text>
+<text x="700.0" y="80" text-anchor="middle" font-size="15" fill="#475569">From a written standard to a signed, offline phone file, tested the way it is used</text>
+<rect x="42" y="104" width="228" height="30" rx="15" fill="#4f46e5"/>
+<text x="156.0" y="124" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">The therapist standard</text>
+<rect x="44" y="153" width="228" height="96" rx="12" fill="#0f172a" fill-opacity="0.07"/>
+<rect x="42" y="150" width="228" height="96" rx="12" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.6"/>
+<text x="58" y="180" font-size="15.5" font-weight="700" fill="#0f172a">Requirements</text>
+<text x="58" y="204" font-size="13" fill="#334155">solution-based, a plan over</text>
+<text x="58" y="224" font-size="13" fill="#334155">months, never a questionnaire</text>
+<line x1="156.0" y1="248" x2="156.0" y2="278" stroke="#475569" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="44" y="285" width="228" height="96" rx="12" fill="#0f172a" fill-opacity="0.07"/>
+<rect x="42" y="282" width="228" height="96" rx="12" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.6"/>
+<text x="58" y="312" font-size="15.5" font-weight="700" fill="#0f172a">31 service playbooks</text>
+<text x="58" y="336" font-size="13" fill="#334155">each built from the</text>
+<text x="58" y="356" font-size="13" fill="#334155">clinical evidence</text>
+<line x1="156.0" y1="380" x2="156.0" y2="410" stroke="#475569" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="44" y="417" width="228" height="96" rx="12" fill="#0f172a" fill-opacity="0.07"/>
+<rect x="42" y="414" width="228" height="96" rx="12" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.6"/>
+<text x="58" y="444" font-size="15.5" font-weight="700" fill="#0f172a">App system prompt</text>
+<text x="58" y="468" font-size="13" fill="#334155">and the rulebook for</text>
+<text x="58" y="488" font-size="13" fill="#334155">writing training sessions</text>
+<rect x="314" y="104" width="228" height="30" rx="15" fill="#0f766e"/>
+<text x="428.0" y="124" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Training data</text>
+<rect x="316" y="153" width="228" height="96" rx="12" fill="#0f172a" fill-opacity="0.07"/>
+<rect x="314" y="150" width="228" height="96" rx="12" fill="#ecfdf5" stroke="#0f766e" stroke-width="1.6"/>
+<text x="330" y="180" font-size="15.5" font-weight="700" fill="#0f172a">Simulated people</text>
+<text x="330" y="204" font-size="13" fill="#334155">seeded from CACTUS, Thousand</text>
+<text x="330" y="224" font-size="13" fill="#334155">Voices of Trauma, Graph2Counsel</text>
+<line x1="428.0" y1="248" x2="428.0" y2="278" stroke="#475569" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="316" y="285" width="228" height="96" rx="12" fill="#0f172a" fill-opacity="0.07"/>
+<rect x="314" y="282" width="228" height="96" rx="12" fill="#ecfdf5" stroke="#0f766e" stroke-width="1.6"/>
+<text x="330" y="312" font-size="15.5" font-weight="700" fill="#0f172a">Multi-session series</text>
+<text x="330" y="336" font-size="13" fill="#334155">first session builds the plan,</text>
+<text x="330" y="356" font-size="13" fill="#334155">later ones work it; note + record</text>
+<line x1="428.0" y1="380" x2="428.0" y2="410" stroke="#475569" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="316" y="417" width="228" height="96" rx="12" fill="#0f172a" fill-opacity="0.07"/>
+<rect x="314" y="414" width="228" height="96" rx="12" fill="#ecfdf5" stroke="#0f766e" stroke-width="1.6"/>
+<text x="330" y="444" font-size="15.5" font-weight="700" fill="#0f172a">Code gates</text>
+<text x="330" y="468" font-size="13" fill="#334155">question runs, time talk,</text>
+<text x="330" y="488" font-size="13" fill="#334155">mood numbers, lists</text>
+<line x1="428.0" y1="512" x2="428.0" y2="542" stroke="#475569" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="316" y="549" width="228" height="96" rx="12" fill="#0f172a" fill-opacity="0.07"/>
+<rect x="314" y="546" width="228" height="96" rx="12" fill="#ecfdf5" stroke="#0f766e" stroke-width="1.6"/>
+<text x="330" y="576" font-size="15.5" font-weight="700" fill="#0f172a">Strict judge</text>
+<text x="330" y="600" font-size="13" fill="#334155">only sessions it passes</text>
+<text x="330" y="620" font-size="13" fill="#334155">are trained on</text>
+<rect x="586" y="104" width="228" height="30" rx="15" fill="#1d4ed8"/>
+<text x="700.0" y="124" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Training</text>
+<rect x="588" y="153" width="228" height="96" rx="12" fill="#0f172a" fill-opacity="0.07"/>
+<rect x="586" y="150" width="228" height="96" rx="12" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6"/>
+<text x="602" y="180" font-size="15.5" font-weight="700" fill="#0f172a">Gemma 4 QAT base</text>
+<text x="602" y="204" font-size="13" fill="#334155">E4B Standard</text>
+<text x="602" y="224" font-size="13" fill="#334155">E2B Light</text>
+<line x1="700.0" y1="248" x2="700.0" y2="278" stroke="#475569" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="588" y="285" width="228" height="96" rx="12" fill="#0f172a" fill-opacity="0.07"/>
+<rect x="586" y="282" width="228" height="96" rx="12" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6"/>
+<text x="602" y="312" font-size="15.5" font-weight="700" fill="#0f172a">Supervised fine-tuning</text>
+<text x="602" y="336" font-size="13" fill="#334155">4-bit LoRA, rank 32,</text>
+<text x="602" y="356" font-size="13" fill="#334155">therapist turns only</text>
+<line x1="700.0" y1="380" x2="700.0" y2="410" stroke="#475569" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="588" y="417" width="228" height="96" rx="12" fill="#0f172a" fill-opacity="0.07"/>
+<rect x="586" y="414" width="228" height="96" rx="12" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6"/>
+<text x="602" y="444" font-size="15.5" font-weight="700" fill="#0f172a">Merge into bf16</text>
+<text x="602" y="468" font-size="13" fill="#334155">the adapter joins the</text>
+<text x="602" y="488" font-size="13" fill="#334155">full-precision weights</text>
+<line x1="700.0" y1="512" x2="700.0" y2="542" stroke="#475569" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="588" y="549" width="228" height="96" rx="12" fill="#0f172a" fill-opacity="0.07"/>
+<rect x="586" y="546" width="228" height="96" rx="12" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.6"/>
+<text x="602" y="576" font-size="15.5" font-weight="700" fill="#0f172a">Preference pairs</text>
+<text x="602" y="600" font-size="13" fill="#334155">the model's own faulty replies</text>
+<text x="602" y="620" font-size="13" fill="#334155">vs the judged reply (DPO)</text>
+<rect x="858" y="104" width="228" height="30" rx="15" fill="#7c3aed"/>
+<text x="972.0" y="124" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Phone file</text>
+<rect x="860" y="153" width="228" height="96" rx="12" fill="#0f172a" fill-opacity="0.07"/>
+<rect x="858" y="150" width="228" height="96" rx="12" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="874" y="180" font-size="15.5" font-weight="700" fill="#0f172a">GGUF Q5_K_M</text>
+<text x="874" y="204" font-size="13" fill="#334155">quantised with an</text>
+<text x="874" y="224" font-size="13" fill="#334155">importance matrix</text>
+<line x1="972.0" y1="248" x2="972.0" y2="278" stroke="#475569" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="860" y="285" width="228" height="96" rx="12" fill="#0f172a" fill-opacity="0.07"/>
+<rect x="858" y="282" width="228" height="96" rx="12" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="874" y="312" font-size="15.5" font-weight="700" fill="#0f172a">Drift check</text>
+<text x="874" y="336" font-size="13" fill="#334155">KL divergence against</text>
+<text x="874" y="356" font-size="13" fill="#334155">the full model</text>
+<line x1="972.0" y1="380" x2="972.0" y2="410" stroke="#475569" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="860" y="417" width="228" height="96" rx="12" fill="#0f172a" fill-opacity="0.07"/>
+<rect x="858" y="414" width="228" height="96" rx="12" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="874" y="444" font-size="15.5" font-weight="700" fill="#0f172a">Signed model list</text>
+<text x="874" y="468" font-size="13" fill="#334155">Ed25519; the app accepts</text>
+<text x="874" y="488" font-size="13" fill="#334155">only listed models</text>
+<line x1="972.0" y1="512" x2="972.0" y2="542" stroke="#475569" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="860" y="549" width="228" height="96" rx="12" fill="#0f172a" fill-opacity="0.07"/>
+<rect x="858" y="546" width="228" height="96" rx="12" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="874" y="576" font-size="15.5" font-weight="700" fill="#0f172a">On the device</text>
+<text x="874" y="600" font-size="13" fill="#334155">llama.cpp, fully offline,</text>
+<text x="874" y="620" font-size="13" fill="#334155">nothing leaves the phone</text>
+<rect x="1130" y="104" width="228" height="30" rx="15" fill="#b45309"/>
+<text x="1244.0" y="124" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Evaluation</text>
+<rect x="1132" y="153" width="228" height="96" rx="12" fill="#0f172a" fill-opacity="0.07"/>
+<rect x="1130" y="150" width="228" height="96" rx="12" fill="#fffbeb" stroke="#b45309" stroke-width="1.6"/>
+<text x="1146" y="180" font-size="15.5" font-weight="700" fill="#0f172a">Live conversations</text>
+<text x="1146" y="204" font-size="13" fill="#334155">a simulated person answers</text>
+<text x="1146" y="224" font-size="13" fill="#334155">each reply as a person would</text>
+<line x1="1244.0" y1="248" x2="1244.0" y2="278" stroke="#475569" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="1132" y="285" width="228" height="96" rx="12" fill="#0f172a" fill-opacity="0.07"/>
+<rect x="1130" y="282" width="228" height="96" rx="12" fill="#fffbeb" stroke="#b45309" stroke-width="1.6"/>
+<text x="1146" y="312" font-size="15.5" font-weight="700" fill="#0f172a">Simulated hard users</text>
+<text x="1146" y="336" font-size="13" fill="#334155">who push back and test</text>
+<text x="1146" y="356" font-size="13" fill="#334155">every rule</text>
+<line x1="1244.0" y1="380" x2="1244.0" y2="410" stroke="#475569" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="1132" y="417" width="228" height="96" rx="12" fill="#0f172a" fill-opacity="0.07"/>
+<rect x="1130" y="414" width="228" height="96" rx="12" fill="#fffbeb" stroke="#b45309" stroke-width="1.6"/>
+<text x="1146" y="444" font-size="15.5" font-weight="700" fill="#0f172a">Blind judge</text>
+<text x="1146" y="468" font-size="13" fill="#334155">transcripts scored beside</text>
+<text x="1146" y="488" font-size="13" fill="#334155">hand-written references</text>
+<line x1="1244.0" y1="512" x2="1244.0" y2="542" stroke="#475569" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="1132" y="549" width="228" height="96" rx="12" fill="#0f172a" fill-opacity="0.07"/>
+<rect x="1130" y="546" width="228" height="96" rx="12" fill="#fffbeb" stroke="#b45309" stroke-width="1.6"/>
+<text x="1146" y="576" font-size="15.5" font-weight="700" fill="#0f172a">Held-out benchmarks</text>
+<text x="1146" y="600" font-size="13" fill="#334155">public counselling tests,</text>
+<text x="1146" y="620" font-size="13" fill="#334155">never trained on</text>
+<path d="M272,462.0 L291.0,462.0 L291.0,330.0 L310,330.0" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#a)"/>
+<path d="M544,594.0 L563.0,594.0 L563.0,330.0 L582,330.0" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#a)"/>
+<path d="M816,594.0 L835.0,594.0 L835.0,198.0 L854,198.0" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#a)"/>
+<path d="M1088,594.0 L1107.0,594.0 L1107.0,198.0 L1126,198.0" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#a)"/>
+<path d="M1360,462.0 L1380,462.0 L1380,682 L468.0,682 L468.0,648" fill="none" stroke="#b45309" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#b)"/>
+<rect x="410.0" y="666" width="580" height="32" rx="16" fill="#fffbeb" stroke="#b45309" stroke-width="1.2"/>
+<text x="700.0" y="687" text-anchor="middle" font-size="14" fill="#7c2d12">Every failure the tests find becomes corrections and new sessions for the next round</text>
+<text x="700.0" y="778" text-anchor="middle" font-size="12.5" fill="#64748b">Not trained on: PsychoCounsel-Preference (its preferred answers are long advice essays). The safety check is trained separately on MindGuard.</text>
+</svg>
