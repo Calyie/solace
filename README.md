@@ -22,29 +22,15 @@ Nothing the person says leaves the device.
 
 > Solace is not a medical device, a licensed clinician or an emergency service. It does not diagnose or prescribe.
 
-## Why it exists: the gaps in traditional therapy
+## Why it exists
 
-Many people who try therapy find it slow, costly and passive: weeks on a waiting list, a fixed hour, a lot of
-listening, few concrete tools and no clear plan. Solace is built to close those gaps, one by one.
-
-| The gap | How Solace is built to close it |
-|---|---|
-| **Listening without solving.** Sessions can turn into question after question with few concrete tools. | The therapist is solution-based. When someone brings a problem or asks what to do, it names the research-backed method that fits, explains plainly why it works, and shows step by step how to do it in their life, then does the work with them in the session. It asks a question only when it needs the answer, and never answers a request for help with a question. |
-| **No clear plan.** Therapy can drift from week to week without a shared direction. | The first session builds a full plan with the person: what will change, the method, phases over weeks or months, how long it should take, the first tasks and how progress will be seen. The plan stays visible in every session, and each later session reviews it and moves it forward, adjusting it when something does not work. |
-| **Forgetting between sessions.** Details, homework and progress get lost. | Solace keeps its own notes and a therapy record of the plan, the methods in use, the tasks, what helped and what did not. The person can read and correct them, and every session starts from them. |
-| **The fixed hour.** A session ends when the clock says so. | There are no time limits. The person decides when a session ends, and the therapist never wraps up for them. |
-| **A sounding board.** Agreeing with everything feels kind but does not help. | The therapist is an expert, not an echo. When the person is wrong or stuck in a belief that hurts them, it says so kindly, with its reason, and shows a better path. |
-| **Uneven use of the evidence.** Not every practitioner uses the methods that work best for a given problem. | Each of the 31 problems Solace covers has an expert playbook grounded in the published evidence (CBT, behavioural activation, exposure and response prevention, CBT for insomnia, DBT skills, ACT, problem solving, self-compassion, motivational interviewing, habit design and coaching), and the therapist picks what fits the person and says why. |
-| **Cost, waiting lists and stigma.** Help is often expensive, slow to reach and hard to ask for. | Solace runs entirely on the person's own device: no appointment, no waiting list, no account, and nothing they say ever leaves the device. |
-| **Feeling like a form, not a person.** | The therapist has a name and one steady, warm personality, uses the person's name, and remembers their story. |
-
-**How we are building it.** These gaps were written down as the therapist standard before anything was trained. The
-standard became the app's system prompt and a rulebook for writing training sessions; the training sessions were
-written to that rulebook and kept only when a strict judge passed them. Each version of the model is then tested the
-way it will be used: in live conversations where a simulated person answers each reply as a real person would, with
-hard users who push back, and with transcripts read by a blind judge beside hand-written reference sessions. Every
-failure those tests find (a run of questions, a plan without a length, an urgent problem put off) becomes the target
-of the next training round.
+Traditional therapy is often slow and passive: weeks of listening, exploring and questions, and few concrete tools to
+actually solve the problem. Solace is built to be the opposite. It is **solution-based**: when someone brings a
+problem, the therapist names the research-backed method that fits (CBT, behavioural activation, exposure and response
+prevention, CBT for insomnia, problem solving, DBT skills, ACT, self-compassion, motivational interviewing, habit
+design), explains plainly why it works, shows step by step how to do it in their life, and does the work with them in
+the session. It asks a question only when it truly needs the answer, builds a plan with the person in the first
+session, and keeps working through that plan with them over weeks or months.
 
 Solace supports people with everyday mental-health problems; it does not replace clinical care, diagnosis or
 emergency help.
@@ -55,10 +41,8 @@ emergency help.
   questionnaire, never a sounding board), turned into the app's system prompt (`prompts/app_system_v5.txt`), a
   rulebook for writing training sessions (`prompts/v5/`), and 31 expert playbooks, one per service, each grounded in
   the published evidence (`prompts/services/`, sources in `docs/SERVICE_SOURCES.md`).
-- **Training data.** Multi-session therapy series between simulated people and the therapist, written to the
-  rulebook, checked by code gates and strict judges; only sessions a strict judge passed are trained on.
-- **Training.** Supervised fine-tuning of both models with LoRA, preference training experiments, and export to small
-  phone files with an importance matrix, each checked for drift against the full model (`train/`).
+- **Training data and training.** Multi-session therapy series, judged strictly, then fine-tuning and export to
+  small phone files; see "Training data and architecture" below.
 - **Evaluation that adapts.** Live conversations in which a simulated person answers each reply as a real person
   would, simulated hard users, and blind judging of transcripts against hand-written reference sessions. Fixed
   scripts of user messages were rejected as a test, because they stop making sense after the first few turns.
@@ -67,6 +51,80 @@ emergency help.
 - **Privacy by design.** The standard build has no network code or network permission at all, and tests enforce it.
   An optional separate build can use the model on the person's own computer, only over their home network or a
   private VPN, never the open internet (`home_server/`).
+
+## Training data and architecture
+
+**The training sessions.** The model learns from multi-session therapy series between simulated people and the
+therapist: a first session that builds the plan, then check-ins and weekly sessions weeks or months in, each followed
+by the note and the therapy record the app asks the model to write. The series are written to the rulebook, partly by
+open models and, for the gold standard, by hand in Claude Code sessions; every session then passes code gates (no runs
+of questions, no time limits, no mood numbers, spoken sentences) and a strict judge, and only passed sessions are
+trained on. The current round trains on 145 judged sessions (867 rows with their notes and records).
+
+**Public datasets that shaped it.**
+- **CACTUS** (31,577 CBT counselling dialogues with intake forms): seeds for realistic simulated people and their
+  intake histories, and everyday lines for checking the safety check does not raise false alarms.
+- **Thousand Voices of Trauma** (3,000 prolonged-exposure therapy conversations): seeds for people with trauma
+  histories and the shape of exposure work.
+- **Graph2Counsel**: counselling knowledge graphs used as extra seeds for people.
+- **MindGuard** (Sword Health): the training set of the optional safety check, relabelled message by message.
+- **CounselingBench, CBT-Bench and CounselBench-Adv** (with expert labels): held-out evaluation only, never trained on.
+- **PsychoCounsel-Preference** (36,653 preference pairs): studied and deliberately *not* trained on, because its
+  preferred answers are long written advice essays, the opposite of a spoken, solution-based therapist.
+- Each of the 31 services also has an expert playbook built from the clinical literature (`docs/SERVICE_SOURCES.md`).
+
+**The training architecture.**
+
+```mermaid
+flowchart TD
+    subgraph Standard["The therapist standard"]
+        S1["Owner's requirements:<br/>solution-based, plan over months,<br/>never a questionnaire"]
+        S2["App system prompt<br/>+ writing rulebook"]
+        S3["31 evidence-based<br/>service playbooks"]
+        S1 --> S2
+        S3 --> S2
+    end
+    subgraph Data["Training data"]
+        D1["Simulated people<br/>(seeded from CACTUS,<br/>Thousand Voices, Graph2Counsel)"]
+        D2["Multi-session series:<br/>first session builds the plan,<br/>later sessions work it,<br/>note + record after each"]
+        D3["Code gates<br/>(question runs, time talk,<br/>mood numbers, lists)"]
+        D4["Strict judge<br/>(only passes are kept)"]
+        D1 --> D2 --> D3 --> D4
+    end
+    subgraph Train["Training"]
+        T1["Gemma 4 QAT base<br/>E4B Standard / E2B Light"]
+        T2["Supervised fine-tuning<br/>4-bit LoRA, rank 32"]
+        T3["Merge into bf16"]
+        T4["Preference pairs:<br/>the model's own faulty replies<br/>vs the judged reply"]
+        T5["Optional DPO round"]
+        T1 --> T2 --> T3
+        T3 --> T4 --> T5
+    end
+    subgraph Ship["Phone file"]
+        P1["GGUF Q5_K_M<br/>with importance matrix"]
+        P2["Drift check:<br/>KL divergence vs full model"]
+        P3["Signed model list<br/>(Ed25519)"]
+        P4["On the device:<br/>llama.cpp, fully offline"]
+        P1 --> P2 --> P3 --> P4
+    end
+    subgraph Eval["Evaluation"]
+        E1["Live conversations:<br/>a simulated person answers<br/>each reply"]
+        E2["Simulated hard users"]
+        E3["Blind judge vs<br/>hand-written references"]
+        E4["Held-out public benchmarks"]
+    end
+    S2 --> D2
+    S3 --> D2
+    D4 --> T2
+    T3 --> P1
+    T5 --> P1
+    P1 --> E1
+    P1 --> E2
+    E1 --> E3
+    E2 --> E3
+    P1 --> E4
+    E3 -- "failures found become<br/>corrections and new sessions<br/>for the next round" --> D2
+```
 
 ## Where it stands (honestly)
 
