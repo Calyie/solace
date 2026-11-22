@@ -38,7 +38,7 @@ emergency help.
 ## What the work involved
 
 - **The therapist standard.** A written standard for the therapist (solution-based, plan-driven, warm, never a
-  questionnaire, never a sounding board), turned into the app's system prompt (`prompts/app_system_v5.txt`), a
+  questionnaire, never just a sounding board), turned into the app's system prompt (`prompts/app_system_v5.txt`), a
   rulebook for writing training sessions (`prompts/v5/`), and 31 expert playbooks, one per service, each grounded in
   the published evidence (`prompts/services/`, sources in `docs/SERVICE_SOURCES.md`).
 - **Training data and training.** Multi-session therapy series, judged strictly, then fine-tuning and export to
@@ -178,8 +178,7 @@ privately.
 
 ## Who built it
 
-**Calister Nnona** (Calyie) started Solace and leads it: the idea, the standard the therapist is held to, what it
-covers, its privacy rules and design, and testing it as a real user.
+**Calister Nnona** (Calyie) started Solace and leads it: the idea, the functional and non-functional requirements, the services, its privacy rules and security design, and testing it as a real user.
 
 **Claude** (Anthropic), working in Claude Code under Calister's direction, wrote most of the code, the training
 pipeline and the training sessions, ran the training and the evaluations, and wrote the documentation.
