@@ -52,6 +52,30 @@ emergency help.
   An optional separate build can use the model on the person's own computer, only over their home network or a
   private VPN, never the open internet (`home_server/`).
 
+## Screenshots
+
+From the app's screenshot tests (all people and data in them are fictional).
+
+<p align="center">
+  <img src="app/test/goldens/21_today_mac.png" width="720" alt="Today on a computer">
+</p>
+
+<p align="center">
+  <img src="app/test/goldens/18_choose_therapist.png" width="200" alt="Choosing the therapist and the first session">
+  <img src="app/test/goldens/16_plan_today.png" width="200" alt="Today's part of the plan">
+  <img src="app/test/goldens/27_insights.png" width="200" alt="Patterns worth noticing">
+  <img src="app/test/goldens/32_first_run_welcome.png" width="200" alt="First run">
+</p>
+
+<p align="center">
+  <img src="app/test/goldens/22_today_ipad.png" width="420" alt="Today on a tablet">
+  <img src="app/test/goldens/20_today_dark_plum.png" width="200" alt="A dark theme">
+</p>
+
+Left to right: the first session, where the person names the therapist's voice and what it should call them and then
+builds the plan; today's steps from that plan, with a gentler version when one slips; patterns the app notices on the
+device; the first run; the same app on a tablet and in a dark theme.
+
 ## Training data and architecture
 
 **The training sessions.** The model learns from multi-session therapy series between simulated people and the
