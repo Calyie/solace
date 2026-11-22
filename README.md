@@ -178,38 +178,11 @@ privately.
 
 ## Who built it
 
-**Calister Nnona** (GitHub: Calyie) conceived Solace and leads it as its founder, product owner and researcher.
-- **The idea and the standard.** Solace grew out of Calister's view that traditional therapy too often listens
-  without solving. Calister defined what the therapist must be: solution-based, research-backed, plan-driven over
-  weeks and months, warm and named, never a questionnaire or a sounding board, with the person in charge of every
-  session. Calister wrote and refined key parts of the therapist's system prompt, including how it gives solutions
-  and builds and maintains the plan with the person.
-- **What it covers.** Calister chose the 31 problems Solace works on and set the priorities among them (among them
-  OCD, depression, purpose, focus, self-esteem, health anxiety and burnout), and the methods the therapist uses.
-- **Privacy and product decisions.** Calister set the non-negotiables: fully on the device and air-gapped, nothing
-  sent to anyone including the base model's maker, encryption behind the app's own passcode, no biometrics, a normal
-  supportive app rather than a crisis hotline, and a safety check that must be highly precise before it interrupts
-  anyone. Calister conceived Solace Home for phones too small to hold the model.
-- **Design.** Calister directed the look and feel: the premium design, the therapists' faces, names and voices, and
-  layouts that work on phones and computers.
-- **Testing and quality.** Calister tested Solace as a real user on real devices and found the failures that shaped
-  each training round (question after question, body scans offered as answers, invented time limits). Calister set
-  the evaluation standard: tests must adapt to every reply rather than replay a script, judges must be blind and
-  strict, results are reported honestly with their limits, and every security fix is verified by an independent
-  reviewer.
-- **Direction.** Calister set the priorities and standing rules, reviewed the work at each stage, decided what was
-  accepted, and arranged and funded the compute and data generation the project needed.
+**Calister Nnona** (Calyie) started Solace and leads it: the idea, the standard the therapist is held to, what it
+covers, its privacy rules and design, and testing it as a real user.
 
-**Claude** (Anthropic), working through Claude Code under Calister's direction, did most of the building.
-- **Engineering.** Wrote most of the code: the Flutter app, the home server, the training-data pipeline, the
-  training and export scripts, and the tests.
-- **Data and training.** Drafted the writing rulebook and the service playbooks from the clinical literature, wrote
-  the hand-written gold training sessions, built and ran the data pipeline, and ran the training rounds and phone-file
-  exports.
-- **Evaluation and review.** Ran the evaluations, with separate Claude instances playing the simulated person and
-  acting as fresh, blind judges, and carried out the security reviews and their fixes, each checked by a fresh
-  reviewer.
-- **Documentation.** Wrote the documentation, the guides and the model card.
+**Claude** (Anthropic), working in Claude Code under Calister's direction, wrote most of the code, the training
+pipeline and the training sessions, ran the training and the evaluations, and wrote the documentation.
 
 **Built on** Gemma 4 (Google), llama.cpp, Flutter, sherpa-onnx with Kokoro voices, ONNX Runtime and Unsloth, and the
 open counselling datasets and clinical sources credited in `docs/SERVICE_SOURCES.md`.
