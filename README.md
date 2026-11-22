@@ -117,6 +117,8 @@ trained on. The current round trains on 145 judged sessions (867 rows with their
   against a signed list, so a better model can be added later without a new version of the app.
 - **Evaluation:** live conversations with a simulated person who answers each reply, simulated hard users, and blind
   judging against hand-written reference sessions.
+- **The call screen on Intel Macs:** its visual glitches are fixed (the app now draws with a different renderer),
+  confirmed on a real device.
 - **Solace Home (first version):** a separate build and a small home server for Mac and Linux, so a phone with too
   little memory can use the model on the person's own computer, paired with a one-time code over the home network or
   a private VPN only.
@@ -151,8 +153,6 @@ over to new situations.
   gave); the person can read and correct it.
 - **Questions:** both models still end more replies with a question than the hand-written standard.
 - **Voice:** a more natural therapist voice is wanted.
-- **The call screen on Intel Macs** had visual glitches; the app now draws with a different renderer to remove them,
-  which still has to be confirmed on a real device.
 - **Small phones** (3 to 4 GB of memory) cannot hold even the Light model; Solace Home is meant for them, once it
   works end to end.
 - **iPhone builds** are not yet signed for distribution.
