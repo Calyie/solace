@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Solace Home only (docs/HOME_SERVER.md): merged into the release build when it is made with
+         dash-dash-dart-define SOLACE_HOME=true (android/app/build.gradle.kts), so the phone can reach the person's own
+         home server, and only it (the app's guard pins that server's address, port and certificate). The default
+         build never merges this file and has no internet permission (test/privacy_test.dart,
+         tools/ci/android_checks.sh). -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>

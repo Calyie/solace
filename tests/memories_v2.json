@@ -1,0 +1,450 @@
+{
+ "first": {
+  "about": "Alex, 24, Toronto (Canada), first session, nothing remembered yet",
+  "mode": "normal",
+  "memory": {
+   "story": {
+    "sections": {}
+   },
+   "last_note": "",
+   "homework_due": "",
+   "moods": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "scores": [
+    "Monday 9 November: PHQ-9 9, GAD-7 7"
+   ]
+  },
+  "date": "Monday 9 November",
+  "today": "2026-11-09"
+ },
+ "amira_w2": {
+  "about": "Amira, 29, junior architect, Montreal (Canada); perfectionism, self-criticism, putting things off",
+  "mode": "normal",
+  "memory": {
+   "story": {
+    "sections": {
+     "About": "Amira, 29, junior architect in Montreal, lives alone with her cat Pistache. Close to her sister Leila; her best friend Sophie moved to Toronto.",
+     "Patterns and triggers": "Design reviews and short emails from her manager Daniel set off 'I'm not good enough'; she delays starting, then stays late redoing details. Seeing colleagues praised triggers 'everyone else finds this easy'.",
+     "Beliefs we are working on": "'If my work isn't perfect, people will see I'm a fraud.'",
+     "What helps": "Checking the evidence for a thought (belief dropped from 80 to 50 on 4 November); a 25-minute start before email, done on 2 of 3 mornings.",
+     "What does not help": "Scrolling in bed until 2am; rereading Daniel's emails.",
+     "Progress": "Handed in the Rousseau drawings on time on 7 November without staying past 7pm.",
+     "Open threads": "Whether to ask Daniel for clearer feedback; she has not sketched for fun in months."
+    }
+   },
+   "last_note": "Session: weekly session, Monday 9 November\nTalked about: the Rousseau hand-in went well; still dreads Thursday's design review.\nPractised: planned what to say to Daniel using DEAR MAN; rehearsed the opening line twice.\nMood: \"tired and a bit flat\" at the start; \"a bit more hopeful\" by the end\nHomework agreed: ask Daniel for ten minutes on Wednesday to agree what 'done' means for the Lavoie project.\nFollow up next time: whether she asked Daniel; how the design review went.\nSuggestions for their profile: none\nSafety: no concerns",
+   "homework_due": "ask Daniel for ten minutes on Wednesday to agree what 'done' means for the Lavoie project",
+   "moods": [
+    4,
+    5,
+    null,
+    5,
+    6,
+    null,
+    5
+   ],
+   "scores": [
+    "Monday 2 November: PHQ-9 12, GAD-7 11",
+    "Monday 16 November: PHQ-9 9, GAD-7 9"
+   ],
+   "programmes": [
+    "being enough, day 6, 4 sessions done. Recent: evidence: Daniel asked my opinion on the facade; commitment: leave at 18:00 on Thursday (when Thursday, confidence 8)"
+   ],
+   "plans": {
+    "steps": [
+     {
+      "text": "Ask Daniel for ten minutes to agree what done means for Lavoie",
+      "day": "2026-11-18",
+      "time": "10:00",
+      "ifthen": "When I've got my coffee, I will walk to his desk and ask",
+      "quote": "I could ask him on Wednesday after coffee",
+      "added": "2026-11-09"
+     }
+    ],
+    "habits": [
+     {
+      "text": "25-minute start before email",
+      "cue": "coffee at my desk",
+      "tiny": "five minutes",
+      "quote": "if I just start before I open email",
+      "start": "2026-11-04",
+      "kept": [
+       "2026-11-05",
+       "2026-11-06",
+       "2026-11-09",
+       "2026-11-11",
+       "2026-11-12",
+       "2026-11-13",
+       "2026-11-16"
+      ],
+      "missed": [
+       "2026-11-10",
+       "2026-11-17"
+      ]
+     }
+    ],
+    "goals": [
+     {
+      "text": "Hand in drawings on time without an all-nighter",
+      "next_step": "a 25-minute start each weekday morning",
+      "quote": "I want to stop living at the office",
+      "added": "2026-11-02",
+      "last_progress": "2026-11-16"
+     },
+     {
+      "text": "Ask Daniel for clearer feedback",
+      "next_step": "ask for ten minutes on Wednesday",
+      "quote": "I never know what he actually wants",
+      "added": "2026-11-02",
+      "last_progress": "2026-11-09"
+     }
+    ],
+    "values": [
+     {
+      "text": "creativity",
+      "quote": "I feel like myself when I sketch",
+      "added": "2026-11-09"
+     }
+    ],
+    "pictures": []
+   }
+  },
+  "date": "Wednesday 18 November",
+  "today": "2026-11-18"
+ },
+ "julien_w3": {
+  "about": "Julien, 41, bus driver on sick leave, Lyon (France); PTSD after a car crash in March in which his friend Karim was badly hurt; avoids driving; guilt",
+  "mode": "full",
+  "memory": {
+   "story": {
+    "sections": {
+     "About": "Julien, 41, lives in Lyon with his partner Claire and their son Hugo (9). Bus driver, on sick leave since the crash in March, when he was driving and his friend Karim was badly hurt.",
+     "Patterns and triggers": "Sirens, rain at night and the smell of petrol bring back the crash; he avoids driving and the road where it happened; nightmares most nights.",
+     "Beliefs we are working on": "'It was my fault; I should have seen the van.'",
+     "What helps": "5-4-3-2-1 grounding during flashbacks (used three times last week); walking with Hugo after school.",
+     "What does not help": "Drinking two or three beers to get to sleep; avoiding Karim's calls.",
+     "Progress": "Completed two Written Exposure Therapy sessions; distress at the start fell from 85 to 70.",
+     "Open threads": "Whether to call Karim back; Full mode was turned on in Settings on 10 November."
+    }
+   },
+   "last_note": "Session: written exposure, Thursday 12 November\nTalked about: second written exposure session about the crash; most distressing moment was seeing Karim not moving.\nPractised: 30 minutes of writing the memory in detail, then talking it through; distress 70 at the start, peak 85, 55 at the end.\nMood: \"on edge\" at the start; \"a little steadier\" by the end\nHomework agreed: none for the writing (Written Exposure has no homework); two evenings this week without beer, using grounding at bedtime instead.\nFollow up next time: the evenings without beer; Karim's calls.\nSuggestions for their profile: none\nSafety: no concerns",
+   "homework_due": "two evenings this week without beer, using grounding at bedtime instead",
+   "moods": [
+    3,
+    4,
+    4,
+    null,
+    4,
+    5,
+    4
+   ],
+   "scores": [
+    "Monday 26 October: PHQ-9 16, GAD-7 13, PCL-5 52",
+    "Monday 9 November: PHQ-9 14, GAD-7 12, PCL-5 46"
+   ],
+   "plans": {
+    "steps": [],
+    "habits": [],
+    "goals": [
+     {
+      "text": "Drive Hugo to football again",
+      "next_step": "sit in the parked car for five minutes",
+      "quote": "I just want to take Hugo to football",
+      "added": "2026-11-02",
+      "last_progress": "2026-11-11"
+     },
+     {
+      "text": "Sleep through most nights",
+      "next_step": "",
+      "quote": "I'd give anything to sleep through",
+      "added": "2026-11-02",
+      "last_progress": "2026-11-07"
+     }
+    ],
+    "values": [
+     {
+      "text": "family",
+      "quote": "the kids are everything",
+      "added": "2026-11-02"
+     },
+     {
+      "text": "loyalty",
+      "quote": "you don't leave your mates",
+      "added": "2026-11-07"
+     }
+    ],
+    "pictures": []
+   }
+  },
+  "date": "Saturday 14 November",
+  "today": "2026-11-14"
+ },
+ "meiling_w2": {
+  "about": "Mei Ling, 34, accountant, Kuala Lumpur (Malaysia); worries she has offended people and seeks reassurance; health worries",
+  "mode": "normal",
+  "memory": {
+   "story": {
+    "sections": {
+     "About": "Mei Ling, 34, accountant in Kuala Lumpur, lives with her husband Faris. Close to her younger brother Wei.",
+     "Patterns and triggers": "After conversations she replays what she said and messages people to check she did not offend them; googles symptoms at night.",
+     "Beliefs we are working on": "'If I upset someone and do not fix it straight away, they will leave me.'",
+     "What helps": "Postponing worry to a fixed 15-minute slot at 7pm (worked on 3 of 5 days).",
+     "What does not help": "Asking Faris 'are you sure she's not upset?' again and again; googling symptoms.",
+     "Progress": "Sent no checking messages on two days last week, a first.",
+     "Open threads": "Her aunt's comment at Sunday lunch."
+    }
+   },
+   "last_note": "Session: weekly session, Monday 9 November\nTalked about: the reassurance loop with Faris and colleagues; how checking brings relief for minutes, then more doubt.\nPractised: an experiment plan: not sending a checking message after the Tuesday meeting, and rating anxiety before and after.\nMood: \"anxious, as usual\" at the start; \"a little calmer\" by the end\nHomework agreed: no checking messages after meetings; write worries down for the 7pm slot instead.\nFollow up next time: what happened to the anxiety when she did not check.\nSuggestions for their profile: none\nSafety: no concerns",
+   "homework_due": "no checking messages after meetings; write worries down for the 7pm slot instead",
+   "moods": [
+    5,
+    4,
+    5,
+    null,
+    5,
+    4,
+    null
+   ],
+   "scores": [
+    "Monday 2 November: PHQ-9 8, GAD-7 14"
+   ],
+   "programmes": [
+    "letting thoughts pass, day 4, 3 sessions done. Recent: urge: message Hana to check she is not upset (delayed 30 minutes, peak 70); outcome: urge faded to 20 after 25 minutes"
+   ],
+   "plans": {
+    "steps": [],
+    "habits": [
+     {
+      "text": "Wait 30 minutes before checking messages",
+      "cue": "the urge to check",
+      "tiny": "wait five minutes",
+      "quote": "maybe I can wait before I check",
+      "start": "2026-11-05",
+      "kept": [
+       "2026-11-05",
+       "2026-11-06",
+       "2026-11-08",
+       "2026-11-09"
+      ],
+      "missed": [
+       "2026-11-07",
+       "2026-11-10"
+      ]
+     }
+    ],
+    "goals": [
+     {
+      "text": "Go a whole week without checking messages",
+      "next_step": "wait 30 minutes before checking",
+      "quote": "I want a week where I don't check",
+      "added": "2026-11-04",
+      "last_progress": "2026-11-05"
+     }
+    ],
+    "values": [
+     {
+      "text": "kindness",
+      "quote": "I just want to be kind to people",
+      "added": "2026-11-04"
+     }
+    ],
+    "pictures": []
+   }
+  },
+  "date": "Wednesday 11 November",
+  "today": "2026-11-11"
+ },
+ "somchai_w4": {
+  "about": "Somchai, 62, retired teacher, Chiang Mai (Thailand); low mood since his wife Malee died eight months ago; drinking more",
+  "mode": "normal",
+  "memory": {
+   "story": {
+    "sections": {
+     "About": "Somchai, 62, retired maths teacher in Chiang Mai. His wife Malee died eight months ago. Daughter Nok lives in Bangkok and calls on Sundays.",
+     "Patterns and triggers": "Evenings and Malee's favourite songs bring a wave of grief; he stays in, skips meals, and drinks rice whisky.",
+     "Beliefs we are working on": "'Without Malee there is no point to my days.'",
+     "What helps": "Morning walks to the temple (four days last week); tutoring the neighbour's son in maths on Saturday.",
+     "What does not help": "Sitting alone in the evening with the television on; drinking.",
+     "Progress": "Mood up from 2 to 4 on most days; started cooking one meal a day.",
+     "Open threads": "Whether to join the temple's volunteer group; Nok worries about the drinking."
+    }
+   },
+   "last_note": "Session: daily check-in, Thursday 26 November\nTalked about: a hard evening on what would have been Malee's birthday.\nPractised: a self-compassion break, speaking to himself as Malee would.\nMood: \"heavy, very low\" at the start; \"a little lighter\" by the end\nHomework agreed: call Nok on Friday instead of waiting for Sunday.\nFollow up next time: the call with Nok; the drinking on hard evenings.\nSuggestions for their profile: none\nSafety: no concerns",
+   "homework_due": "call Nok on Friday instead of waiting for Sunday",
+   "moods": [
+    4,
+    4,
+    3,
+    null,
+    4,
+    2,
+    null
+   ],
+   "scores": [
+    "Monday 2 November: PHQ-9 19, GAD-7 8",
+    "Monday 16 November: PHQ-9 15, GAD-7 7"
+   ],
+   "plans": {
+    "steps": [
+     {
+      "text": "Phone the temple school about helping with Thai lessons",
+      "day": "",
+      "time": "",
+      "ifthen": "",
+      "quote": "maybe I could ring the temple school",
+      "added": "2026-11-21",
+      "moves": 0
+     }
+    ],
+    "habits": [],
+    "goals": [
+     {
+      "text": "Cook one proper meal every day",
+      "next_step": "cook rice soup on Monday",
+      "quote": "I used to cook every day",
+      "added": "2026-11-02",
+      "last_progress": "2026-11-25"
+     },
+     {
+      "text": "Find something meaningful to do with his days",
+      "next_step": "phone the temple school",
+      "quote": "I need something to get up for",
+      "added": "2026-11-02",
+      "last_progress": "2026-11-10"
+     }
+    ],
+    "values": [
+     {
+      "text": "teaching",
+      "quote": "I taught for thirty years",
+      "added": "2026-11-02"
+     },
+     {
+      "text": "family",
+      "quote": "my grandchildren",
+      "added": "2026-11-02"
+     },
+     {
+      "text": "faith",
+      "quote": "the temple keeps me steady",
+      "added": "2026-11-09"
+     }
+    ],
+    "pictures": [
+     {
+      "title": "Teaching Thai to my grandchildren",
+      "wish": "Teach the grandchildren to read Thai",
+      "outcome": "Feeling useful and close to them",
+      "obstacle": "Thinking I am too old to be interesting",
+      "plan": "If I think I am too old, then I will prepare one short lesson anyway",
+      "quote": "I would love to teach them to read Thai",
+      "added": "2026-10-26",
+      "last_action": ""
+     }
+    ]
+   }
+  },
+  "date": "Saturday 28 November",
+  "today": "2026-11-28"
+ },
+ "somchai_after": {
+  "about": "Somchai, 62, retired teacher, Chiang Mai (Thailand); low mood since his wife Malee died eight months ago; drinking more",
+  "mode": "normal",
+  "memory": {
+   "story": {
+    "sections": {
+     "About": "Somchai, 62, retired maths teacher in Chiang Mai. His wife Malee died eight months ago. Daughter Nok lives in Bangkok and calls on Sundays.",
+     "Patterns and triggers": "Evenings and Malee's favourite songs bring a wave of grief; he stays in, skips meals, and drinks rice whisky.",
+     "Beliefs we are working on": "'Without Malee there is no point to my days.'",
+     "What helps": "Morning walks to the temple (four days last week); tutoring the neighbour's son in maths on Saturday.",
+     "What does not help": "Sitting alone in the evening with the television on; drinking.",
+     "Progress": "Mood up from 2 to 4 on most days; started cooking one meal a day.",
+     "Open threads": "Whether to join the temple's volunteer group; Nok worries about the drinking."
+    }
+   },
+   "last_note": "Session: daily checkin, Saturday 28 November\nTalked about: a lonely weekend; Malee's birthday is next week.\nPractised: slow breathing at six a minute.\nMood: \"heavy, very low\" at the start; \"a little lighter\" by the end\nHomework agreed: phone Nok on Sunday evening.\nPractice log: none\nFollow up next time: how he is and whether he is safe; whether he phoned Nok.\nPlan steps: none\nHabits: none\nGoals: none\nValues: none\nVision board: none\nSafety: said he would not mind not waking up; no plan and no means; agreed to call 1323 if it gets worse and started a safety plan (warning signs, what helps, Nok and his neighbour Prasert as people to call).",
+   "homework_due": "phone Nok on Sunday evening",
+   "moods": [
+    4,
+    3,
+    null,
+    4,
+    2,
+    3,
+    null
+   ],
+   "scores": [
+    "Monday 2 November: PHQ-9 19, GAD-7 8",
+    "Monday 16 November: PHQ-9 15, GAD-7 7"
+   ],
+   "plans": {
+    "steps": [
+     {
+      "text": "Phone the temple school about helping with Thai lessons",
+      "day": "",
+      "time": "",
+      "ifthen": "",
+      "quote": "maybe I could ring the temple school",
+      "added": "2026-11-21",
+      "moves": 0
+     }
+    ],
+    "habits": [],
+    "goals": [
+     {
+      "text": "Cook one proper meal every day",
+      "next_step": "cook rice soup on Monday",
+      "quote": "I used to cook every day",
+      "added": "2026-11-02",
+      "last_progress": "2026-11-25"
+     },
+     {
+      "text": "Find something meaningful to do with his days",
+      "next_step": "phone the temple school",
+      "quote": "I need something to get up for",
+      "added": "2026-11-02",
+      "last_progress": "2026-11-10"
+     }
+    ],
+    "values": [
+     {
+      "text": "teaching",
+      "quote": "I taught for thirty years",
+      "added": "2026-11-02"
+     },
+     {
+      "text": "family",
+      "quote": "my grandchildren",
+      "added": "2026-11-02"
+     },
+     {
+      "text": "faith",
+      "quote": "the temple keeps me steady",
+      "added": "2026-11-09"
+     }
+    ],
+    "pictures": [
+     {
+      "title": "Teaching Thai to my grandchildren",
+      "wish": "Teach the grandchildren to read Thai",
+      "outcome": "Feeling useful and close to them",
+      "obstacle": "Thinking I am too old to be interesting",
+      "plan": "If I think I am too old, then I will prepare one short lesson anyway",
+      "quote": "I would love to teach them to read Thai",
+      "added": "2026-10-26",
+      "last_action": ""
+     }
+    ]
+   }
+  },
+  "date": "Monday 30 November",
+  "today": "2026-11-30"
+ }
+}

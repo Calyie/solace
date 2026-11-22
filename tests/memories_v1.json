@@ -1,0 +1,195 @@
+{
+ "first": {
+  "about": "Alex, 24, Toronto (Canada), first session, nothing remembered yet",
+  "mode": "normal",
+  "memory": {
+   "story": {
+    "sections": {},
+    "confirmed_goals": [],
+    "confirmed_values": []
+   },
+   "last_note": "",
+   "homework_due": "",
+   "moods": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "scores": [
+    "Monday 9 November: PHQ-9 9, GAD-7 7"
+   ]
+  },
+  "date": "Monday 9 November"
+ },
+ "amira_w2": {
+  "about": "Amira, 29, junior architect, Montreal (Canada); perfectionism, self-criticism, putting things off",
+  "mode": "normal",
+  "memory": {
+   "story": {
+    "sections": {
+     "About": "Amira, 29, junior architect in Montreal, lives alone with her cat Pistache. Close to her sister Leila; her best friend Sophie moved to Toronto.",
+     "Patterns and triggers": "Design reviews and short emails from her manager Daniel set off 'I'm not good enough'; she delays starting, then stays late redoing details. Seeing colleagues praised triggers 'everyone else finds this easy'.",
+     "Beliefs we are working on": "'If my work isn't perfect, people will see I'm a fraud.'",
+     "What helps": "Checking the evidence for a thought (belief dropped from 80 to 50 on 4 November); a 25-minute start before email, done on 2 of 3 mornings.",
+     "What does not help": "Scrolling in bed until 2am; rereading Daniel's emails.",
+     "Progress": "Handed in the Rousseau drawings on time on 7 November without staying past 7pm.",
+     "Open threads": "Whether to ask Daniel for clearer feedback; she has not sketched for fun in months."
+    },
+    "confirmed_goals": [
+     "Hand in drawings on time without an all-nighter",
+     "Ask Daniel for clearer feedback"
+    ],
+    "confirmed_values": [
+     "creativity"
+    ]
+   },
+   "last_note": "Session: weekly session, Monday 9 November\nTalked about: the Rousseau hand-in went well; still dreads Thursday's design review.\nPractised: planned what to say to Daniel using DEAR MAN; rehearsed the opening line twice.\nMood: start 5/10, end 6/10\nHomework agreed: ask Daniel for ten minutes on Wednesday to agree what 'done' means for the Lavoie project.\nFollow up next time: whether she asked Daniel; how the design review went.\nSuggestions for their profile: none\nSafety: no concerns",
+   "homework_due": "ask Daniel for ten minutes on Wednesday to agree what 'done' means for the Lavoie project",
+   "moods": [
+    4,
+    5,
+    null,
+    5,
+    6,
+    null,
+    5
+   ],
+   "scores": [
+    "Monday 2 November: PHQ-9 12, GAD-7 11",
+    "Monday 16 November: PHQ-9 9, GAD-7 9"
+   ],
+   "programmes": [
+    "being enough, day 6, 4 sessions done. Recent: evidence: Daniel asked my opinion on the facade; commitment: leave at 18:00 on Thursday (when Thursday, confidence 8)"
+   ]
+  },
+  "date": "Wednesday 18 November"
+ },
+ "julien_w3": {
+  "about": "Julien, 41, bus driver on sick leave, Lyon (France); PTSD after a car crash in March in which his friend Karim was badly hurt; avoids driving; guilt",
+  "mode": "full",
+  "memory": {
+   "story": {
+    "sections": {
+     "About": "Julien, 41, lives in Lyon with his partner Claire and their son Hugo (9). Bus driver, on sick leave since the crash in March, when he was driving and his friend Karim was badly hurt.",
+     "Patterns and triggers": "Sirens, rain at night and the smell of petrol bring back the crash; he avoids driving and the road where it happened; nightmares most nights.",
+     "Beliefs we are working on": "'It was my fault; I should have seen the van.'",
+     "What helps": "5-4-3-2-1 grounding during flashbacks (used three times last week); walking with Hugo after school.",
+     "What does not help": "Drinking two or three beers to get to sleep; avoiding Karim's calls.",
+     "Progress": "Completed two Written Exposure Therapy sessions; distress at the start fell from 85 to 70.",
+     "Open threads": "Whether to call Karim back; Full mode was turned on in Settings on 10 November."
+    },
+    "confirmed_goals": [
+     "Drive Hugo to football again",
+     "Sleep through most nights"
+    ],
+    "confirmed_values": [
+     "family",
+     "loyalty"
+    ]
+   },
+   "last_note": "Session: written exposure, Thursday 12 November\nTalked about: second written exposure session about the crash; most distressing moment was seeing Karim not moving.\nPractised: 30 minutes of writing the memory in detail, then talking it through; distress 70 at the start, peak 85, 55 at the end.\nMood: start 4/10, end 5/10\nHomework agreed: none for the writing (Written Exposure has no homework); two evenings this week without beer, using grounding at bedtime instead.\nFollow up next time: the evenings without beer; Karim's calls.\nSuggestions for their profile: none\nSafety: no concerns",
+   "homework_due": "two evenings this week without beer, using grounding at bedtime instead",
+   "moods": [
+    3,
+    4,
+    4,
+    null,
+    4,
+    5,
+    4
+   ],
+   "scores": [
+    "Monday 26 October: PHQ-9 16, GAD-7 13, PCL-5 52",
+    "Monday 9 November: PHQ-9 14, GAD-7 12, PCL-5 46"
+   ]
+  },
+  "date": "Saturday 14 November"
+ },
+ "meiling_w2": {
+  "about": "Mei Ling, 34, accountant, Kuala Lumpur (Malaysia); worries she has offended people and seeks reassurance; health worries",
+  "mode": "normal",
+  "memory": {
+   "story": {
+    "sections": {
+     "About": "Mei Ling, 34, accountant in Kuala Lumpur, lives with her husband Faris. Close to her younger brother Wei.",
+     "Patterns and triggers": "After conversations she replays what she said and messages people to check she did not offend them; googles symptoms at night.",
+     "Beliefs we are working on": "'If I upset someone and do not fix it straight away, they will leave me.'",
+     "What helps": "Postponing worry to a fixed 15-minute slot at 7pm (worked on 3 of 5 days).",
+     "What does not help": "Asking Faris 'are you sure she's not upset?' again and again; googling symptoms.",
+     "Progress": "Sent no checking messages on two days last week, a first.",
+     "Open threads": "Her aunt's comment at Sunday lunch."
+    },
+    "confirmed_goals": [
+     "Go a whole week without checking messages"
+    ],
+    "confirmed_values": [
+     "kindness"
+    ]
+   },
+   "last_note": "Session: weekly session, Monday 9 November\nTalked about: the reassurance loop with Faris and colleagues; how checking brings relief for minutes, then more doubt.\nPractised: an experiment plan: not sending a checking message after the Tuesday meeting, and rating anxiety before and after.\nMood: start 4/10, end 5/10\nHomework agreed: no checking messages after meetings; write worries down for the 7pm slot instead.\nFollow up next time: what happened to the anxiety when she did not check.\nSuggestions for their profile: none\nSafety: no concerns",
+   "homework_due": "no checking messages after meetings; write worries down for the 7pm slot instead",
+   "moods": [
+    5,
+    4,
+    5,
+    null,
+    5,
+    4,
+    null
+   ],
+   "scores": [
+    "Monday 2 November: PHQ-9 8, GAD-7 14"
+   ],
+   "programmes": [
+    "letting thoughts pass, day 4, 3 sessions done. Recent: urge: message Hana to check she is not upset (delayed 30 minutes, peak 70); outcome: urge faded to 20 after 25 minutes"
+   ]
+  },
+  "date": "Wednesday 11 November"
+ },
+ "somchai_w4": {
+  "about": "Somchai, 62, retired teacher, Chiang Mai (Thailand); low mood since his wife Malee died eight months ago; drinking more",
+  "mode": "normal",
+  "memory": {
+   "story": {
+    "sections": {
+     "About": "Somchai, 62, retired maths teacher in Chiang Mai. His wife Malee died eight months ago. Daughter Nok lives in Bangkok and calls on Sundays.",
+     "Patterns and triggers": "Evenings and Malee's favourite songs bring a wave of grief; he stays in, skips meals, and drinks rice whisky.",
+     "Beliefs we are working on": "'Without Malee there is no point to my days.'",
+     "What helps": "Morning walks to the temple (four days last week); tutoring the neighbour's son in maths on Saturday.",
+     "What does not help": "Sitting alone in the evening with the television on; drinking.",
+     "Progress": "Mood up from 2 to 4 on most days; started cooking one meal a day.",
+     "Open threads": "Whether to join the temple's volunteer group; Nok worries about the drinking."
+    },
+    "confirmed_goals": [
+     "Cook one proper meal every day",
+     "Find something meaningful to do with his days"
+    ],
+    "confirmed_values": [
+     "teaching",
+     "family",
+     "faith"
+    ]
+   },
+   "last_note": "Session: daily check-in, Thursday 26 November\nTalked about: a hard evening on what would have been Malee's birthday.\nPractised: a self-compassion break, speaking to himself as Malee would.\nMood: start 2/10, end 3/10\nHomework agreed: call Nok on Friday instead of waiting for Sunday.\nFollow up next time: the call with Nok; the drinking on hard evenings.\nSuggestions for their profile: none\nSafety: no concerns",
+   "homework_due": "call Nok on Friday instead of waiting for Sunday",
+   "moods": [
+    4,
+    4,
+    3,
+    null,
+    4,
+    2,
+    null
+   ],
+   "scores": [
+    "Monday 2 November: PHQ-9 19, GAD-7 8",
+    "Monday 16 November: PHQ-9 15, GAD-7 7"
+   ]
+  },
+  "date": "Saturday 28 November"
+ }
+}

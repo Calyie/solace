@@ -1,0 +1,134 @@
+[
+ {
+  "practice": "",
+  "check_in": null,
+  "open_event": "[The person opened the app for today's session.]"
+ },
+ {
+  "practice": "",
+  "check_in": {},
+  "open_event": "[The person opened the app for today's session.]"
+ },
+ {
+  "practice": "",
+  "check_in": {
+   "skipped": true
+  },
+  "open_event": "[The person opened the app for today's session. They skipped the check-in.]"
+ },
+ {
+  "practice": "",
+  "check_in": {
+   "mood": 6,
+   "safety": "fine"
+  },
+  "open_event": "[The person opened the app for today's session. Their check-in before this session: mood 6 out of 10; safety: they said they are OK.]"
+ },
+ {
+  "practice": "",
+  "check_in": {
+   "safety": "thoughts"
+  },
+  "open_event": "[The person opened the app for today's session. Their check-in before this session: safety: they said they have had thoughts of harming themselves or of not wanting to live, and the app showed them where to get help.]"
+ },
+ {
+  "practice": "",
+  "check_in": {
+   "mood": 0,
+   "safety": "help"
+  },
+  "open_event": "[The person opened the app for today's session. Their check-in before this session: mood 0 out of 10; safety: they asked for help now, and the app showed them where to get help.]"
+ },
+ {
+  "practice": "",
+  "check_in": {
+   "mood": 4,
+   "practice": "the lift ladder, step 2",
+   "start": 70,
+   "end": 35,
+   "safety": "fine"
+  },
+  "open_event": "[The person opened the app for today's session. Their check-in before this session: mood 4 out of 10; practice since last time (the lift ladder, step 2): distress 70 out of 100 at the start, 35 at the end; safety: they said they are OK.]"
+ },
+ {
+  "practice": "",
+  "check_in": {
+   "practice": "touching the door handle",
+   "safety": ""
+  },
+  "open_event": "[The person opened the app for today's session. Their check-in before this session: practice since last time (touching the door handle): not done; safety: not answered.]"
+ },
+ {
+  "practice": "",
+  "check_in": {
+   "mood": 10
+  },
+  "open_event": "[The person opened the app for today's session. Their check-in before this session: mood 10 out of 10; safety: not answered.]"
+ },
+ {
+  "practice": "Box breathing",
+  "check_in": null,
+  "open_event": "[The person opened the practice: Box breathing.]"
+ },
+ {
+  "practice": "Box breathing",
+  "check_in": {},
+  "open_event": "[The person opened the practice: Box breathing.]"
+ },
+ {
+  "practice": "Box breathing",
+  "check_in": {
+   "skipped": true
+  },
+  "open_event": "[The person opened the practice: Box breathing. They skipped the check-in.]"
+ },
+ {
+  "practice": "Box breathing",
+  "check_in": {
+   "mood": 6,
+   "safety": "fine"
+  },
+  "open_event": "[The person opened the practice: Box breathing. Their check-in before this session: mood 6 out of 10; safety: they said they are OK.]"
+ },
+ {
+  "practice": "Box breathing",
+  "check_in": {
+   "safety": "thoughts"
+  },
+  "open_event": "[The person opened the practice: Box breathing. Their check-in before this session: safety: they said they have had thoughts of harming themselves or of not wanting to live, and the app showed them where to get help.]"
+ },
+ {
+  "practice": "Box breathing",
+  "check_in": {
+   "mood": 0,
+   "safety": "help"
+  },
+  "open_event": "[The person opened the practice: Box breathing. Their check-in before this session: mood 0 out of 10; safety: they asked for help now, and the app showed them where to get help.]"
+ },
+ {
+  "practice": "Box breathing",
+  "check_in": {
+   "mood": 4,
+   "practice": "the lift ladder, step 2",
+   "start": 70,
+   "end": 35,
+   "safety": "fine"
+  },
+  "open_event": "[The person opened the practice: Box breathing. Their check-in before this session: mood 4 out of 10; practice since last time (the lift ladder, step 2): distress 70 out of 100 at the start, 35 at the end; safety: they said they are OK.]"
+ },
+ {
+  "practice": "Box breathing",
+  "check_in": {
+   "practice": "touching the door handle",
+   "safety": ""
+  },
+  "open_event": "[The person opened the practice: Box breathing. Their check-in before this session: practice since last time (touching the door handle): not done; safety: not answered.]"
+ },
+ {
+  "practice": "Box breathing",
+  "check_in": {
+   "mood": 10
+  },
+  "open_event": "[The person opened the practice: Box breathing. Their check-in before this session: mood 10 out of 10; safety: not answered.]"
+ }
+]

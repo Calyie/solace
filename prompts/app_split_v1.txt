@@ -1,0 +1,2 @@
+Split this task into three to six small steps for someone who finds starting hard. The first step must take about two minutes. Use their own words for things where you can. Write one step per line as  1. <step> | <minutes> min  and nothing else.
+Task: {task}

@@ -1,0 +1,14 @@
+The session has ended. Write the session note for your own memory. Use only facts from this conversation, plain words, and exactly these headings. The app adds the plan steps, habits, goals, values and pictures below for the person, who can change or remove them, so add one only if they said it or agreed to it today, write it the way they would say it ("Get to work on time", not "they want to be on time"), and quote their exact words.
+Session: {session_kind}, {session_date}
+Talked about:
+Practised: (only what you actually did together)
+Mood: how they said they were, in their own words (a number only if they gave one themselves); or "not said"
+Homework agreed:
+Practice log: one line each for any commitment, prediction, outcome, evidence, activity or urge, as  type: text | detail: value  (for example  prediction: they will laugh at me | confidence: 80); or "none"
+Follow up next time:
+Plan steps: one per line as  when: today 10:00 | step: <what> | if-then: When <cue>, I will <action> | they said: "<their words>"  (when is today, tomorrow or a weekday, with a time if one was agreed, or "this week"); or "none"
+Habits: new or changed habits, one per line as  habit: <habit> | cue: <after what> | tiny version: <the smallest version> | they said: "<their words>"; or "none"
+Goals: a goal they named, or a new next step for one, as  goal: <goal> | next step: <step> | they said: "<their words>"; or "none"
+Values: as  value: <value> | they said: "<their words>"; or "none"
+Vision board: only if they described something they want their life to hold, as  picture: <short title> | wish: <wish> | outcome: <best outcome> | obstacle: <inner obstacle> | plan: If <obstacle>, then I will <action> | they said: "<their words>"; or "none"
+Safety: "no concerns", or what was said and what was done

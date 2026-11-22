@@ -1,0 +1,858 @@
+<title>My Therapist</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<style>
+/* Layout: a phone-sized room beside a margin of design notes; on phones the notes follow the room. */
+:root{
+  --ground:#e6ebf1; --surface:#f5f7fa; --raised:#ffffff; --ink:#18222f; --muted:#526072; --line:#d2d9e3;
+  --sage:#2f68ad; --on-sage:#ffffff; --sage-soft:#dce7f5;
+  --lamp:#e0873f; --lamp-core:#ffe3c6; --lamp-soft:#f5e5d6;
+  --support:#b0443b; --good:#3b8558;
+  --voice:"Newsreader","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --ui:"Atkinson Hyperlegible","Segoe UI",system-ui,-apple-system,sans-serif;
+  /* photos and the lock screen look the same in either room */
+  --lock-a:#26354d; --lock-b:#111a28; --lock-ink:#f1f4f8; --photo-ink:#ffffff;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0a1019; --surface:#111a26; --raised:#182333; --ink:#e3e9f2; --muted:#98a6ba; --line:#25334a;
+    --sage:#8db8ec; --on-sage:#0a1019; --sage-soft:#1a2c44;
+    --lamp:#f0a057; --lamp-core:#ffe8cf; --lamp-soft:#33281c;
+    --support:#e67d72; --good:#71c595;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0a1019; --surface:#111a26; --raised:#182333; --ink:#e3e9f2; --muted:#98a6ba; --line:#25334a;
+  --sage:#8db8ec; --on-sage:#0a1019; --sage-soft:#1a2c44;
+  --lamp:#f0a057; --lamp-core:#ffe8cf; --lamp-soft:#33281c;
+  --support:#e67d72; --good:#71c595;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{background:var(--ground)}
+body{color:var(--ink);font-family:var(--ui);font-size:15px;line-height:1.5;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 48px}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--sage);outline-offset:2px;border-radius:8px}
+.wrap{display:grid;grid-template-columns:400px minmax(0,1fr);gap:56px;max-width:1060px;margin:0 auto;align-items:start}
+@media (max-width:900px){.wrap{grid-template-columns:minmax(0,1fr);justify-items:center;gap:36px}.notes{max-width:440px;width:100%}}
+
+/* phone */
+.phone{position:relative;width:100%;max-width:400px;height:800px;background:var(--surface);border:1px solid var(--line);border-radius:44px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 40px 80px -40px rgb(15 28 50 / .45)}
+@media (max-width:480px){.phone{height:740px;border-radius:30px}}
+.screen{flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;position:relative;scrollbar-width:thin}
+.view{display:none;padding:26px 20px 32px}
+.view.on{display:block}
+#v-session.on{display:flex;flex-direction:column;height:100%;padding:0}
+.nav{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);background:var(--surface);padding:6px 6px 10px}
+.nav button{border:0;background:none;display:grid;justify-items:center;gap:2px;padding:6px 0;font-size:12px;color:var(--muted);border-radius:14px}
+.nav button svg{width:24px;height:24px}
+.nav button[aria-selected="true"]{color:var(--sage);font-weight:700}
+
+/* type */
+.eyebrow{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:0}
+.h1{font-family:var(--voice);font-weight:400;font-size:31px;line-height:1.15;letter-spacing:-.01em;margin:6px 0 18px;text-wrap:balance}
+.h2{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:30px 0 8px}
+.h2 span{letter-spacing:0;text-transform:none;font-weight:400}
+.small{font-size:13px;color:var(--muted);margin:0}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.btn{border:0;border-radius:999px;padding:8px 16px;font-weight:700;font-size:14px;background:var(--sage);color:var(--on-sage)}
+.btn.ghost{background:transparent;color:var(--sage);box-shadow:inset 0 0 0 1.5px var(--sage)}
+.btn.quiet{background:transparent;color:var(--muted);padding-inline:8px}
+.btn[disabled]{opacity:.55;cursor:default}
+
+/* today */
+.presence{display:grid;grid-template-columns:64px minmax(0,1fr);gap:14px;align-items:start;padding:16px;border-radius:26px;background:var(--lamp-soft)}
+.presence canvas{width:64px;height:64px;display:block}
+.presence p{margin:0 0 12px;font-family:var(--voice);font-size:18px;line-height:1.4;font-style:italic}
+.planhead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:6px}
+.planhead .btn{flex:none;white-space:nowrap}
+.timeline{list-style:none;margin:10px 0 0;padding:0;position:relative}
+.timeline::before{content:"";position:absolute;left:55px;top:10px;bottom:10px;width:1.5px;background:var(--line)}
+.step{display:grid;grid-template-columns:44px 22px minmax(0,1fr) 30px;align-items:start;padding:7px 0;position:relative}
+.step time{font-variant-numeric:tabular-nums;font-size:13px;color:var(--muted);padding-top:1px}
+.step .dot{width:11px;height:11px;border-radius:50%;background:var(--surface);border:2px solid var(--sage);margin:5px 0 0 6px;position:relative;z-index:1}
+.step .t{font-weight:700;font-size:15px;line-height:1.35}
+.step .m{font-size:13px;color:var(--muted);margin-top:1px}
+.ifthen{font-family:var(--voice);font-style:italic;font-size:15px;line-height:1.4;margin-top:4px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.chip{font-size:11.5px;padding:2px 9px;border-radius:999px;background:var(--sage-soft);color:var(--sage);font-weight:700}
+.chip.lamp{background:var(--lamp-soft);color:var(--ink)}
+.now{display:grid;grid-template-columns:44px minmax(0,1fr);align-items:center;gap:0;margin:4px 0;position:relative;z-index:1}
+.now span{font-size:12px;font-weight:700;font-variant-numeric:tabular-nums}
+.now div{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted)}
+.now div::before{content:"";flex:none;margin-left:5px;width:13px;height:13px;border-radius:50%;background:var(--lamp);box-shadow:0 0 0 4px var(--lamp-soft)}
+.more{border:0;background:none;color:var(--muted);width:30px;height:30px;border-radius:50%;font-size:18px;line-height:1;display:grid;place-items:center}
+.more:hover{background:var(--sage-soft)}
+.nudge{border-radius:20px;background:var(--raised);border:1px solid var(--line);padding:14px 16px;display:grid;gap:8px;margin-top:12px}
+.who{display:flex;gap:8px;align-items:center;font-size:11.5px;color:var(--muted);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.who i{width:10px;height:10px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--lamp-core),var(--lamp))}
+.nudge p{margin:0;font-size:15px}
+.habit{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;padding:12px 0;border-top:1px solid var(--line)}
+.habit .t{font-weight:700}
+.habit .m{font-size:12.5px;color:var(--muted);grid-column:1 / -1}
+.days{display:flex;gap:5px}
+.day{display:grid;justify-items:center;gap:3px;font-size:10.5px;color:var(--muted);width:14px}
+.day i{width:14px;height:14px;border-radius:50%;display:block}
+.day i.done{background:var(--sage)}
+.day i.gap{box-shadow:inset 0 0 0 1.5px var(--muted);opacity:.55}
+.day i.off{height:2px;width:10px;margin:6px 2px;background:var(--line);border-radius:2px}
+.day i.today{box-shadow:inset 0 0 0 2px var(--lamp)}
+.lock{border-radius:22px;padding:14px;background:linear-gradient(165deg,var(--lock-a),var(--lock-b));color:var(--lock-ink);margin-top:10px}
+.lock .clock{font-family:var(--voice);font-size:38px;line-height:1;text-align:center;margin:6px 0 14px;font-variant-numeric:tabular-nums}
+.notif{background:rgb(255 255 255 / .14);border-radius:16px;padding:10px 12px;display:grid;gap:8px}
+.notif .top{display:flex;justify-content:space-between;font-size:12px;opacity:.85}
+.notif .acts{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.notif .acts span{background:rgb(255 255 255 / .16);border-radius:10px;text-align:center;padding:6px 0;font-size:12.5px;font-weight:700}
+
+/* session room */
+.sbar{display:flex;align-items:center;gap:6px;padding:14px 12px 4px 18px}
+.arc{flex:1;display:grid;grid-template-columns:repeat(6,1fr);gap:4px}
+.arc button{height:24px;border:0;background:none;padding:0;display:flex;align-items:center}
+.arc button i{display:block;height:4px;width:100%;border-radius:4px;background:var(--line);transition:background .4s}
+.arc button.done i{background:var(--sage)}
+.arc button.cur i{background:var(--lamp)}
+.iconbtn{width:38px;height:38px;border-radius:50%;border:0;background:transparent;display:grid;place-items:center;color:var(--ink);flex:none}
+.iconbtn svg{width:21px;height:21px}
+.iconbtn.support{color:var(--support)}
+.beatname{padding:0 18px;display:flex;justify-content:space-between;gap:12px;font-size:12.5px;color:var(--muted)}
+.beatname b{color:var(--ink)}
+.beatname span{font-variant-numeric:tabular-nums}
+.room{position:relative;flex:1;min-height:0;display:flex;flex-direction:column}
+.room::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 55% at 50% 4%,var(--lamp-soft),transparent 72%);pointer-events:none}
+.orbbox{position:relative;height:230px;flex:none;transition:height .5s ease}
+.room.withcard .orbbox{height:120px}
+#orb{position:absolute;inset:0;width:100%;height:100%;display:block}
+.breathtext{position:absolute;left:0;right:0;bottom:6px;text-align:center;font-family:var(--voice);font-size:19px}
+.breathtext small{display:block;font-family:var(--ui);font-size:12px;color:var(--muted)}
+.captions{position:relative;flex:1;min-height:0;overflow:hidden;padding:0 24px 4px;display:flex;flex-direction:column;justify-content:flex-end;gap:10px;-webkit-mask-image:linear-gradient(transparent,#000 34%);mask-image:linear-gradient(transparent,#000 34%)}
+.l-th{font-family:var(--voice);font-size:20px;line-height:1.38;margin:0;text-wrap:pretty}
+.l-you{align-self:flex-end;max-width:86%;background:var(--sage-soft);padding:8px 14px;border-radius:18px 18px 4px 18px;font-size:15px;margin:0}
+.captions .old{opacity:.42}
+.cardslot{position:relative;padding:8px 14px 0}
+.card{background:var(--raised);border:1px solid var(--line);border-radius:22px;padding:13px 15px;box-shadow:0 18px 40px -26px rgb(10 22 45 / .55);animation:rise .45s ease both}
+@keyframes rise{from{transform:translateY(14px);opacity:.35}to{transform:none;opacity:1}}
+.card h3{margin:0 0 8px;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.kv{display:grid;grid-template-columns:82px minmax(0,1fr);gap:5px 10px;font-size:13.5px;margin:0}
+.kv dt{color:var(--muted)}
+.kv dd{margin:0}
+.spark{display:flex;gap:4px;align-items:flex-end;height:26px}
+.spark i{width:10px;background:var(--sage);border-radius:3px}
+.spark i.none{background:var(--line);height:3px}
+.big{font-family:var(--voice);font-size:40px;line-height:1;font-variant-numeric:tabular-nums}
+input[type="range"]{width:100%;accent-color:var(--sage)}
+.scale{display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted)}
+.thought{font-family:var(--voice);font-style:italic;font-size:16px;margin:0 0 8px}
+.ev{display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:13px}
+.ev b{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.ev ul{margin:3px 0 0;padding-left:16px}
+.fair{margin:8px 0 0;font-size:13.5px}
+.added{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.added li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:center;font-size:13.5px}
+.added li span small{display:block;color:var(--muted);font-size:12px}
+.ctl{display:grid;grid-template-columns:52px 1fr 52px;align-items:center;justify-items:center;padding:10px 18px 12px}
+.mic{width:66px;height:66px;border-radius:50%;border:0;background:var(--sage);color:var(--on-sage);display:grid;place-items:center;box-shadow:0 10px 26px -12px var(--sage)}
+.mic svg{width:28px;height:28px}
+.miclabel{font-size:12.5px;color:var(--muted);text-align:center;margin-top:4px;min-height:19px}
+.demo{font-size:11.5px;color:var(--muted);text-align:center;padding:0 24px 10px;margin:0}
+
+/* focus */
+.timerwrap{display:grid;justify-items:center;margin:4px 0 6px;position:relative}
+#ftimer{width:230px;height:230px;display:block}
+.tread{position:absolute;top:0;width:230px;height:230px;display:grid;place-items:center;text-align:center;pointer-events:none}
+.tread .big{font-size:46px}
+.tread small{display:block;font-size:12.5px;color:var(--muted)}
+.say{font-family:var(--voice);font-style:italic;font-size:17px;line-height:1.4;text-align:center;margin:8px 8px 4px;min-height:24px}
+.switch{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-top:1px solid var(--line)}
+.switch input{appearance:none;width:44px;height:26px;border-radius:26px;background:var(--line);position:relative;flex:none;cursor:pointer;transition:background .2s}
+.switch input::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:var(--raised);transition:transform .2s}
+.switch input:checked{background:var(--sage)}
+.switch input:checked::after{transform:translateX(18px)}
+.switch span small{display:block;font-size:12.5px;color:var(--muted)}
+.steps{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:6px}
+.steps label{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;align-items:start;padding:9px 12px;border-radius:14px;font-size:14px;cursor:pointer}
+.steps input{width:18px;height:18px;margin:1px 0 0;accent-color:var(--sage)}
+.steps .first{background:var(--lamp-soft)}
+.steps .first em{display:block;font-style:normal;font-size:12px;color:var(--muted)}
+.steps .ticked{color:var(--muted);text-decoration:line-through}
+.park{display:flex;gap:8px;margin-top:8px}
+.park input{flex:1;min-width:0;border:1px solid var(--line);background:var(--raised);color:var(--ink);border-radius:999px;padding:8px 14px;font:inherit;font-size:14px}
+.parked{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:4px;font-size:14px}
+.parked li{display:flex;justify-content:space-between;gap:10px}
+.parked small{color:var(--muted);white-space:nowrap}
+
+/* goals */
+.board{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tile{position:relative;border:0;padding:0;background:none;perspective:900px;height:168px;text-align:left;border-radius:18px}
+.tile.tall{grid-row:span 2;height:346px}
+.tile .in{position:absolute;inset:0;transition:transform .6s;transform-style:preserve-3d}
+.tile[aria-pressed="true"] .in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;border-radius:18px;overflow:hidden;-webkit-backface-visibility:hidden;backface-visibility:hidden;display:flex;flex-direction:column;justify-content:flex-end}
+.face .cap{padding:30px 12px 11px;background:linear-gradient(transparent,rgb(0 0 0 / .58));color:var(--photo-ink);font-weight:700;font-size:14px;line-height:1.3}
+.face .cap small{display:block;font-weight:400;font-size:11.5px;opacity:.9}
+.face .flag{position:absolute;top:10px;left:10px;right:10px;background:rgb(0 0 0 / .5);color:var(--photo-ink);border-radius:10px;padding:5px 9px;font-size:11.5px}
+.back{transform:rotateY(180deg);background:var(--raised);border:1px solid var(--line);justify-content:flex-start;padding:12px;font-size:12.5px;line-height:1.4;gap:5px;overflow:auto;color:var(--ink)}
+.back b{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block}
+.back p{margin:0}
+.back .act{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.back .act span{font-size:12px;font-weight:700;color:var(--sage);box-shadow:inset 0 0 0 1.5px var(--sage);border-radius:999px;padding:3px 10px}
+.art1{background:radial-gradient(circle at 72% 26%,#5b3b25 0 13px,#efe6d7 14px 23px,transparent 24px),repeating-linear-gradient(-32deg,rgb(40 30 20 / .16) 0 1px,transparent 1px 10px),linear-gradient(170deg,#e2d4b1,#a98c60)}
+.art2{background:linear-gradient(to top,#1f1d2e 16%,transparent 16%),linear-gradient(to top,transparent 0,transparent 100%),repeating-linear-gradient(90deg,#1f1d2e 0 15px,transparent 15px 22px,#1f1d2e 22px 30px,transparent 30px 44px) 0 100% / 100% 36% no-repeat,linear-gradient(#f3a768,#a5627a 62%,#3a2f4f)}
+.art3{background:linear-gradient(transparent 56%,rgb(224 135 63 / .6) 56% 64%,transparent 64%),radial-gradient(circle,#93aaa2 1px,transparent 1.6px) 0 0 / 14px 14px,linear-gradient(#f0f4f1,#d8e3dd)}
+.art4{background:radial-gradient(circle at 20% 30%,#f6b8c8 0 9px,transparent 10px),radial-gradient(circle at 62% 22%,#f9cbd7 0 12px,transparent 13px),radial-gradient(circle at 80% 58%,#f4a9bd 0 8px,transparent 9px),radial-gradient(circle at 38% 64%,#fbd6df 0 11px,transparent 12px),linear-gradient(#bcd6ea,#e8eef2)}
+.goal{padding:14px 0;border-top:1px solid var(--line);position:relative}
+.goal .t{font-family:var(--voice);font-size:19px;line-height:1.3;padding-right:34px}
+.goal .from{font-size:12.5px;color:var(--muted);margin-top:2px}
+.ms{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin:10px 0 6px}
+.ms i{height:6px;border-radius:6px;background:var(--line)}
+.ms i.done{background:var(--sage)}
+.ms i.cur{background:var(--lamp)}
+.msl{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;font-size:11.5px;color:var(--muted);line-height:1.3}
+.goal .more{position:absolute;top:12px;right:0}
+
+/* overlays */
+.toast{position:absolute;left:14px;right:14px;bottom:78px;z-index:30;background:var(--ink);color:var(--surface);border-radius:14px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:14px;box-shadow:0 12px 30px -12px rgb(0 0 0 / .5)}
+.toast button{border:0;background:none;color:var(--lamp);font-weight:700}
+.pop{position:absolute;z-index:25;background:var(--raised);border:1px solid var(--line);border-radius:14px;box-shadow:0 14px 30px -14px rgb(0 0 0 / .4);padding:4px;display:grid;min-width:132px}
+.pop button{border:0;background:none;text-align:left;padding:8px 12px;border-radius:10px;font-size:14px}
+.pop button:hover{background:var(--sage-soft)}
+.pop .del{color:var(--support)}
+[contenteditable="true"]{outline:2px solid var(--sage);outline-offset:2px;border-radius:4px}
+.sheet{position:absolute;inset:0;z-index:40;background:rgb(0 0 0 / .35);display:flex;align-items:flex-end}
+.sheet .in{background:var(--raised);width:100%;border-radius:26px 26px 0 0;padding:20px 20px 24px;display:grid;gap:10px}
+.sheet h2{font-family:var(--voice);font-weight:400;font-size:24px;margin:0}
+.line{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;padding:10px 0;border-top:1px solid var(--line);align-items:center}
+.line big{font-family:var(--voice);font-size:26px;font-variant-numeric:tabular-nums;color:var(--support)}
+.line small{grid-column:1 / -1;color:var(--muted);font-size:12.5px}
+
+/* notes */
+.notes{padding-top:8px}
+.notes h1{font-family:var(--voice);font-weight:400;font-size:46px;line-height:1.05;letter-spacing:-.015em;margin:8px 0 12px}
+.lede{font-size:16px;max-width:60ch;color:var(--muted);margin:0 0 18px}
+.seg{display:inline-flex;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:3px}
+.seg button{border:0;background:none;border-radius:999px;padding:6px 14px;font-weight:700;font-size:13px;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--sage);color:var(--on-sage)}
+.tabname{font-family:var(--voice);font-weight:400;font-size:26px;margin:30px 0 2px}
+.notelist{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:14px;max-width:62ch}
+.notelist li{font-size:15px;line-height:1.55}
+.foot{margin-top:28px;padding-top:16px;border-top:1px solid var(--line);font-size:14px;color:var(--muted);max-width:62ch;display:grid;gap:10px}
+.foot p{margin:0}
+@media (prefers-reduced-motion: reduce){
+  .tile .in,.orbbox,.arc button i{transition:none}
+  .card{animation:none}
+}
+</style>
+
+<div class="wrap">
+  <div class="phone" id="phone">
+    <div class="screen" id="screen">
+
+      <!-- TODAY -->
+      <section class="view on" id="v-today" aria-label="Today">
+        <p class="eyebrow">Wednesday 18 November · 08:12</p>
+        <h2 class="h1">Good morning, Amira.</h2>
+        <div class="presence">
+          <canvas id="orb-mini" aria-hidden="true"></canvas>
+          <div>
+            <p id="mini-say">Today's the day you planned to ask Daniel for ten minutes. I've put it at 10:00, after your coffee. Shall we rehearse the first line together?</p>
+            <div class="row">
+              <button class="btn" id="go-rehearse">Rehearse, about 5 min</button>
+              <button class="btn quiet" id="not-now">Not now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="h2">Your plan for today <span id="plan-state">Drafted 07:30</span></div>
+        <div class="planhead">
+          <p class="small">Built from Monday's session, your habits and your goals. Change or remove any step.</p>
+          <button class="btn ghost" id="accept-plan">Looks right</button>
+        </div>
+        <ol class="timeline" id="timeline"></ol>
+
+        <div class="nudge" id="rescue">
+          <div class="who"><i></i>Never miss twice</div>
+          <p>The phone stayed by the bed last night. Tonight, the tiny version is enough: phone face down across the room.</p>
+          <div class="row"><button class="btn" data-act="tiny">Use the tiny version</button><button class="btn quiet" data-act="full">Keep the full one</button></div>
+        </div>
+        <div class="nudge" id="pattern">
+          <div class="who"><i></i>Pattern spotted</div>
+          <p>Your 25-minute start slipped on the last two Tuesdays, both mornings with a site visit first. Move Tuesday's start to 13:30?</p>
+          <div class="row"><button class="btn" data-act="move">Move it</button><button class="btn quiet" data-act="keep">Keep the morning</button></div>
+        </div>
+
+        <div class="h2">Habits <span>last 7 days</span></div>
+        <div id="habits"></div>
+
+        <div class="h2">Next nudge <span>09:55</span></div>
+        <div class="lock" aria-label="Preview of the lock screen at 09:55">
+          <div class="clock">09:55</div>
+          <div class="notif">
+            <div class="top"><b>My Therapist</b><span>now</span></div>
+            <div>A step is coming up.</div>
+            <div class="acts"><span>Done</span><span>Not yet</span><span>Help me start</span></div>
+          </div>
+        </div>
+        <p class="small" style="margin-top:8px">The lock screen never shows what the step is. You see it after unlocking.</p>
+      </section>
+
+      <!-- SESSION -->
+      <section class="view" id="v-session" aria-label="Session">
+        <div class="sbar">
+          <div class="arc" id="arc" aria-label="Steps of this check-in"></div>
+          <button class="iconbtn" id="sound" aria-label="Sound on" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h4l5-4v14l-5-4H4z"/><path id="snd-w" d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg></button>
+          <button class="iconbtn support" id="support" aria-label="Support"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 20s-7.5-4.6-7.5-10.2A4.1 4.1 0 0 1 12 7.4a4.1 4.1 0 0 1 7.5 2.4C19.5 15.4 12 20 12 20z"/></svg></button>
+        </div>
+        <div class="beatname"><span><b id="beat-n">Daily check-in</b> · <span id="beat-l">about 5 minutes</span></span><span id="clock">00:00</span></div>
+        <div class="room" id="room">
+          <div class="orbbox"><canvas id="orb" aria-hidden="true"></canvas><div class="breathtext" id="breathtext" hidden></div></div>
+          <div class="captions" id="captions" aria-live="polite"></div>
+          <div class="cardslot" id="cardslot"></div>
+        </div>
+        <div class="ctl">
+          <button class="iconbtn" id="kbd" aria-label="Type instead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="6" width="18" height="12" rx="2.5"/><path d="M7 10h.01M10.5 10h.01M14 10h.01M17 10h.01M8 14h8"/></svg></button>
+          <div style="display:grid;justify-items:center">
+            <button class="mic" id="mic" aria-label="Begin the check-in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg></button>
+            <div class="miclabel" id="miclabel">Tap to begin</div>
+          </div>
+          <button class="iconbtn" id="skip" aria-label="Skip ahead"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 5.5l9 6.5-9 6.5z"/><rect x="16.5" y="5.5" width="2" height="13" rx="1"/></svg></button>
+        </div>
+        <p class="demo">Demo: Amira's replies are scripted. In the app you talk or type.</p>
+      </section>
+
+      <!-- FOCUS -->
+      <section class="view" id="v-focus" aria-label="Focus">
+        <p class="eyebrow">Focus · from your plan</p>
+        <h2 class="h1" id="f-title">25-minute start</h2>
+        <p class="small" id="f-sub" style="margin-top:-12px">Lavoie north elevation · 08:30</p>
+        <div class="timerwrap">
+          <canvas id="ftimer" aria-hidden="true"></canvas>
+          <div class="tread"><div><div class="big" id="f-left">25:00</div><small id="f-of">of 25 minutes</small></div></div>
+        </div>
+        <p class="say" id="f-say"></p>
+        <div class="row" style="justify-content:center">
+          <button class="btn" id="f-start">Start</button>
+          <button class="btn quiet" id="f-ff">Skip 5 minutes (demo)</button>
+        </div>
+        <label class="switch"><span>Sit with me<small>The light stays while you work and checks in halfway.</small></span><input type="checkbox" id="f-sit" checked></label>
+
+        <div class="nudge" id="avoid">
+          <div class="who"><i></i>Noticed</div>
+          <p>"Lavoie details" has moved three times this week. I've split it into four steps below. Want to start the first one with me now? It takes about two minutes.</p>
+          <div class="row"><button class="btn" id="start-1">Start step 1</button></div>
+        </div>
+
+        <div class="h2">Help me start <span>split by your therapist</span></div>
+        <ul class="steps" id="steps"></ul>
+
+        <div class="h2">Park a thought <span>back at your break</span></div>
+        <form class="park" id="park"><input id="park-in" aria-label="A thought to park" placeholder="Something pulling at you?"><button class="btn" type="submit">Park</button></form>
+        <ul class="parked" id="parked"></ul>
+
+        <label class="switch" style="margin-top:14px"><span>Hyperfocus guard<small>A nudge to stand up and drink water after 90 minutes.</small></span><input type="checkbox" id="f-guard" checked></label>
+      </section>
+
+      <!-- GOALS -->
+      <section class="view" id="v-goals" aria-label="Goals">
+        <p class="eyebrow">Goals · built from your sessions</p>
+        <h2 class="h1">Where you're heading</h2>
+        <div class="h2" style="margin-top:6px">Vision board <span>tap a picture to turn it over</span></div>
+        <div class="board" id="board"></div>
+        <div class="h2">Goals</div>
+        <div id="goals"></div>
+      </section>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden><span id="toast-t"></span><button id="toast-undo" hidden>Undo</button></div>
+    <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-h" hidden>
+      <div class="in">
+        <h2 id="sheet-h">Support, any time</h2>
+        <p class="small">You're in Canada, so these come first. Talking to a person can help right now.</p>
+        <div class="line"><span><b>9-8-8 Suicide Crisis Helpline</b></span><big>988</big><small>Call or text. Free, 24 hours, in English and French.</small></div>
+        <div class="line"><span><b>Emergency</b></span><big>911</big></div>
+        <p class="small">Checked 29 October 2026. In the app this sheet also opens by itself when the safety check sees a crisis.</p>
+        <button class="btn" id="sheet-close">Back to the session</button>
+      </div>
+    </div>
+
+    <nav class="nav" role="tablist" aria-label="Sections">
+      <button role="tab" data-tab="today" aria-selected="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 18.5h17M7 15a5 5 0 0 1 10 0M12 4.5v3M5.4 8l1.9 1.9M18.6 8l-1.9 1.9"/></svg>Today</button>
+      <button role="tab" data-tab="session" aria-selected="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.6" fill="currentColor"/><circle cx="12" cy="12" r="8.6" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".45"/></svg>Session</button>
+      <button role="tab" data-tab="focus" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="13.5" r="7.5"/><path d="M12 13.5V9.5M10 3h4"/></svg>Focus</button>
+      <button role="tab" data-tab="goals" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M2.5 19.5l6.5-10 4 5.5 3-4 5.5 8.5z"/></svg>Goals</button>
+    </nav>
+  </div>
+
+  <aside class="notes" aria-label="Design notes">
+    <p class="eyebrow">Design prototype · 3 November 2026</p>
+    <h1>My Therapist</h1>
+    <p class="lede">A clickable sketch of where the app is heading. The person is Amira, one of the five test people the model is checked against. Nothing here is real data, and no model runs on this page.</p>
+    <div class="seg" role="group" aria-label="Room lighting">
+      <button id="room-light" aria-pressed="true">Morning room</button>
+      <button id="room-dark" aria-pressed="false">Evening room</button>
+    </div>
+    <h2 class="tabname" id="note-h">Today</h2>
+    <ul class="notelist" id="note-list"></ul>
+    <div class="foot">
+      <p><b>Built from your conversations.</b> Plan steps, habits, goals and pictures are added by themselves from what you say in sessions. Each one shows the session and the words it came from, and you can change, update or delete any of them at any time.</p>
+      <p><b>Private by design.</b> Everything stays on the device. Reminders are scheduled on the phone itself, and photos are encrypted with your notes.</p>
+    </div>
+  </aside>
+</div>
+
+<script>
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const phone = $('#phone');
+
+/* ---------- colours from the tokens ---------- */
+const C = {};
+function rgb(v) { v = v.replace('#', ''); if (v.length === 3) v = v.split('').map(c => c + c).join(''); const n = parseInt(v, 16); return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; }
+function readColors() {
+  const cs = getComputedStyle(document.documentElement);
+  for (const k of ['lamp', 'lamp-core', 'line', 'sage']) C[k] = rgb(cs.getPropertyValue('--' + k).trim());
+  C.surface = cs.getPropertyValue('--surface').trim();
+}
+const rgba = (c, a) => `rgba(${c[0]},${c[1]},${c[2]},${a})`;
+const ease = p => .5 - .5 * Math.cos(Math.PI * p);
+
+/* ---------- the light ---------- */
+class Orb {
+  constructor(canvas, scale) { this.c = canvas; this.x = canvas.getContext('2d'); this.scale = scale; this.state = 'idle'; this.env = 0; this.tg = 0; this.last = 0; this.breathStart = 0; }
+  draw(now) {
+    if (!this.c.offsetParent) return;
+    const d = Math.min(devicePixelRatio || 1, 2), w = this.c.clientWidth, h = this.c.clientHeight;
+    if (!w || !h) return;
+    if (this.c.width !== Math.round(w * d) || this.c.height !== Math.round(h * d)) { this.c.width = Math.round(w * d); this.c.height = Math.round(h * d); }
+    const x = this.x; x.setTransform(d, 0, 0, d, 0, 0); x.clearRect(0, 0, w, h);
+    const t = reduce ? 0 : now / 1000, cx = w / 2, cy = h / 2, st = this.state;
+    let R = Math.min(w, h) * this.scale, amp = .035, sp = .45, glow = .32;
+    if (st === 'listening') { amp = .05; sp = .8; glow = .38; }
+    else if (st === 'thinking') { amp = .022; sp = 1.8; glow = .24; }
+    if (st === 'speaking' && !reduce) { if (now - this.last > 120) { this.tg = .25 + Math.random() * .75; this.last = now; } this.env += (this.tg - this.env) * .22; }
+    else this.env *= .9;
+    R *= 1 + this.env * .06; amp += this.env * .03; glow += this.env * .18;
+    if (st === 'breathing') { const p = ((now - this.breathStart) / 1000) % 10, k = reduce ? .5 : (p < 5 ? ease(p / 5) : 1 - ease((p - 5) / 5)); R *= .8 + .4 * k; glow = .26 + .3 * k; }
+    let g = x.createRadialGradient(cx, cy, R * .3, cx, cy, Math.min(R * 2.7, Math.min(w, h) / 2));
+    g.addColorStop(0, rgba(C.lamp, glow)); g.addColorStop(1, rgba(C.lamp, 0));
+    x.fillStyle = g; x.fillRect(0, 0, w, h);
+    if (st === 'listening' && !reduce) for (let k = 0; k < 3; k++) {
+      const ph = (t * .7 + k / 3) % 1; x.beginPath(); x.arc(cx, cy, R * (1.08 + ph * .95), 0, Math.PI * 2);
+      x.strokeStyle = rgba(C.lamp, (1 - ph) * .45); x.lineWidth = 1.5; x.stroke();
+    }
+    x.beginPath();
+    for (let i = 0, N = 72; i <= N; i++) {
+      const a = i / N * Math.PI * 2;
+      const r = R * (1 + amp * (Math.sin(3 * a + t * sp * 1.3) + .6 * Math.sin(5 * a - t * sp * 1.7) + .4 * Math.sin(2 * a + t * sp * .9)));
+      const px = cx + r * Math.cos(a), py = cy + r * Math.sin(a); i ? x.lineTo(px, py) : x.moveTo(px, py);
+    }
+    x.closePath();
+    g = x.createRadialGradient(cx - R * .32, cy - R * .38, R * .05, cx, cy, R * 1.15);
+    g.addColorStop(0, rgba(C['lamp-core'], 1)); g.addColorStop(.55, rgba(C.lamp, .95)); g.addColorStop(1, rgba(C.lamp, .78));
+    x.fillStyle = g; x.fill();
+  }
+}
+const orb = new Orb($('#orb'), .2);
+const mini = new Orb($('#orb-mini'), .3);
+
+/* ---------- toast and menus ---------- */
+let toastTimer = 0, undoFn = null;
+function toast(text, undo) {
+  $('#toast-t').textContent = text; undoFn = undo || null; $('#toast-undo').hidden = !undo; $('#toast').hidden = false;
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => { $('#toast').hidden = true; }, undo ? 5000 : 3200);
+}
+$('#toast-undo').onclick = () => { if (undoFn) undoFn(); $('#toast').hidden = true; };
+
+let pop = null;
+function closePop() { if (pop) { pop.remove(); pop = null; } }
+function openMenu(btn, onEdit, onDelete) {
+  closePop();
+  pop = document.createElement('div'); pop.className = 'pop';
+  pop.innerHTML = '<button data-a="e">Edit</button><button data-a="d" class="del">Delete</button>';
+  const pr = phone.getBoundingClientRect(), br = btn.getBoundingClientRect();
+  pop.style.top = (br.bottom - pr.top + 4) + 'px'; pop.style.right = (pr.right - br.right) + 'px';
+  phone.appendChild(pop);
+  pop.onclick = e => { const a = e.target.dataset.a; closePop(); if (a === 'e') onEdit(); if (a === 'd') onDelete(); };
+  pop.querySelector('button').focus();
+}
+document.addEventListener('click', e => { if (pop && !pop.contains(e.target) && !e.target.closest('.more')) closePop(); });
+function editInPlace(el, save) {
+  el.contentEditable = 'true'; el.focus();
+  const range = document.createRange(); range.selectNodeContents(el); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(range);
+  const done = () => { el.contentEditable = 'false'; el.removeEventListener('blur', done); save(el.textContent.trim()); toast('Saved on this phone.'); };
+  el.addEventListener('blur', done);
+  el.onkeydown = e => { if (e.key === 'Enter') { e.preventDefault(); el.blur(); } };
+}
+
+/* ---------- today ---------- */
+const PLAN = [
+  {id:'p1', time:'08:30', t:'25-minute start: Lavoie north elevation', m:'Before email', chips:[['Habit','']]},
+  {id:'p2', time:'10:00', t:'Ask Daniel for ten minutes', m:'To agree what "done" means for Lavoie', chips:[["From Monday's session",'']]},
+  {id:'p3', time:'12:30', t:'Walk along the canal, 20 minutes', m:'A midday reset before the detail work', chips:[['Planned break','']]},
+  {id:'p4', time:'14:00', t:'Lavoie details, until 15:30', m:'Stop at 15:30 even if it is not perfect', chips:[['Goal: drawings on time','']]},
+  {id:'p5', time:'18:30', t:'Leave the office', m:'Being enough, day 6', chips:[['Programme','']]},
+  {id:'p6', time:'21:00', t:'Sketch for fun, 10 minutes', m:'Tiny version: one doodle counts', chips:[['New habit','lamp']]},
+  {id:'p7', time:'22:45', t:'Phone on the kitchen shelf', m:'After brushing your teeth', chips:[['Habit','']]},
+];
+function renderPlan() {
+  const ol = $('#timeline'); ol.innerHTML = '';
+  let nowDone = false;
+  for (const p of PLAN) {
+    if (p.gone) continue;
+    if (!nowDone && p.time > '08:12') {
+      nowDone = true;
+      const li = document.createElement('li'); li.className = 'now';
+      li.innerHTML = '<span>08:12</span><div>Now · 18 minutes until your 25-minute start</div>'; ol.appendChild(li);
+    }
+    const li = document.createElement('li'); li.className = 'step';
+    li.innerHTML = `<time>${p.time}</time><i class="dot"></i><div><div class="t" data-title>${esc(p.t)}</div><div class="m">${esc(p.m)}</div>${p.ifthen ? `<div class="ifthen">${esc(p.ifthen)}</div>` : ''}<div class="chips">${p.chips.map(([c, k]) => `<span class="chip ${k}">${esc(c)}</span>`).join('')}</div></div><button class="more" aria-label="Change this step">⋯</button>`;
+    li.querySelector('.more').onclick = e => openMenu(e.currentTarget,
+      () => editInPlace(li.querySelector('[data-title]'), v => { if (v) p.t = v; renderPlan(); }),
+      () => { p.gone = true; renderPlan(); toast('Removed from today.', () => { p.gone = false; renderPlan(); }); });
+    ol.appendChild(li);
+  }
+}
+const HABITS = [
+  {t:'25-minute start before email', cue:'After coffee at my desk', days:['done','done','off','off','done','gap','today'], m:'Feels automatic: 4.5 of 7 · day 23'},
+  {t:'Sketch for fun, 10 minutes', cue:'After the dinner dishes', days:['off','off','off','off','done','done','today'], m:'New. From the 9 November session: "I haven\'t sketched for fun in months."'},
+  {t:'Phone on the kitchen shelf', cue:'After brushing my teeth', days:['done','done','done','done','done','gap','today'], m:'Feels automatic: 3 of 7 · day 16'},
+];
+function renderHabits() {
+  const L = ['T','F','S','S','M','T','W'];
+  $('#habits').innerHTML = HABITS.map(h => `<div class="habit"><div><div class="t">${esc(h.t)}</div><div class="small">${esc(h.cue)}</div></div><div class="days" aria-label="Last seven days">${h.days.map((d, i) => `<span class="day"><i class="${d}"></i>${L[i]}</span>`).join('')}</div><div class="m">${esc(h.m)}</div></div>`).join('');
+}
+$('#accept-plan').onclick = e => { e.currentTarget.disabled = true; e.currentTarget.textContent = 'Accepted'; $('#plan-state').textContent = 'Accepted 08:12'; toast("Today's plan is set. First nudge at 08:25."); };
+$('#rescue').onclick = e => {
+  const a = e.target.dataset.act; if (!a) return;
+  const card = $('#rescue');
+  if (a === 'tiny') { PLAN[6].m = "Tonight's tiny version: phone face down across the room"; renderPlan(); card.innerHTML = '<div class="who"><i></i>Never miss twice</div><p>Done. Tonight the tiny version counts in full. Tomorrow we go back to the shelf.</p>'; }
+  else card.innerHTML = '<div class="who"><i></i>Never miss twice</div><p>The full one it is. I\'ll nudge you at 22:40.</p>';
+};
+$('#pattern').onclick = e => {
+  const a = e.target.dataset.act; if (!a) return;
+  $('#pattern').innerHTML = a === 'move'
+    ? '<div class="who"><i></i>Pattern spotted</div><p>Moved. Tuesday\'s start is now at 13:30. I\'ll ask how it went next Wednesday.</p>'
+    : '<div class="who"><i></i>Pattern spotted</div><p>Morning it stays. Next Tuesday I\'ll offer a 10-minute version before you leave.</p>';
+};
+$('#not-now').onclick = () => toast("I'll ask again at 09:30.");
+$('#go-rehearse').onclick = () => { showTab('session'); goTo(0); };
+
+/* ---------- session ---------- */
+const BEATS = ['Arrive','Since last time','How you are','The work','Practise','Next step'];
+const LINE = "Could we take ten minutes today to agree what done means for Lavoie?";
+const S = [
+  {b:0, th:"Let's start with one slow breath together. In through the nose, and slowly out.", breath:1},
+  {b:1, card:'memory', th:"Good morning, Amira. On Monday you planned to ask Daniel for ten minutes today, to agree what done means for Lavoie. How are you feeling about it this morning?"},
+  {b:1, you:"Honestly, a bit sick. I keep thinking he'll hear it as me not knowing how to do my job."},
+  {b:2, card:'belief', th:"That sounds like the old thought: if it isn't perfect, people will see I'm a fraud. How strongly do you believe he'll think that, from 0 to 100?"},
+  {b:2, you:"About 80.", set:{belief:80}},
+  {b:3, card:'evidence', th:"Let's check it the way we did on the 4th. What's the evidence that he thinks you can't do your job?"},
+  {b:3, you:"His emails are really short.", add:{for:'His emails are short.'}},
+  {b:3, th:"And the evidence against it?"},
+  {b:3, you:"He asked my opinion on the facade last week. And he signed off the Rousseau drawings.", add:{against:['He asked my opinion on the facade.','He signed off the Rousseau drawings.']}},
+  {b:3, th:"Putting both sides together, what's a fairer way to say it?"},
+  {b:3, you:"Asking what done means is what a careful architect does.", add:{fair:"Asking what \"done\" means is what a careful architect does."}},
+  {b:3, th:"And how strong is the worry now?"},
+  {b:3, you:"Maybe 45.", set:{rerate:45}},
+  {b:4, card:'none', th:"From 80 to 45. Let's rehearse it once. Say your first line as if I'm Daniel."},
+  {b:4, you:"Daniel. " + LINE},
+  {b:4, th:"Clear and friendly. Before you walk over, slow breathing helps. Three breaths now, at six a minute.", breath:3},
+  {b:5, card:'plan', plan:true, th:"I've put it in your plan at 10:00, after your coffee, with the line you just said. I'll nudge you at 09:55."},
+  {b:5, you:"Okay. I can do that."},
+  {b:5, card:'summary', th:"Tonight, tell me how it went, even if you didn't ask. That counts too.", end:true},
+];
+const SS = {};
+function resetSession() {
+  Object.assign(SS, {lines:[], card:null, belief:null, rerate:null, ev:{for:[], against:[], fair:''}, planAdded:false, removed:{}, breath:null, beat:-1, secs:0});
+  S.forEach(s => { delete s._L; delete s._applied; });
+  si = -1;
+}
+let si = -1, playing = false, tok = {dead:false};
+const CANCEL = {};
+async function sleep(ms, k) {
+  const end = performance.now() + ms;
+  while (performance.now() < end) { if (k.dead) throw CANCEL; await new Promise(r => setTimeout(r, Math.min(50, end - performance.now()))); }
+  if (k.dead) throw CANCEL;
+}
+function renderArc() {
+  $('#arc').innerHTML = BEATS.map((b, i) => `<button data-b="${i}" class="${i < SS.beat ? 'done' : i === SS.beat ? 'cur' : ''}" aria-label="${i + 1} of 6: ${b}"><i></i></button>`).join('');
+  $('#beat-n').textContent = SS.beat < 0 ? 'Daily check-in' : `${SS.beat + 1} of 6`;
+  $('#beat-l').textContent = SS.beat < 0 ? 'about 5 minutes' : BEATS[SS.beat];
+}
+$('#arc').onclick = e => { const b = e.target.closest('button'); if (b) goTo(+b.dataset.b); };
+function setBeat(b) { if (SS.beat !== b) { SS.beat = b; renderArc(); } }
+function renderLines() {
+  const shown = SS.lines.slice(-3);
+  if (!shown.length) { $('#captions').innerHTML = `<p class="l-th">Whenever you're ready. This morning's check-in takes about five minutes.</p>`; return; }
+  $('#captions').innerHTML = shown.map((l, i) => `<p class="${l.who === 'th' ? 'l-th' : 'l-you'}${i < shown.length - 1 ? ' old' : ''}">${esc(l.text)}</p>`).join('');
+}
+function mood(v) { return v == null ? '<i class="none"></i>' : `<i style="height:${v * 2.6}px"></i>`; }
+function renderCard(animate) {
+  const slot = $('#cardslot'), k = SS.card;
+  $('#room').classList.toggle('withcard', !!k);
+  if (!k) { slot.innerHTML = ''; return; }
+  let h = '';
+  if (k === 'memory') h = `<h3>From Monday 9 November</h3><dl class="kv"><dt>Homework</dt><dd>Ask Daniel for ten minutes on Wednesday to agree what "done" means for Lavoie</dd><dt>Mood</dt><dd><div class="spark" aria-label="Mood over the last seven days">${[4,5,null,5,6,null,5].map(mood).join('')}</div></dd><dt>Programme</dt><dd>Being enough, day 6</dd></dl>`;
+  if (k === 'belief') h = `<h3>How strongly do you believe it?</h3><p class="thought">"Daniel will think I can't do my job."</p><div class="row" style="justify-content:space-between"><span class="big" id="bel-n">${SS.belief ?? '--'}</span><span class="small">out of 100</span></div><input type="range" id="bel" min="0" max="100" step="5" value="${SS.belief ?? 50}" aria-label="Belief from 0 to 100"><div class="scale"><span>0 not at all</span><span>100 completely</span></div>`;
+  if (k === 'evidence') h = `<h3>Checking the evidence</h3><p class="thought">"Daniel will think I can't do my job."</p><p class="small" style="margin:-4px 0 8px">Believed: ${SS.belief ?? 80} out of 100</p><div class="ev"><div><b>For</b><ul>${SS.ev.for.map(x => `<li>${esc(x)}</li>`).join('') || '<li class="small">...</li>'}</ul></div><div><b>Against</b><ul>${SS.ev.against.map(x => `<li>${esc(x)}</li>`).join('') || '<li class="small">...</li>'}</ul></div></div>${SS.ev.fair ? `<p class="fair"><b>Fairer:</b> ${esc(SS.ev.fair)}</p>` : ''}${SS.rerate != null ? `<p class="fair"><b>Now:</b> ${SS.rerate} out of 100, down from ${SS.belief}</p>` : ''}`;
+  if (k === 'plan') h = `<h3>Added to today at 10:00</h3><p class="thought" style="margin-bottom:4px">When I've got my coffee, I walk to Daniel's desk and say: "${LINE}"</p><div class="row" style="justify-content:space-between"><span class="small">Nudge at 09:55 · from this check-in</span><span><button class="btn quiet" id="plan-edit">Edit</button><button class="btn quiet" id="plan-undo">Remove</button></span></div>`;
+  if (k === 'summary') {
+    const items = [
+      ['plan', 'Today 10:00: ask Daniel, with your first line', 'Plan step'],
+      ['help', 'Saying the first line out loud first', 'Added to "What helps"'],
+      ['goal', 'Rehearse the opening line: done', 'Goal step · Ask Daniel for clearer feedback'],
+    ].filter(([id]) => !SS.removed[id] && (id !== 'plan' || SS.planAdded));
+    h = `<h3>Saved on this phone · mood 5 to 6</h3><ul class="added">${items.map(([id, t, s]) => `<li><span>${esc(t)}<small>${esc(s)}</small></span><button class="btn quiet" data-rm="${id}">Remove</button></li>`).join('') || '<li class="small">Nothing added this time.</li>'}</ul>`;
+  }
+  slot.innerHTML = `<div class="card"${animate ? '' : ' style="animation:none"'}>${h}</div>`;
+  const bel = $('#bel'); if (bel) bel.oninput = () => { SS.belief = +bel.value; $('#bel-n').textContent = bel.value; };
+  const pu = $('#plan-undo'); if (pu) pu.onclick = () => { removePlan(); toast('Removed from today.', () => { addPlan(true); renderCard(); }); renderCard(); };
+  const pe = $('#plan-edit'); if (pe) pe.onclick = () => { showTab('today'); toast('Tap ⋯ beside 10:00 to change the step.'); };
+  $$('[data-rm]', slot).forEach(b => b.onclick = () => {
+    const id = b.dataset.rm; SS.removed[id] = true; if (id === 'plan') removePlan();
+    renderCard(); toast('Removed.', () => { delete SS.removed[id]; if (id === 'plan') addPlan(true); renderCard(); });
+  });
+  if (k === 'plan' && !SS.planAdded) slot.querySelector('h3').textContent = 'Removed from today';
+}
+function addPlan(quiet) {
+  const p = PLAN[1]; SS.planAdded = true; p.gone = false;
+  p.ifthen = `When I've got my coffee, I walk to his desk and say: "${LINE}"`;
+  if (!p.chips.some(c => c[0] === 'Rehearsed 08:16')) p.chips.push(['Rehearsed 08:16', 'lamp']);
+  renderPlan(); if (!quiet) toast('Added to today at 10:00.');
+}
+function removePlan() { const p = PLAN[1]; SS.planAdded = false; delete p.ifthen; p.chips = p.chips.filter(c => c[0] !== 'Rehearsed 08:16'); renderPlan(); }
+function apply(st) {
+  if (st._applied) return; st._applied = true;
+  if (st.set) Object.assign(SS, st.set);
+  if (st.add) { if (st.add.for) SS.ev.for.push(st.add.for); if (st.add.against) SS.ev.against.push(...st.add.against); if (st.add.fair) SS.ev.fair = st.add.fair; }
+  if (st.plan) addPlan();
+}
+function showCardFor(st, animate) { if (st.card) { SS.card = st.card === 'none' ? null : st.card; renderCard(animate); } }
+function micLabel(t) { $('#miclabel').textContent = t; }
+async function breathe(n, k) {
+  orb.state = 'breathing'; orb.breathStart = performance.now(); micLabel('Breathing');
+  const bt = $('#breathtext'); bt.hidden = false;
+  try {
+    for (let i = 0; i < n; i++) for (const ph of ['in', 'out']) {
+      tone(ph); if (navigator.vibrate && ph === 'in') try { navigator.vibrate(18); } catch (e) {}
+      for (let s = 5; s > 0; s--) { bt.innerHTML = `${ph === 'in' ? 'Breathe in' : 'And out'} · ${s}<small>Breath ${i + 1} of ${n} · six a minute</small>`; await sleep(1000, k); }
+    }
+  } finally { bt.hidden = true; if (k === tok) orb.state = 'idle'; }
+}
+async function doStep(st, k) {
+  setBeat(st.b); showCardFor(st, true);
+  const text = st.th || st.you;
+  if (st.th) {
+    orb.state = 'thinking'; micLabel('Thinking'); await sleep(600, k);
+    const L = {who:'th', text:''}; SS.lines.push(L); st._L = L; orb.state = 'speaking'; micLabel('Speaking');
+    const w = text.split(' ');
+    for (let i = 0; i < w.length; i++) { L.text = w.slice(0, i + 1).join(' '); renderLines(); await sleep(reduce ? 0 : 70, k); }
+    apply(st); await sleep(800 + w.length * 105, k); orb.state = 'idle';
+  } else if (st.you) {
+    orb.state = 'listening'; micLabel('Listening'); await sleep(1300, k);
+    const L = {who:'you', text:''}; SS.lines.push(L); st._L = L;
+    const w = text.split(' ');
+    for (let i = 0; i < w.length; i++) { L.text = w.slice(0, i + 1).join(' '); renderLines(); await sleep(reduce ? 0 : 55, k); }
+    apply(st); if (SS.card) renderCard(false); await sleep(900, k); orb.state = 'idle';
+  }
+  if (st.breath) await breathe(st.breath, k);
+}
+function finish(st) {
+  setBeat(st.b); if (st.card) SS.card = st.card === 'none' ? null : st.card;
+  const text = st.th || st.you;
+  if (text) { if (st._L) st._L.text = text; else { st._L = {who: st.th ? 'th' : 'you', text}; SS.lines.push(st._L); } }
+  apply(st); renderLines(); renderCard(false);
+}
+let clockTimer = 0;
+function setPlaying(v) {
+  playing = v;
+  $('#mic').setAttribute('aria-label', v ? 'Pause the demo' : (si >= S.length - 1 ? 'Start again' : 'Continue the check-in'));
+  clearInterval(clockTimer);
+  if (v) clockTimer = setInterval(() => { SS.secs++; $('#clock').textContent = String(Math.floor(SS.secs / 60)).padStart(2, '0') + ':' + String(SS.secs % 60).padStart(2, '0'); }, 1000);
+}
+async function play() {
+  if (playing) return;
+  ac(); if (si < 0) chime();
+  tok = {dead:false}; const k = tok; setPlaying(true);
+  try {
+    while (si < S.length - 1) { si++; await doStep(S[si], k); }
+    setPlaying(false); micLabel('Finished · tap to start again'); orb.state = 'idle'; chime();
+  } catch (e) { if (e !== CANCEL) throw e; }
+}
+function pause(label) { tok.dead = true; setPlaying(false); orb.state = 'idle'; micLabel(label || 'Paused · tap to continue'); }
+function skip() {
+  const was = playing; pause();
+  if (si >= 0 && si < S.length) finish(S[si]);
+  if (was) play(); else if (si < S.length - 1) { si++; finish(S[si]); }
+}
+function goTo(b) {
+  pause(); if (SS.planAdded) removePlan(); resetSession();
+  const first = S.findIndex(s => s.b === b);
+  for (let i = 0; i < first; i++) finish(S[i]);
+  si = first - 1; setBeat(b); renderLines(); renderCard(false); $('#clock').textContent = '00:00';
+  play();
+}
+$('#mic').onclick = () => {
+  if (playing) return pause();
+  if (si >= S.length - 1) { goTo(0); return; }
+  play();
+};
+$('#skip').onclick = skip;
+$('#kbd').onclick = () => toast('In the app you can type at any point.');
+$('#support').onclick = () => { if (playing) pause(); $('#sheet').hidden = false; $('#sheet-close').focus(); };
+$('#sheet-close').onclick = () => { $('#sheet').hidden = true; };
+
+/* ---------- sound ---------- */
+let AC = null, soundOn = true;
+function ac() { if (!AC) { try { AC = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { AC = null; } } if (AC && AC.state === 'suspended') AC.resume(); return AC; }
+function chime() {
+  const a = ac(); if (!a || !soundOn) return; const t = a.currentTime;
+  [[523.25, 0], [783.99, .14], [1046.5, .28]].forEach(([f, d]) => {
+    const o = a.createOscillator(), g = a.createGain(); o.type = 'sine'; o.frequency.value = f;
+    g.gain.setValueAtTime(0, t + d); g.gain.linearRampToValueAtTime(.05, t + d + .02); g.gain.exponentialRampToValueAtTime(.0001, t + d + 2.4);
+    o.connect(g).connect(a.destination); o.start(t + d); o.stop(t + d + 2.5);
+  });
+}
+function tone(ph) {
+  const a = ac(); if (!a || !soundOn) return; const t = a.currentTime, o = a.createOscillator(), g = a.createGain();
+  o.type = 'sine'; o.frequency.setValueAtTime(ph === 'in' ? 196 : 262, t); o.frequency.linearRampToValueAtTime(ph === 'in' ? 262 : 196, t + 5);
+  g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(.03, t + .6); g.gain.linearRampToValueAtTime(.025, t + 4.2); g.gain.linearRampToValueAtTime(0, t + 5);
+  o.connect(g).connect(a.destination); o.start(t); o.stop(t + 5.05);
+}
+$('#sound').onclick = e => { soundOn = !soundOn; const b = e.currentTarget; b.setAttribute('aria-pressed', soundOn); b.setAttribute('aria-label', soundOn ? 'Sound on' : 'Sound off'); $('#snd-w').style.opacity = soundOn ? 1 : .15; };
+
+/* ---------- focus ---------- */
+const F = {total:1500, left:1500, running:false, last:0, half:false, steps:[false, false, false, false], parked:['Reply to Sophie about the weekend']};
+const STEPS = ['Open the Lavoie north file and add a layer called sketch-1', 'Trace the window grid on the north face', 'Mark three places where the facade feels heavy', 'Stop and write one question for Daniel'];
+const MINS = [2, 8, 10, 5];
+function fmt(s) { s = Math.max(0, Math.ceil(s)); return String(Math.floor(s / 60)).padStart(2, '0') + ':' + String(s % 60).padStart(2, '0'); }
+function renderSteps() {
+  const firstOpen = F.steps.indexOf(false);
+  $('#steps').innerHTML = STEPS.map((s, i) => `<li><label class="${i === firstOpen ? 'first' : ''}"><input type="checkbox" data-i="${i}" ${F.steps[i] ? 'checked' : ''}><span class="${F.steps[i] ? 'ticked' : ''}">${esc(s)}<em>${i === firstOpen ? 'Just this one for now · about ' + MINS[i] + ' minutes' : 'About ' + MINS[i] + ' minutes'}</em></span></label></li>`).join('');
+}
+$('#steps').onchange = e => { const i = +e.target.dataset.i; F.steps[i] = e.target.checked; renderSteps(); if (e.target.checked) toast(i < 3 ? 'Ticked. The next step is lit up.' : 'All four done. That was the whole task.'); };
+function renderParked() { $('#parked').innerHTML = F.parked.map(p => `<li><span>${esc(p)}</span><small>back at 08:55</small></li>`).join(''); }
+$('#park').onsubmit = e => { e.preventDefault(); const v = $('#park-in').value.trim(); if (!v) return; F.parked.push(v); $('#park-in').value = ''; renderParked(); toast("Parked. It'll be waiting at your break."); };
+function say(t) { $('#f-say').textContent = t; }
+function setTimer(total, title, sub) { F.total = F.left = total; F.half = false; $('#f-title').textContent = title; $('#f-sub').textContent = sub; $('#f-of').textContent = 'of ' + Math.round(total / 60) + ' minutes'; $('#f-left').textContent = fmt(total); }
+function startTimer() {
+  F.running = true; F.last = performance.now(); $('#f-start').textContent = 'Pause';
+  if ($('#f-sit').checked) say("I'm here. I'll check in halfway. If something pulls at you, park it below.");
+}
+$('#f-start').onclick = () => { if (F.running) { F.running = false; $('#f-start').textContent = 'Resume'; } else { if (F.left <= 0) { F.left = F.total; F.half = false; } startTimer(); } };
+$('#f-ff').onclick = () => { F.left = Math.max(0, F.left - 300); tickFocus(performance.now(), true); };
+$('#start-1').onclick = () => { setTimer(120, 'Step 1 of 4', 'Lavoie details · split from your plan'); $('#avoid').innerHTML = '<div class="who"><i></i>Noticed</div><p>Started. Two minutes is all this step asks.</p>'; startTimer(); };
+function tickFocus(now, force) {
+  if (F.running) { F.left -= (now - F.last) / 1000; F.last = now; }
+  if (F.running || force) {
+    $('#f-left').textContent = fmt(F.left);
+    if (!F.half && F.left <= F.total / 2 && $('#f-sit').checked) { F.half = true; say('Halfway. Still with it? A glance at the steps below can help you pick it back up.'); }
+    if (F.left <= 0) { F.left = 0; F.running = false; $('#f-start').textContent = 'Again'; say(`Time. Take a five-minute break. You parked ${F.parked.length} thought${F.parked.length === 1 ? '' : 's'}: deal with one now, or I'll put them in tomorrow's plan.`); }
+  }
+  const c = $('#ftimer'); if (!c.offsetParent) return;
+  const d = Math.min(devicePixelRatio || 1, 2), w = c.clientWidth, h = c.clientHeight;
+  if (c.width !== Math.round(w * d)) { c.width = Math.round(w * d); c.height = Math.round(h * d); }
+  const x = c.getContext('2d'); x.setTransform(d, 0, 0, d, 0, 0); x.clearRect(0, 0, w, h);
+  const cx = w / 2, cy = h / 2, R = Math.min(w, h) / 2 - 6, frac = Math.max(0, F.left / F.total);
+  x.beginPath(); x.arc(cx, cy, R, 0, Math.PI * 2); x.fillStyle = rgba(C.line, .55); x.fill();
+  if (frac > 0) { x.beginPath(); x.moveTo(cx, cy); x.arc(cx, cy, R, -Math.PI / 2, -Math.PI / 2 + frac * Math.PI * 2); x.closePath(); const g = x.createRadialGradient(cx, cy, R * .2, cx, cy, R); g.addColorStop(0, rgba(C['lamp-core'], 1)); g.addColorStop(1, rgba(C.lamp, .9)); x.fillStyle = g; x.fill(); }
+  x.beginPath(); x.arc(cx, cy, R * .62, 0, Math.PI * 2); x.fillStyle = C.surface; x.fill();
+}
+
+/* ---------- goals ---------- */
+const TILES = [
+  {art:'art1', tall:true, t:'Sketching on Sunday mornings', s:'Value: creativity · this week Sunday 10:00, 20 minutes', w:'Sketch for fun again, every Sunday morning.', o:'Feeling like an architect who loves buildings, not one who fears reviews.', ob:'I open the laptop "just to check" the Lavoie files.', p:'If I reach for the laptop on Sunday, then I take the sketchbook to Café Olimpico instead.', from:'From the 9 November session'},
+  {art:'art2', t:'Home by 18:30', s:'This week: 2 of 4 evenings so far', w:'Leave by 18:30 four days a week.', o:'Evenings with Pistache, and time to call Leila.', ob:'Redoing details that are already good enough.', p:'If I start redoing a finished detail after 17:30, then I put it on tomorrow\'s list and close the file.', from:'Goal: drawings on time'},
+  {art:'art3', t:'Ideas that count', s:"This week: Thursday's design review", w:'Say one idea out loud in every design review.', o:'Daniel knows what I think, and so do I.', ob:'The thought "they\'ll see I\'m a fraud" just before I speak.', p:'If I notice that thought, then I say my idea within a minute, before I can edit it.', from:'Goal: clearer feedback from Daniel'},
+  {art:'art4', t:"Sophie's visit in spring", s:'No step yet', flag:'Nothing done for five weeks. Is this still yours?', w:'Have Sophie stay for a weekend in April.', o:'Feeling less alone in the city.', ob:'Not set yet.', p:'Not set yet.', from:'From the 26 October session', ask:true},
+];
+function renderBoard() {
+  $('#board').innerHTML = TILES.map((t, i) => `<button class="tile${t.tall ? ' tall' : ''}" aria-pressed="false" data-i="${i}" aria-label="${esc(t.t)}. Turn over for the plan."><span class="in"><span class="face ${t.art}">${t.flag ? `<span class="flag">${esc(t.flag)}</span>` : ''}<span class="cap">${esc(t.t)}<small>${esc(t.s)}</small></span></span><span class="face back"><b>Wish</b><p>${esc(t.w)}</p><b>Outcome</b><p>${esc(t.o)}</p><b>Obstacle</b><p>${esc(t.ob)}</p><b>Plan</b><p>${esc(t.p)}</p><b>From</b><p>${esc(t.from)}</p>${t.ask ? '<span class="act"><span data-k="keep">Keep it</span><span data-k="plan">Plan a step</span><span data-k="go">Let it go</span></span>' : ''}</span></span></button>`).join('');
+}
+$('#board').onclick = e => {
+  const k = e.target.dataset.k;
+  if (k) { e.stopPropagation(); toast(k === 'keep' ? 'Kept. I\'ll bring it up on Monday.' : k === 'plan' ? 'On Monday we\'ll pick a first step together.' : 'Let go. It\'s in your archive if you want it back.'); return; }
+  const b = e.target.closest('.tile'); if (b) b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') !== 'true');
+};
+const GOALS = [
+  {t:'Hand in drawings on time without an all-nighter', from:'From the 9 November session: "I want to stop living at the office."', ms:[['done','Rousseau, handed in 7 November'],['cur','Lavoie, due Friday 27 November'],['','A third hand-in, home by 19:00']], next:'This week: 25-minute start on 3 of 4 mornings so far.', push:'Lavoie is due in nine days and three work blocks are planned. I would add one on Monday morning.', btn:'Add Monday 09:00'},
+  {t:'Ask Daniel for clearer feedback', from:'From the 2 November session: "I never know what he actually wants."', ms:[['done','Plan what to say, 9 November'],['cur','Ask for ten minutes, today 10:00'],['','Agree a "done" checklist for Lavoie']], next:'Next step: today at 10:00, rehearsed this morning.'},
+];
+function renderGoals() {
+  $('#goals').innerHTML = GOALS.map((g, i) => g.gone ? '' : `<div class="goal"><div class="t" data-title>${esc(g.t)}</div><div class="from">${esc(g.from)}</div><div class="ms">${g.ms.map(m => `<i class="${m[0]}"></i>`).join('')}</div><div class="msl">${g.ms.map(m => `<span>${esc(m[1])}</span>`).join('')}</div><p class="small" style="margin-top:8px">${esc(g.next)}</p>${g.push ? `<div class="nudge"><div class="who"><i></i>Keeping it moving</div><p>${esc(g.push)}</p>${g.btn ? `<div class="row"><button class="btn" data-add="${i}">${esc(g.btn)}</button></div>` : ''}</div>` : ''}<button class="more" data-g="${i}" aria-label="Change this goal">⋯</button></div>`).join('');
+}
+$('#goals').onclick = e => {
+  const a = e.target.closest('[data-add]');
+  if (a) { const g = GOALS[+a.dataset.add]; g.push = 'Added: Monday 09:00, Lavoie details. Four blocks before the hand-in.'; g.btn = ''; renderGoals(); toast('Added to Monday at 09:00.'); return; }
+  const m = e.target.closest('[data-g]');
+  if (m) { const i = +m.dataset.g, el = m.parentElement.querySelector('[data-title]');
+    openMenu(m, () => editInPlace(el, v => { if (v) GOALS[i].t = v; renderGoals(); }),
+      () => { GOALS[i].gone = true; renderGoals(); toast('Goal deleted.', () => { GOALS[i].gone = false; renderGoals(); }); }); }
+};
+
+/* ---------- notes beside the phone ---------- */
+const NOTES = {
+  today: ['Today', [
+    ['It plans with you.', "At 07:30 the app drafts the day from Monday's homework, your habits and your goals. One tap accepts it, and any step can be changed or removed with the ⋯ button."],
+    ['Homework becomes a time.', 'The 10:00 step came out of the last session. After the rehearsal it also carries the exact line you practised.'],
+    ['You can see the gap.', 'The now line shows how long until the next step, which helps with time blindness.'],
+    ['A miss is a gap, not a broken streak.', 'In the best-known study of habit forming (Lally and colleagues, 2010), one missed day did not undo progress, and habits took 18 to 254 days to feel automatic, 66 on average. Every two weeks the app asks four short questions to measure how automatic each habit feels.'],
+    ['It acts on patterns.', 'When the same day keeps slipping, it proposes a change instead of just recording the miss.'],
+    ['Private on the lock screen.', 'Nudges only say "A step is coming up" until you unlock. Each has one-tap answers, including Help me start.'],
+  ]],
+  session: ['Session', [
+    ['One room.', 'Nothing jumps to another page. Tools slide in when the therapist uses them, the way a therapist reaches for a worksheet, and the light moves up to make room.'],
+    ['The light is the therapist.', 'It breathes, listens, thinks and speaks. There is no face, so nothing looks almost human and slightly wrong.'],
+    ['Two voices in the type.', 'The therapist speaks in a book face, you in a plain one, so a glance tells you who said what.'],
+    ['It opens with memory.', 'The first thing it says comes from your last session, with the homework, your mood and your programme day on the card.'],
+    ['You always know where you are.', 'The six steps of the check-in run along the top. Tap any of them to jump there in this demo.'],
+    ['It writes as it goes.', 'The plan step lands in Today by itself. The summary lists everything added, each with Remove.'],
+    ['Speed decides the motion.', 'On your iPhone 16 Pro Max the model wrote 20.5 tokens a second in a short test and 12.6 in a long one. The heavier movement of the light pauses while the model writes, so they do not compete for the chip.'],
+  ]],
+  focus: ['Focus', [
+    ['Time you can see.', 'The coloured disc shrinks as time passes. Seeing time is easier than reading numbers, especially with ADHD.'],
+    ['Help me start.', 'The therapist splits a task until the first step takes about two minutes. Only that step is lit up.'],
+    ['Park a thought.', 'Write the distraction down and get it back at the break. This is the "distractibility delay" from CBT for adult ADHD (Safren and colleagues).'],
+    ['It notices avoidance.', 'A step moved three times gets an offer to split it and start together, right now.'],
+    ['Sit with me.', 'The light stays while you work and checks in halfway. Many people with ADHD say this helps, but there is little formal research yet, so it is a switch.'],
+  ]],
+  goals: ['Goals', [
+    ['A plan on the back of every picture.', 'Studies by Gabriele Oettingen found that only picturing a dream can lower the energy to chase it. Each picture turns over to WOOP: wish, outcome, obstacle, plan, with an if-then plan for the obstacle.'],
+    ['Goals come from sessions.', 'Each shows the session and the words it came from. Edit or delete it with the ⋯ button.'],
+    ['It keeps goals moving.', 'It spots when a deadline needs more time blocks and offers them. A goal with no step done in two weeks goes on the next session\'s agenda.'],
+    ['It asks before letting go.', 'A picture with nothing done for a month gets one question: is this still yours?'],
+    ['Your photos stay on this phone,', 'encrypted together with your notes.'],
+  ]],
+};
+function renderNotes(tab) {
+  const [h, items] = NOTES[tab];
+  $('#note-h').textContent = h;
+  $('#note-list').innerHTML = items.map(([b, t]) => `<li><b>${esc(b)}</b> ${esc(t)}</li>`).join('');
+}
+
+/* ---------- tabs and room lighting ---------- */
+function showTab(tab) {
+  if (tab !== 'session' && playing) pause();
+  $$('.nav button').forEach(b => b.setAttribute('aria-selected', b.dataset.tab === tab));
+  $$('.view').forEach(v => v.classList.toggle('on', v.id === 'v-' + tab));
+  $('#screen').scrollTop = 0; closePop(); renderNotes(tab);
+}
+$$('.nav button').forEach(b => b.onclick = () => showTab(b.dataset.tab));
+function isDark() { const t = document.documentElement.dataset.theme; return t ? t === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches; }
+function syncRoom() { readColors(); $('#room-light').setAttribute('aria-pressed', !isDark()); $('#room-dark').setAttribute('aria-pressed', isDark()); }
+$('#room-light').onclick = () => { document.documentElement.dataset.theme = 'light'; syncRoom(); };
+$('#room-dark').onclick = () => { document.documentElement.dataset.theme = 'dark'; syncRoom(); };
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change', syncRoom);
+new MutationObserver(syncRoom).observe(document.documentElement, {attributes:true, attributeFilter:['data-theme']});
+
+/* ---------- start ---------- */
+resetSession(); syncRoom(); renderPlan(); renderHabits(); renderArc(); renderLines(); renderCard(false);
+renderSteps(); renderParked(); renderBoard(); renderGoals(); renderNotes('today');
+function frame(now) { orb.draw(now); mini.draw(now); tickFocus(now, false); requestAnimationFrame(frame); }
+requestAnimationFrame(frame);
+</script>

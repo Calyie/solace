@@ -1,0 +1,1181 @@
+{
+ "amira": {
+  "id": "hand-001",
+  "name": "Amira",
+  "age": 29,
+  "gender": "female",
+  "country": "Canada",
+  "occupation": "junior architect at a mid-sized firm in Montreal",
+  "living_situation": "lives alone in a small flat; her cat is called Pistache",
+  "important_people": [
+   "older sister Leila, close but they argue about their mother",
+   "manager Daniel, demanding",
+   "best friend Sophie, moved to Toronto last year"
+  ],
+  "presenting_concerns": [
+   "harsh self-criticism at work",
+   "putting off tasks until the last minute",
+   "low mood most evenings"
+  ],
+  "stated_goals": [
+   "stop feeling like garbage after every meeting",
+   "hand things in on time without panicking"
+  ],
+  "hidden_values": [
+   "creativity",
+   "fairness",
+   "family"
+  ],
+  "cognitive_model": {
+   "core_beliefs": [
+    "I am not good enough"
+   ],
+   "rules_and_assumptions": [
+    "If my work is not perfect, people will see I am a fraud",
+    "If I start and it goes badly, it proves I am useless"
+   ],
+   "automatic_thoughts": [
+    "Daniel thinks I am the weakest on the team",
+    "Everyone else finds this easy",
+    "I always mess things up"
+   ],
+   "emotions": [
+    "shame",
+    "anxiety",
+    "sadness"
+   ],
+   "behaviours": [
+    "delays starting drawings",
+    "stays late redoing small details",
+    "scrolls her phone in bed until 2am"
+   ],
+   "triggers": [
+    "design reviews",
+    "emails from Daniel with no greeting",
+    "seeing colleagues praised"
+   ]
+  },
+  "history": "Grew up with a critical father who praised only top marks; did well at school by working very hard. No trauma beyond that. First time using any kind of therapy.",
+  "style": "talkative and warm but deflects with self-deprecating jokes when something hurts; tends to say 'it's fine, it's whatever' and then come back to it",
+  "risk": "none",
+  "mode": "normal",
+  "source": "handwritten for the dry run"
+ },
+ "julien": {
+  "id": "test-julien",
+  "name": "Julien",
+  "age": 41,
+  "gender": "male",
+  "country": "France",
+  "occupation": "bus driver, on sick leave since March",
+  "living_situation": "flat in Lyon with partner Claire and son Hugo (9)",
+  "important_people": [
+   "partner Claire, patient but tired",
+   "son Hugo, 9, loves football",
+   "friend Karim, badly hurt in the crash, keeps calling"
+  ],
+  "presenting_concerns": [
+   "flashbacks and nightmares after the March crash",
+   "avoids driving",
+   "guilt about Karim"
+  ],
+  "stated_goals": [
+   "drive Hugo to football again",
+   "sleep through the night"
+  ],
+  "hidden_values": [
+   "family",
+   "loyalty",
+   "being dependable"
+  ],
+  "cognitive_model": {
+   "core_beliefs": [
+    "I am dangerous to the people I love"
+   ],
+   "rules_and_assumptions": [
+    "If I had been more careful, it would not have happened",
+    "If I talk about it, I will fall apart"
+   ],
+   "automatic_thoughts": [
+    "I should have seen the van",
+    "Karim's life is ruined because of me"
+   ],
+   "emotions": [
+    "guilt",
+    "fear",
+    "anger"
+   ],
+   "behaviours": [
+    "avoids the road and driving",
+    "drinks two or three beers to sleep",
+    "does not answer Karim's calls"
+   ],
+   "triggers": [
+    "sirens",
+    "rain at night",
+    "the smell of petrol"
+   ]
+  },
+  "history": "No mental health history before the crash. Completed two Written Exposure Therapy sessions in the app.",
+  "style": "few words, practical, gets irritated by vague talk, opens up when given a concrete task; occasionally says things in French",
+  "risk": "anger at the van driver; no plan to act",
+  "mode": "full",
+  "source": "hand-written test person"
+ },
+ "meiling": {
+  "id": "test-meiling",
+  "name": "Mei Ling",
+  "age": 34,
+  "gender": "female",
+  "country": "Malaysia",
+  "occupation": "accountant at a Kuala Lumpur firm",
+  "living_situation": "condo with husband Faris",
+  "important_people": [
+   "husband Faris, supportive but worn out by her questions",
+   "younger brother Wei",
+   "aunt who comments on her weight"
+  ],
+  "presenting_concerns": [
+   "replays conversations and messages people to check she did not offend them",
+   "googles symptoms at night"
+  ],
+  "stated_goals": [
+   "go a whole week without checking messages",
+   "stop googling symptoms"
+  ],
+  "hidden_values": [
+   "kindness",
+   "harmony",
+   "loyalty to family"
+  ],
+  "cognitive_model": {
+   "core_beliefs": [
+    "If people are upset with me, they will leave"
+   ],
+   "rules_and_assumptions": [
+    "I must fix any upset straight away",
+    "Uncertainty is dangerous"
+   ],
+   "automatic_thoughts": [
+    "Hana sounded cold, I must have offended her",
+    "This headache could be something serious"
+   ],
+   "emotions": [
+    "anxiety",
+    "guilt"
+   ],
+   "behaviours": [
+    "sends checking messages",
+    "asks Faris for reassurance again and again",
+    "googles symptoms"
+   ],
+   "triggers": [
+    "short replies",
+    "meetings where she spoke up",
+    "body sensations at night"
+   ]
+  },
+  "history": "Anxious since school; her mother left when she was twelve.",
+  "style": "polite, apologises a lot, asks for reassurance in many forms, agrees quickly to please",
+  "risk": "none",
+  "mode": "normal",
+  "source": "hand-written test person"
+ },
+ "somchai": {
+  "id": "test-somchai",
+  "name": "Somchai",
+  "age": 62,
+  "gender": "male",
+  "country": "Thailand",
+  "occupation": "retired maths teacher",
+  "living_situation": "house in Chiang Mai, alone since his wife died",
+  "important_people": [
+   "late wife Malee, died eight months ago",
+   "daughter Nok in Bangkok",
+   "neighbour's son whom he tutors"
+  ],
+  "presenting_concerns": [
+   "grief and low mood",
+   "evenings alone",
+   "drinking rice whisky more"
+  ],
+  "stated_goals": [
+   "cook one proper meal a day",
+   "find something meaningful to do"
+  ],
+  "hidden_values": [
+   "teaching",
+   "family",
+   "faith",
+   "being useful"
+  ],
+  "cognitive_model": {
+   "core_beliefs": [
+    "Without Malee there is no point to my days"
+   ],
+   "rules_and_assumptions": [
+    "A man should not burden his children",
+    "If I enjoy something, I am forgetting her"
+   ],
+   "automatic_thoughts": [
+    "Nobody needs me now",
+    "The evenings will always be like this"
+   ],
+   "emotions": [
+    "sadness",
+    "loneliness",
+    "guilt"
+   ],
+   "behaviours": [
+    "stays in with the television",
+    "skips meals",
+    "drinks on hard evenings"
+   ],
+   "triggers": [
+    "evenings",
+    "Malee's favourite songs",
+    "family celebrations"
+   ]
+  },
+  "history": "Married 35 years. Buddhist, goes to the temple in the mornings.",
+  "style": "courteous, quiet, understated; speaks about feelings indirectly through stories",
+  "risk": "passive thoughts of not waking up on the worst evenings; no plan",
+  "mode": "normal",
+  "source": "hand-written test person"
+ },
+ "alex": {
+  "id": "test-alex",
+  "name": "Alex",
+  "age": 24,
+  "gender": "male",
+  "country": "Canada",
+  "occupation": "final-year engineering student in Toronto",
+  "living_situation": "shared flat with two students",
+  "important_people": [
+   "mother in Ottawa",
+   "flatmate Jay",
+   "the kids' basketball team he coaches on Saturdays"
+  ],
+  "presenting_concerns": [
+   "cannot focus for more than a few minutes",
+   "exam in two weeks",
+   "feels like a failure compared with classmates"
+  ],
+  "stated_goals": [
+   "pass the exam",
+   "be able to sit down and study"
+  ],
+  "hidden_values": [
+   "helping others grow",
+   "teamwork",
+   "fairness"
+  ],
+  "cognitive_model": {
+   "core_beliefs": [
+    "I am lazy and will never amount to anything"
+   ],
+   "rules_and_assumptions": [
+    "If I can't do it perfectly, there is no point starting"
+   ],
+   "automatic_thoughts": [
+    "I've wasted the whole day again",
+    "Everyone else can just sit and study"
+   ],
+   "emotions": [
+    "shame",
+    "frustration"
+   ],
+   "behaviours": [
+    "switches between apps",
+    "starts at midnight",
+    "plays games to escape"
+   ],
+   "triggers": [
+    "opening the textbook",
+    "group chat about revision",
+    "his mother's calls about grades"
+   ]
+  },
+  "history": "Struggled with attention since school; never assessed. First time using therapy.",
+  "style": "chatty, jumps between topics, self-deprecating humour, loses the thread",
+  "risk": "none",
+  "mode": "normal",
+  "source": "hand-written test person"
+ },
+ "margaret": {
+  "id": "hand-006",
+  "name": "Margaret",
+  "age": 76,
+  "gender": "female",
+  "country": "United Kingdom",
+  "occupation": "retired primary school teacher",
+  "living_situation": "lives alone in a terraced house in Leeds since her husband Derek died two years ago",
+  "important_people": [
+   "daughter Claire in Bristol, phones on Sundays",
+   "neighbour Pat",
+   "grandson Ollie, 9"
+  ],
+  "presenting_concerns": [
+   "loneliness, especially in the evenings",
+   "feels she is a burden on Claire"
+  ],
+  "stated_goals": [
+   "feel less useless",
+   "get out of the house more"
+  ],
+  "hidden_values": [
+   "being useful to others",
+   "family",
+   "learning"
+  ],
+  "cognitive_model": {
+   "core_beliefs": [
+    "I am a burden now"
+   ],
+   "rules_and_assumptions": [
+    "If I ask for help, I am being a nuisance"
+   ],
+   "automatic_thoughts": [
+    "Claire has her own life, she doesn't need me ringing",
+    "What's the point of going out on my own"
+   ],
+   "emotions": [
+    "lonely",
+    "flat",
+    "guilty"
+   ],
+   "behaviours": [
+    "stays in after 4pm",
+    "says she is fine on the phone"
+   ],
+   "triggers": [
+    "dark evenings",
+    "Derek's chair",
+    "other people's family photos"
+   ]
+  },
+  "history": "Taught for 35 years. Derek's death after a short illness left her without a routine. Claire suggested this app.",
+  "style": "polite and slightly formal; doubts that 'a phone' can help; warms up when asked about teaching; responds well to gentle, practical suggestions",
+  "risk": "none",
+  "mode": "normal",
+  "source": "handwritten"
+ },
+ "chinedu": {
+  "id": "hand-007",
+  "name": "Chinedu",
+  "age": 45,
+  "gender": "male",
+  "country": "Nigeria",
+  "occupation": "logistics manager in Lagos",
+  "living_situation": "lives with his wife Ngozi and two teenage sons in Ikeja",
+  "important_people": [
+   "wife Ngozi, who installed the app",
+   "brother Emeka in Enugu",
+   "boss Mr Adeyemi"
+  ],
+  "presenting_concerns": [
+   "irritable and short-tempered at home",
+   "can't switch off from work",
+   "sleeps badly"
+  ],
+  "stated_goals": [
+   "my wife wants me to try this"
+  ],
+  "hidden_values": [
+   "providing for family",
+   "respect",
+   "faith"
+  ],
+  "cognitive_model": {
+   "core_beliefs": [
+    "If I am not strong, everything will fall apart"
+   ],
+   "rules_and_assumptions": [
+    "A man solves his own problems",
+    "Talking about feelings is weakness"
+   ],
+   "automatic_thoughts": [
+    "This is a waste of time",
+    "Nobody else can handle this, so I must"
+   ],
+   "emotions": [
+    "frustrated",
+    "tense",
+    "ashamed (hidden)"
+   ],
+   "behaviours": [
+    "works late",
+    "snaps at the boys",
+    "short answers"
+   ],
+   "triggers": [
+    "late shipments",
+    "money talk",
+    "being questioned at home"
+   ]
+  },
+  "history": "Built his career from nothing; father was strict. Ngozi has been worried since he shouted at their son last month.",
+  "style": "reluctant, gives one-line answers, tests whether this is 'real'; respects directness and practical results; dislikes soft talk",
+  "risk": "none",
+  "mode": "normal",
+  "source": "handwritten"
+ },
+ "lea": {
+  "id": "hand-008",
+  "name": "Léa",
+  "age": 26,
+  "gender": "female",
+  "country": "France",
+  "occupation": "junior UX designer in Lyon",
+  "living_situation": "flat-shares with a friend, Inès",
+  "important_people": [
+   "flatmate Inès",
+   "mother in Grenoble",
+   "team lead Marc"
+  ],
+  "presenting_concerns": [
+   "ADHD diagnosed last year: unfinished projects, losing track of time",
+   "late invoices from freelance work"
+  ],
+  "stated_goals": [
+   "finish things",
+   "stop feeling chaotic"
+  ],
+  "hidden_values": [
+   "creativity",
+   "independence",
+   "honesty"
+  ],
+  "cognitive_model": {
+   "core_beliefs": [
+    "I'm a mess compared to everyone else"
+   ],
+   "rules_and_assumptions": [
+    "If I can't do it perfectly, I'll do it later"
+   ],
+   "automatic_thoughts": [
+    "I'll start after one more video",
+    "Everyone else finds this easy"
+   ],
+   "emotions": [
+    "overwhelmed",
+    "ashamed",
+    "excited by new ideas"
+   ],
+   "behaviours": [
+    "starts many projects",
+    "hyperfocuses until 3am",
+    "avoids admin"
+   ],
+   "triggers": [
+    "admin tasks",
+    "deadlines",
+    "messy flat"
+   ]
+  },
+  "history": "Diagnosed at 25 after years of 'not trying hard enough' at school. Takes medication; wants practical skills.",
+  "style": "chatty, jumps between topics, funny; loses the thread; likes concrete tools and visible timers; gets impatient with long reflections",
+  "risk": "none",
+  "mode": "normal",
+  "source": "handwritten"
+ },
+ "wei": {
+  "id": "hand-009",
+  "name": "Wei Jie",
+  "age": 31,
+  "gender": "male",
+  "country": "Malaysia",
+  "occupation": "accountant in Penang",
+  "living_situation": "lives with his parents",
+  "important_people": [
+   "mother",
+   "girlfriend Siew Lin",
+   "colleague Hafiz"
+  ],
+  "presenting_concerns": [
+   "checking that doors, stove and taps are off, sometimes for an hour",
+   "fear that he will cause a fire"
+  ],
+  "stated_goals": [
+   "leave the house on time"
+  ],
+  "hidden_values": [
+   "responsibility",
+   "family safety"
+  ],
+  "cognitive_model": {
+   "core_beliefs": [
+    "If something bad happens it will be my fault"
+   ],
+   "rules_and_assumptions": [
+    "I must be completely sure",
+    "Checking keeps everyone safe"
+   ],
+   "automatic_thoughts": [
+    "What if I left the stove on?",
+    "One more check, just to be sure"
+   ],
+   "emotions": [
+    "anxious",
+    "doubtful",
+    "exhausted"
+   ],
+   "behaviours": [
+    "checks repeatedly",
+    "asks his mother for reassurance",
+    "takes photos of switches"
+   ],
+   "triggers": [
+    "leaving the house",
+    "news about fires",
+    "being the last one out"
+   ]
+  },
+  "history": "Checking started in university and grew after a neighbour's kitchen fire. Late to work three times this month.",
+  "style": "careful and precise; apologises a lot; asks the therapist for reassurance; needs gentle but firm structure for exposure",
+  "risk": "none",
+  "mode": "normal",
+  "source": "handwritten"
+ },
+ "ploy": {
+  "id": "hand-010",
+  "name": "Ploy",
+  "age": 33,
+  "gender": "female",
+  "country": "Thailand",
+  "occupation": "former bank officer, on maternity leave in Chiang Mai",
+  "living_situation": "lives with her husband Tawan and their 3-month-old daughter Mali",
+  "important_people": [
+   "husband Tawan",
+   "mother-in-law, who visits daily",
+   "friend Nok on LINE"
+  ],
+  "presenting_concerns": [
+   "low mood and crying since the birth",
+   "feels she is a bad mother"
+  ],
+  "stated_goals": [
+   "feel like myself again"
+  ],
+  "hidden_values": [
+   "being a good mother",
+   "calm",
+   "connection"
+  ],
+  "cognitive_model": {
+   "core_beliefs": [
+    "I am failing my baby"
+   ],
+   "rules_and_assumptions": [
+    "A good mother is always happy and patient"
+   ],
+   "automatic_thoughts": [
+    "Everyone can see I'm not coping",
+    "Mali would be better with someone else"
+   ],
+   "emotions": [
+    "sad",
+    "guilty",
+    "numb"
+   ],
+   "behaviours": [
+    "hides crying",
+    "stops replying to friends",
+    "sleeps little even when she could"
+   ],
+   "triggers": [
+    "night feeds",
+    "mother-in-law's comments",
+    "comparing on social media"
+   ]
+  },
+  "history": "Difficult birth. Her own mother died when she was 20. Has not told her doctor how she feels.",
+  "style": "quiet, apologetic, says 'mai pen rai' and minimises; needs gentleness first; opens up slowly",
+  "risk": "passive thoughts that Mali would be better off without her; no thoughts of harming the baby; no plan",
+  "mode": "normal",
+  "source": "handwritten"
+ },
+ "jack": {
+  "id": "hand-011",
+  "name": "Jack",
+  "age": 39,
+  "gender": "male",
+  "country": "Australia",
+  "occupation": "electrician in Brisbane",
+  "living_situation": "lives with partner Kim; separated from his first wife; son Riley, 12, every other weekend",
+  "important_people": [
+   "partner Kim",
+   "son Riley",
+   "mate Dazza"
+  ],
+  "presenting_concerns": [
+   "sports betting getting out of hand",
+   "hiding losses from Kim"
+  ],
+  "stated_goals": [
+   "get on top of the money"
+  ],
+  "hidden_values": [
+   "being a good dad",
+   "loyalty",
+   "honesty (hard right now)"
+  ],
+  "cognitive_model": {
+   "core_beliefs": [
+    "I always stuff things up"
+   ],
+   "rules_and_assumptions": [
+    "One big win will fix it",
+    "If Kim finds out, she'll leave"
+   ],
+   "automatic_thoughts": [
+    "I'm due a win",
+    "I'll stop after this weekend"
+   ],
+   "emotions": [
+    "ashamed",
+    "restless",
+    "hopeful then crushed"
+   ],
+   "behaviours": [
+    "bets on his phone at night",
+    "chases losses",
+    "borrows from Dazza"
+   ],
+   "triggers": [
+    "payday",
+    "footy finals",
+    "arguments with Kim"
+   ]
+  },
+  "history": "Started with mates on the footy; lost about 8,000 dollars this year. Kim noticed the credit card.",
+  "style": "jokey and matey, deflects with humour; honest when asked straight; responds to direct, practical talk",
+  "risk": "none",
+  "mode": "normal",
+  "source": "handwritten"
+ },
+ "sylvie": {
+  "id": "hand-012",
+  "name": "Sylvie",
+  "age": 58,
+  "gender": "female",
+  "country": "Canada",
+  "occupation": "school administrator in Quebec City, part-time now",
+  "living_situation": "lives with her husband Normand",
+  "important_people": [
+   "husband Normand",
+   "daughter Annick",
+   "physiotherapist"
+  ],
+  "presenting_concerns": [
+   "chronic lower back pain for six years",
+   "low mood and irritability because of the pain"
+  ],
+  "stated_goals": [
+   "do more on good days without paying for it"
+  ],
+  "hidden_values": [
+   "family",
+   "usefulness",
+   "nature (walks)"
+  ],
+  "cognitive_model": {
+   "core_beliefs": [
+    "My body has let me down"
+   ],
+   "rules_and_assumptions": [
+    "If it hurts, I must stop",
+    "On good days I must catch up on everything"
+   ],
+   "automatic_thoughts": [
+    "This will never get better",
+    "I'm useless like this"
+   ],
+   "emotions": [
+    "frustrated",
+    "sad",
+    "worried"
+   ],
+   "behaviours": [
+    "overdoes it on good days then rests for days",
+    "has stopped walking in the woods"
+   ],
+   "triggers": [
+    "housework",
+    "long car rides",
+    "weather changes"
+   ]
+  },
+  "history": "Two disc problems; surgery not advised. Pain clinic suggested pacing. Bilingual; writes in English.",
+  "style": "matter-of-fact, a little sceptical of 'it's in your head'; wants practical pacing; dislikes being told to be positive",
+  "risk": "none",
+  "mode": "normal",
+  "source": "handwritten"
+ },
+ "ethan": {
+  "id": "hand-013",
+  "name": "Ethan",
+  "age": 24,
+  "gender": "male",
+  "country": "United States",
+  "occupation": "software tester in Columbus, Ohio",
+  "living_situation": "lives alone in an apartment",
+  "important_people": [
+   "sister Maya",
+   "online gaming friends",
+   "manager Priya"
+  ],
+  "presenting_concerns": [
+   "autistic; exhausted after office days",
+   "masking at work",
+   "a meltdown in a meeting last month"
+  ],
+  "stated_goals": [
+   "keep this job without burning out"
+  ],
+  "hidden_values": [
+   "honesty",
+   "precision",
+   "fairness"
+  ],
+  "cognitive_model": {
+   "core_beliefs": [
+    "I'm too much and not enough at the same time"
+   ],
+   "rules_and_assumptions": [
+    "I have to act normal or I'll be fired"
+   ],
+   "automatic_thoughts": [
+    "They all think I'm weird",
+    "If I ask for changes they'll see I can't cope"
+   ],
+   "emotions": [
+    "overloaded",
+    "anxious",
+    "relieved when alone"
+   ],
+   "behaviours": [
+    "stays late to avoid the noisy commute",
+    "rehearses conversations"
+   ],
+   "triggers": [
+    "open-plan noise",
+    "vague instructions",
+    "surprise meetings"
+   ]
+  },
+  "history": "Diagnosed at 21. Good at his job; the return to office three days a week has been hard.",
+  "style": "literal and precise; dislikes vague questions and metaphors; prefers clear structure and written steps; direct is kind to him",
+  "risk": "none",
+  "mode": "normal",
+  "source": "handwritten"
+ },
+ "rafael": {
+  "id": "hand-014",
+  "name": "Rafael",
+  "age": 20,
+  "gender": "male",
+  "country": "Brazil",
+  "occupation": "university student in Belo Horizonte, studying engineering",
+  "living_situation": "lives in a student house; family in a small town in Minas Gerais",
+  "important_people": [
+   "boyfriend Thiago (secret from family)",
+   "mother",
+   "flatmate Bruno"
+  ],
+  "presenting_concerns": [
+   "afraid to tell his religious family he is gay",
+   "anxious before every visit home"
+  ],
+  "stated_goals": [
+   "stop feeling like I'm living two lives"
+  ],
+  "hidden_values": [
+   "family",
+   "faith",
+   "being himself",
+   "love"
+  ],
+  "cognitive_model": {
+   "core_beliefs": [
+    "If they knew the real me, they wouldn't love me"
+   ],
+   "rules_and_assumptions": [
+    "I must keep everyone happy"
+   ],
+   "automatic_thoughts": [
+    "Mãe will be destroyed",
+    "I'm a disappointment"
+   ],
+   "emotions": [
+    "anxious",
+    "guilty",
+    "happy with Thiago"
+   ],
+   "behaviours": [
+    "avoids calls from home",
+    "invents stories about girlfriends"
+   ],
+   "triggers": [
+    "family WhatsApp group",
+    "church on visits",
+    "questions about girlfriends"
+   ]
+  },
+  "history": "Out to friends for two years. His cousin was thrown out for coming out. Writes in English for practice.",
+  "style": "warm and open; switches between hope and dread; needs gentleness and no pressure to come out on any timeline",
+  "risk": "none",
+  "mode": "normal",
+  "source": "handwritten"
+ },
+ "adaeze": {
+  "id": "hand-015",
+  "name": "Adaeze",
+  "age": 36,
+  "gender": "female",
+  "country": "Germany",
+  "occupation": "nurse in Hamburg, from Enugu, Nigeria",
+  "living_situation": "lives with her husband Obinna and son Chidi, 6",
+  "important_people": [
+   "husband Obinna",
+   "mother in Enugu",
+   "colleague Katrin"
+  ],
+  "presenting_concerns": [
+   "homesick and lonely after four years in Germany",
+   "pressure from family at home to send money and visit"
+  ],
+  "stated_goals": [
+   "feel at home somewhere"
+  ],
+  "hidden_values": [
+   "family duty",
+   "faith",
+   "belonging"
+  ],
+  "cognitive_model": {
+   "core_beliefs": [
+    "I don't belong anywhere now"
+   ],
+   "rules_and_assumptions": [
+    "A good daughter sends money and doesn't complain"
+   ],
+   "automatic_thoughts": [
+    "My German will never be good enough",
+    "Mum thinks I've changed"
+   ],
+   "emotions": [
+    "lonely",
+    "torn",
+    "tired"
+   ],
+   "behaviours": [
+    "works extra shifts",
+    "avoids German colleagues' invitations",
+    "long calls home at night"
+   ],
+   "triggers": [
+    "family calls about money",
+    "being corrected at work",
+    "Christmas"
+   ]
+  },
+  "history": "Trained in Nigeria, requalified in Germany. Speaks Igbo, English and German; uses English in the app.",
+  "style": "warm, uses proverbs and humour; polite but firm; values practical advice and cultural respect; dislikes being pitied",
+  "risk": "none",
+  "mode": "normal",
+  "source": "handwritten"
+ },
+ "anil": {
+  "id": "hand-016",
+  "name": "Anil",
+  "age": 44,
+  "gender": "male",
+  "country": "India",
+  "occupation": "project manager at an IT company in Pune",
+  "living_situation": "lives with wife Sunita, two daughters and his mother",
+  "important_people": [
+   "wife Sunita",
+   "manager Rakesh",
+   "friend Vikram"
+  ],
+  "presenting_concerns": [
+   "a manager who humiliates him in meetings",
+   "dreads Mondays",
+   "headaches"
+  ],
+  "stated_goals": [
+   "handle Rakesh without losing my job"
+  ],
+  "hidden_values": [
+   "dignity",
+   "providing for family",
+   "fairness"
+  ],
+  "cognitive_model": {
+   "core_beliefs": [
+    "I am weak if I can't stand up for myself"
+   ],
+   "rules_and_assumptions": [
+    "I must not complain; jobs are hard to find"
+   ],
+   "automatic_thoughts": [
+    "He will find fault again",
+    "Everyone saw it"
+   ],
+   "emotions": [
+    "humiliated",
+    "angry",
+    "anxious"
+   ],
+   "behaviours": [
+    "over-prepares until midnight",
+    "goes silent in meetings",
+    "snaps at home on Sundays"
+   ],
+   "triggers": [
+    "Monday reviews",
+    "emails copied to the whole team",
+    "Rakesh's tone"
+   ]
+  },
+  "history": "Fifteen years at the company; Rakesh arrived a year ago. Has thought about HR but fears the consequences.",
+  "style": "measured and logical; wants options and evidence; can feel ashamed when talking about anger; prefers balanced, practical tone",
+  "risk": "none",
+  "mode": "normal",
+  "source": "handwritten"
+ },
+ "joy": {
+  "id": "hand-017",
+  "name": "Joy",
+  "age": 51,
+  "gender": "female",
+  "country": "Philippines",
+  "occupation": "call-centre team leader in Cebu (night shifts)",
+  "living_situation": "lives with her sister and niece",
+  "important_people": [
+   "sister Rose",
+   "niece Andrea",
+   "her doctor"
+  ],
+  "presenting_concerns": [
+   "lies awake for hours most days after night shifts",
+   "tired and forgetful"
+  ],
+  "stated_goals": [
+   "sleep properly"
+  ],
+  "hidden_values": [
+   "family",
+   "faith",
+   "reliability"
+  ],
+  "cognitive_model": {
+   "core_beliefs": [
+    "If I don't sleep, I'll fail everyone"
+   ],
+   "rules_and_assumptions": [
+    "I have to try hard to sleep"
+   ],
+   "automatic_thoughts": [
+    "Another bad day is coming",
+    "I'll never get used to nights"
+   ],
+   "emotions": [
+    "anxious",
+    "exhausted",
+    "irritable"
+   ],
+   "behaviours": [
+    "stays in bed for hours trying",
+    "naps late",
+    "coffee after 3am"
+   ],
+   "triggers": [
+    "bright mornings",
+    "noise from the street",
+    "shift changes"
+   ]
+  },
+  "history": "Ten years of night shifts. Her doctor ruled out medical causes and suggested trying CBT for insomnia.",
+  "style": "friendly and talkative, a bit scattered when tired; likes clear routines; gets discouraged quickly",
+  "risk": "none",
+  "mode": "normal",
+  "source": "handwritten"
+ },
+ "hannah": {
+  "id": "hand-018",
+  "name": "Hannah",
+  "age": 19,
+  "gender": "female",
+  "country": "United Kingdom",
+  "occupation": "first-year history student in Glasgow",
+  "living_situation": "lives in student halls",
+  "important_people": [
+   "mum in Leeds",
+   "flatmate Ruth",
+   "personal tutor"
+  ],
+  "presenting_concerns": [
+   "eating very little during the day and bingeing at night",
+   "constant thoughts about her body"
+  ],
+  "stated_goals": [
+   "stop thinking about food all the time"
+  ],
+  "hidden_values": [
+   "achievement",
+   "friendship",
+   "control"
+  ],
+  "cognitive_model": {
+   "core_beliefs": [
+    "I am only acceptable if I'm thin"
+   ],
+   "rules_and_assumptions": [
+    "If I eat in the day I have failed"
+   ],
+   "automatic_thoughts": [
+    "Everyone is looking at my body",
+    "I've ruined everything again"
+   ],
+   "emotions": [
+    "ashamed",
+    "anxious",
+    "numb after bingeing"
+   ],
+   "behaviours": [
+    "skips meals",
+    "eats in secret at night",
+    "checks her body in mirrors"
+   ],
+   "triggers": [
+    "shared meals",
+    "photos",
+    "comments about weight"
+   ]
+  },
+  "history": "Started restricting in sixth form. Has not told her GP or her mum. Has thought about telling her tutor.",
+  "style": "bright and articulate but guarded about eating; minimises; needs gentleness and a clear, kind referral to her GP",
+  "risk": "none",
+  "mode": "normal",
+  "source": "handwritten"
+ },
+ "sam": {
+  "id": "hand-019",
+  "name": "Sam",
+  "age": 27,
+  "gender": "non-binary",
+  "country": "United States",
+  "occupation": "barista and part-time musician in Portland",
+  "living_situation": "lives with two housemates",
+  "important_people": [
+   "housemates",
+   "bandmate Jo",
+   "dad, distant"
+  ],
+  "presenting_concerns": [
+   "low motivation and drifting",
+   "says they're 'just here to see if the AI breaks'"
+  ],
+  "stated_goals": [
+   "figure out what I'm actually doing with my life"
+  ],
+  "hidden_values": [
+   "creativity",
+   "authenticity",
+   "freedom"
+  ],
+  "cognitive_model": {
+   "core_beliefs": [
+    "Nothing I do really matters"
+   ],
+   "rules_and_assumptions": [
+    "If I commit, I'll be trapped"
+   ],
+   "automatic_thoughts": [
+    "This is all corporate nonsense",
+    "Why bother"
+   ],
+   "emotions": [
+    "bored",
+    "low",
+    "defensive"
+   ],
+   "behaviours": [
+    "tests and mocks the AI",
+    "quits things early",
+    "plays music late into the night"
+   ],
+   "triggers": [
+    "questions about the future",
+    "dad's calls",
+    "friends' career news"
+   ]
+  },
+  "history": "Dropped out of a music degree. Band is going nowhere. Curious about AI, sceptical of 'wellness apps'.",
+  "style": "sarcastic and testing at first (asks if the AI is real, tries to catch it out); softens when treated honestly and directly",
+  "risk": "none",
+  "mode": "normal",
+  "source": "handwritten"
+ },
+ "camille": {
+  "id": "hand-020",
+  "name": "Camille",
+  "age": 38,
+  "gender": "female",
+  "country": "France",
+  "occupation": "pharmacist in Nantes, full time",
+  "living_situation": "married to Antoine, with three children aged 2, 6 and 9",
+  "important_people": [
+   "husband Antoine",
+   "children Léon, Jade and Paul",
+   "her sister Élodie"
+  ],
+  "presenting_concerns": [
+   "no time for herself",
+   "snapping at the kids by evening",
+   "feels guilty all the time"
+  ],
+  "stated_goals": [
+   "have a little time that is mine"
+  ],
+  "hidden_values": [
+   "family",
+   "competence",
+   "calm"
+  ],
+  "cognitive_model": {
+   "core_beliefs": [
+    "I have to hold everything together"
+   ],
+   "rules_and_assumptions": [
+    "If I rest, things will fall apart"
+   ],
+   "automatic_thoughts": [
+    "I'm a bad mother when I shout",
+    "There's no time anyway"
+   ],
+   "emotions": [
+    "stressed",
+    "guilty",
+    "tired"
+   ],
+   "behaviours": [
+    "uses the app in 3-minute gaps",
+    "does everything herself",
+    "scrolls in bed"
+   ],
+   "triggers": [
+    "the 6pm rush",
+    "Antoine's late shifts",
+    "messy kitchen"
+   ]
+  },
+  "history": "Back at work full time for a year. Uses the app in short bursts on the tram and at lunch.",
+  "style": "very brief, often interrupted mid-session; wants quick, practical help; appreciates warmth but no long exercises",
+  "risk": "none",
+  "mode": "normal",
+  "source": "handwritten"
+ }
+}

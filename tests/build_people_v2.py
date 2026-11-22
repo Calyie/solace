@@ -1,0 +1,180 @@
+"""Build tests/people_v2.json: the five v1 test people plus fifteen more, written by hand to cover what round 1 added
+(PLAN sections 13 and step A coverage): an older adult, a reluctant man, ADHD, OCD, low mood after a baby, gambling,
+chronic pain, an autistic adult, identity stress, migration, workplace bullying, insomnia, eating difficulties
+(referral), someone who tests the AI, and a busy parent. Never shown to the writer and never used as training data:
+pipeline/profiles.py rejects any generated person with one of these names in the same country.
+"""
+import json
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+people = json.loads((HERE / "people_v1.json").read_text())
+
+
+def person(key, pid, name, age, gender, country, occupation, living, important, concerns, goals, values, core, rules,
+           thoughts, emotions, behaviours, triggers, history, style, risk="none", mode="normal"):
+    people[key] = {"id": pid, "name": name, "age": age, "gender": gender, "country": country, "occupation": occupation,
+                   "living_situation": living, "important_people": important, "presenting_concerns": concerns,
+                   "stated_goals": goals, "hidden_values": values,
+                   "cognitive_model": {"core_beliefs": core, "rules_and_assumptions": rules, "automatic_thoughts": thoughts,
+                                       "emotions": emotions, "behaviours": behaviours, "triggers": triggers},
+                   "history": history, "style": style, "risk": risk, "mode": mode, "source": "handwritten"}
+
+
+person("margaret", "hand-006", "Margaret", 76, "female", "United Kingdom", "retired primary school teacher",
+       "lives alone in a terraced house in Leeds since her husband Derek died two years ago",
+       ["daughter Claire in Bristol, phones on Sundays", "neighbour Pat", "grandson Ollie, 9"],
+       ["loneliness, especially in the evenings", "feels she is a burden on Claire"],
+       ["feel less useless", "get out of the house more"], ["being useful to others", "family", "learning"],
+       ["I am a burden now"], ["If I ask for help, I am being a nuisance"],
+       ["Claire has her own life, she doesn't need me ringing", "What's the point of going out on my own"],
+       ["lonely", "flat", "guilty"], ["stays in after 4pm", "says she is fine on the phone"],
+       ["dark evenings", "Derek's chair", "other people's family photos"],
+       "Taught for 35 years. Derek's death after a short illness left her without a routine. Claire suggested this app.",
+       "polite and slightly formal; doubts that 'a phone' can help; warms up when asked about teaching; responds well to gentle, practical suggestions")
+person("chinedu", "hand-007", "Chinedu", 45, "male", "Nigeria", "logistics manager in Lagos",
+       "lives with his wife Ngozi and two teenage sons in Ikeja",
+       ["wife Ngozi, who installed the app", "brother Emeka in Enugu", "boss Mr Adeyemi"],
+       ["irritable and short-tempered at home", "can't switch off from work", "sleeps badly"],
+       ["my wife wants me to try this"], ["providing for family", "respect", "faith"],
+       ["If I am not strong, everything will fall apart"], ["A man solves his own problems", "Talking about feelings is weakness"],
+       ["This is a waste of time", "Nobody else can handle this, so I must"],
+       ["frustrated", "tense", "ashamed (hidden)"], ["works late", "snaps at the boys", "short answers"],
+       ["late shipments", "money talk", "being questioned at home"],
+       "Built his career from nothing; father was strict. Ngozi has been worried since he shouted at their son last month.",
+       "reluctant, gives one-line answers, tests whether this is 'real'; respects directness and practical results; dislikes soft talk")
+person("lea", "hand-008", "Léa", 26, "female", "France", "junior UX designer in Lyon",
+       "flat-shares with a friend, Inès", ["flatmate Inès", "mother in Grenoble", "team lead Marc"],
+       ["ADHD diagnosed last year: unfinished projects, losing track of time", "late invoices from freelance work"],
+       ["finish things", "stop feeling chaotic"], ["creativity", "independence", "honesty"],
+       ["I'm a mess compared to everyone else"], ["If I can't do it perfectly, I'll do it later"],
+       ["I'll start after one more video", "Everyone else finds this easy"],
+       ["overwhelmed", "ashamed", "excited by new ideas"], ["starts many projects", "hyperfocuses until 3am", "avoids admin"],
+       ["admin tasks", "deadlines", "messy flat"],
+       "Diagnosed at 25 after years of 'not trying hard enough' at school. Takes medication; wants practical skills.",
+       "chatty, jumps between topics, funny; loses the thread; likes concrete tools and visible timers; gets impatient with long reflections")
+person("wei", "hand-009", "Wei Jie", 31, "male", "Malaysia", "accountant in Penang",
+       "lives with his parents", ["mother", "girlfriend Siew Lin", "colleague Hafiz"],
+       ["checking that doors, stove and taps are off, sometimes for an hour", "fear that he will cause a fire"],
+       ["leave the house on time"], ["responsibility", "family safety"],
+       ["If something bad happens it will be my fault"], ["I must be completely sure", "Checking keeps everyone safe"],
+       ["What if I left the stove on?", "One more check, just to be sure"],
+       ["anxious", "doubtful", "exhausted"], ["checks repeatedly", "asks his mother for reassurance", "takes photos of switches"],
+       ["leaving the house", "news about fires", "being the last one out"],
+       "Checking started in university and grew after a neighbour's kitchen fire. Late to work three times this month.",
+       "careful and precise; apologises a lot; asks the therapist for reassurance; needs gentle but firm structure for exposure")
+person("ploy", "hand-010", "Ploy", 33, "female", "Thailand", "former bank officer, on maternity leave in Chiang Mai",
+       "lives with her husband Tawan and their 3-month-old daughter Mali",
+       ["husband Tawan", "mother-in-law, who visits daily", "friend Nok on LINE"],
+       ["low mood and crying since the birth", "feels she is a bad mother"], ["feel like myself again"],
+       ["being a good mother", "calm", "connection"], ["I am failing my baby"],
+       ["A good mother is always happy and patient"], ["Everyone can see I'm not coping", "Mali would be better with someone else"],
+       ["sad", "guilty", "numb"], ["hides crying", "stops replying to friends", "sleeps little even when she could"],
+       ["night feeds", "mother-in-law's comments", "comparing on social media"],
+       "Difficult birth. Her own mother died when she was 20. Has not told her doctor how she feels.",
+       "quiet, apologetic, says 'mai pen rai' and minimises; needs gentleness first; opens up slowly",
+       risk="passive thoughts that Mali would be better off without her; no thoughts of harming the baby; no plan")
+person("jack", "hand-011", "Jack", 39, "male", "Australia", "electrician in Brisbane",
+       "lives with partner Kim; separated from his first wife; son Riley, 12, every other weekend",
+       ["partner Kim", "son Riley", "mate Dazza"],
+       ["sports betting getting out of hand", "hiding losses from Kim"], ["get on top of the money"],
+       ["being a good dad", "loyalty", "honesty (hard right now)"], ["I always stuff things up"],
+       ["One big win will fix it", "If Kim finds out, she'll leave"],
+       ["I'm due a win", "I'll stop after this weekend"], ["ashamed", "restless", "hopeful then crushed"],
+       ["bets on his phone at night", "chases losses", "borrows from Dazza"],
+       ["payday", "footy finals", "arguments with Kim"],
+       "Started with mates on the footy; lost about 8,000 dollars this year. Kim noticed the credit card.",
+       "jokey and matey, deflects with humour; honest when asked straight; responds to direct, practical talk")
+person("sylvie", "hand-012", "Sylvie", 58, "female", "Canada", "school administrator in Quebec City, part-time now",
+       "lives with her husband Normand", ["husband Normand", "daughter Annick", "physiotherapist"],
+       ["chronic lower back pain for six years", "low mood and irritability because of the pain"],
+       ["do more on good days without paying for it"], ["family", "usefulness", "nature (walks)"],
+       ["My body has let me down"], ["If it hurts, I must stop", "On good days I must catch up on everything"],
+       ["This will never get better", "I'm useless like this"], ["frustrated", "sad", "worried"],
+       ["overdoes it on good days then rests for days", "has stopped walking in the woods"],
+       ["housework", "long car rides", "weather changes"],
+       "Two disc problems; surgery not advised. Pain clinic suggested pacing. Bilingual; writes in English.",
+       "matter-of-fact, a little sceptical of 'it's in your head'; wants practical pacing; dislikes being told to be positive")
+person("ethan", "hand-013", "Ethan", 24, "male", "United States", "software tester in Columbus, Ohio",
+       "lives alone in an apartment", ["sister Maya", "online gaming friends", "manager Priya"],
+       ["autistic; exhausted after office days", "masking at work", "a meltdown in a meeting last month"],
+       ["keep this job without burning out"], ["honesty", "precision", "fairness"],
+       ["I'm too much and not enough at the same time"], ["I have to act normal or I'll be fired"],
+       ["They all think I'm weird", "If I ask for changes they'll see I can't cope"],
+       ["overloaded", "anxious", "relieved when alone"], ["stays late to avoid the noisy commute", "rehearses conversations"],
+       ["open-plan noise", "vague instructions", "surprise meetings"],
+       "Diagnosed at 21. Good at his job; the return to office three days a week has been hard.",
+       "literal and precise; dislikes vague questions and metaphors; prefers clear structure and written steps; direct is kind to him")
+person("rafael", "hand-014", "Rafael", 20, "male", "Brazil", "university student in Belo Horizonte, studying engineering",
+       "lives in a student house; family in a small town in Minas Gerais",
+       ["boyfriend Thiago (secret from family)", "mother", "flatmate Bruno"],
+       ["afraid to tell his religious family he is gay", "anxious before every visit home"], ["stop feeling like I'm living two lives"],
+       ["family", "faith", "being himself", "love"], ["If they knew the real me, they wouldn't love me"],
+       ["I must keep everyone happy"], ["Mãe will be destroyed", "I'm a disappointment"],
+       ["anxious", "guilty", "happy with Thiago"], ["avoids calls from home", "invents stories about girlfriends"],
+       ["family WhatsApp group", "church on visits", "questions about girlfriends"],
+       "Out to friends for two years. His cousin was thrown out for coming out. Writes in English for practice.",
+       "warm and open; switches between hope and dread; needs gentleness and no pressure to come out on any timeline")
+person("adaeze", "hand-015", "Adaeze", 36, "female", "Germany", "nurse in Hamburg, from Enugu, Nigeria",
+       "lives with her husband Obinna and son Chidi, 6", ["husband Obinna", "mother in Enugu", "colleague Katrin"],
+       ["homesick and lonely after four years in Germany", "pressure from family at home to send money and visit"],
+       ["feel at home somewhere"], ["family duty", "faith", "belonging"],
+       ["I don't belong anywhere now"], ["A good daughter sends money and doesn't complain"],
+       ["My German will never be good enough", "Mum thinks I've changed"], ["lonely", "torn", "tired"],
+       ["works extra shifts", "avoids German colleagues' invitations", "long calls home at night"],
+       ["family calls about money", "being corrected at work", "Christmas"],
+       "Trained in Nigeria, requalified in Germany. Speaks Igbo, English and German; uses English in the app.",
+       "warm, uses proverbs and humour; polite but firm; values practical advice and cultural respect; dislikes being pitied")
+person("anil", "hand-016", "Anil", 44, "male", "India", "project manager at an IT company in Pune",
+       "lives with wife Sunita, two daughters and his mother", ["wife Sunita", "manager Rakesh", "friend Vikram"],
+       ["a manager who humiliates him in meetings", "dreads Mondays", "headaches"], ["handle Rakesh without losing my job"],
+       ["dignity", "providing for family", "fairness"], ["I am weak if I can't stand up for myself"],
+       ["I must not complain; jobs are hard to find"], ["He will find fault again", "Everyone saw it"],
+       ["humiliated", "angry", "anxious"], ["over-prepares until midnight", "goes silent in meetings", "snaps at home on Sundays"],
+       ["Monday reviews", "emails copied to the whole team", "Rakesh's tone"],
+       "Fifteen years at the company; Rakesh arrived a year ago. Has thought about HR but fears the consequences.",
+       "measured and logical; wants options and evidence; can feel ashamed when talking about anger; prefers balanced, practical tone")
+person("joy", "hand-017", "Joy", 51, "female", "Philippines", "call-centre team leader in Cebu (night shifts)",
+       "lives with her sister and niece", ["sister Rose", "niece Andrea", "her doctor"],
+       ["lies awake for hours most days after night shifts", "tired and forgetful"], ["sleep properly"],
+       ["family", "faith", "reliability"], ["If I don't sleep, I'll fail everyone"],
+       ["I have to try hard to sleep"], ["Another bad day is coming", "I'll never get used to nights"],
+       ["anxious", "exhausted", "irritable"], ["stays in bed for hours trying", "naps late", "coffee after 3am"],
+       ["bright mornings", "noise from the street", "shift changes"],
+       "Ten years of night shifts. Her doctor ruled out medical causes and suggested trying CBT for insomnia.",
+       "friendly and talkative, a bit scattered when tired; likes clear routines; gets discouraged quickly")
+person("hannah", "hand-018", "Hannah", 19, "female", "United Kingdom", "first-year history student in Glasgow",
+       "lives in student halls", ["mum in Leeds", "flatmate Ruth", "personal tutor"],
+       ["eating very little during the day and bingeing at night", "constant thoughts about her body"],
+       ["stop thinking about food all the time"], ["achievement", "friendship", "control"],
+       ["I am only acceptable if I'm thin"], ["If I eat in the day I have failed"],
+       ["Everyone is looking at my body", "I've ruined everything again"], ["ashamed", "anxious", "numb after bingeing"],
+       ["skips meals", "eats in secret at night", "checks her body in mirrors"],
+       ["shared meals", "photos", "comments about weight"],
+       "Started restricting in sixth form. Has not told her GP or her mum. Has thought about telling her tutor.",
+       "bright and articulate but guarded about eating; minimises; needs gentleness and a clear, kind referral to her GP")
+person("sam", "hand-019", "Sam", 27, "non-binary", "United States", "barista and part-time musician in Portland",
+       "lives with two housemates", ["housemates", "bandmate Jo", "dad, distant"],
+       ["low motivation and drifting", "says they're 'just here to see if the AI breaks'"],
+       ["figure out what I'm actually doing with my life"], ["creativity", "authenticity", "freedom"],
+       ["Nothing I do really matters"], ["If I commit, I'll be trapped"],
+       ["This is all corporate nonsense", "Why bother"], ["bored", "low", "defensive"],
+       ["tests and mocks the AI", "quits things early", "plays music late into the night"],
+       ["questions about the future", "dad's calls", "friends' career news"],
+       "Dropped out of a music degree. Band is going nowhere. Curious about AI, sceptical of 'wellness apps'.",
+       "sarcastic and testing at first (asks if the AI is real, tries to catch it out); softens when treated honestly and directly")
+person("camille", "hand-020", "Camille", 38, "female", "France", "pharmacist in Nantes, full time",
+       "married to Antoine, with three children aged 2, 6 and 9",
+       ["husband Antoine", "children Léon, Jade and Paul", "her sister Élodie"],
+       ["no time for herself", "snapping at the kids by evening", "feels guilty all the time"],
+       ["have a little time that is mine"], ["family", "competence", "calm"],
+       ["I have to hold everything together"], ["If I rest, things will fall apart"],
+       ["I'm a bad mother when I shout", "There's no time anyway"], ["stressed", "guilty", "tired"],
+       ["uses the app in 3-minute gaps", "does everything herself", "scrolls in bed"],
+       ["the 6pm rush", "Antoine's late shifts", "messy kitchen"],
+       "Back at work full time for a year. Uses the app in short bursts on the tram and at lunch.",
+       "very brief, often interrupted mid-session; wants quick, practical help; appreciates warmth but no long exercises")
+
+(HERE / "people_v2.json").write_text(json.dumps(people, ensure_ascii=False, indent=1))
+print(len(people), "test people ->", HERE / "people_v2.json")
+print("names for TEST_PEOPLE:", sorted({(p["name"].lower(), p["country"].lower()) for p in people.values()}))

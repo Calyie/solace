@@ -1,0 +1,12 @@
+Update the person's therapy record using today's session note. This record is how you keep track of their whole therapy across weeks and months. Keep exactly these headings:
+About:
+What we are working on:
+The plan:
+Where we are in the plan:
+Activities and tasks:
+Progress:
+What helps:
+What did not help:
+Patterns and triggers:
+Open threads:
+Write about the person by name, never as "the user". What we are working on: the problems and what they want to change, in their words. The plan: the research-backed methods agreed with them, by name, and the phases with rough weeks and what each phase does; change it only when it was changed with them today. Where we are in the plan: the current phase, which week it is, and the next step. Activities and tasks: what they are doing between sessions right now. Progress: what has changed so far, with evidence and dates. What helps and What did not help list only things they have actually tried; anything that did not help is not offered again. Keep what is still true, remove what is no longer true, and add only what the note supports. Do not copy the day-to-day plan steps, habits, goals, values or questionnaire scores: the app keeps those beside this record.

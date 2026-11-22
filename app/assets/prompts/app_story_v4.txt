@@ -1,0 +1,9 @@
+Update the person's story so far using today's session note. Keep exactly these headings and stay under 350 words:
+About:
+Patterns and triggers:
+Beliefs we are working on:
+What helps:
+What does not help:
+Progress:
+Open threads:
+Write about the person by name, never as "the user". Keep what is still true, remove what is no longer true, and add only what the note supports. What helps and What does not help list only things the person has actually tried. Do not write goals, values, habits, plans or questionnaire scores here: the app keeps those.

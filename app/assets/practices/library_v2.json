@@ -1,0 +1,1529 @@
+[
+ {
+  "id": "cyclic-sighing",
+  "title": "Five-minute sigh",
+  "category": "calm",
+  "type": "meditation",
+  "pacer": [
+   [
+    "in",
+    2
+   ],
+   [
+    "and in again",
+    1
+   ],
+   [
+    "slowly out",
+    6
+   ]
+  ],
+  "evidence": "Strong for a short practice: five minutes a day for a month lifted mood and lowered breathing rate more than mindfulness meditation in a 2023 Stanford trial (Balban and others).",
+  "when": "Any time you want to feel calmer, or every day to build the habit.",
+  "versions": {
+   "short": {
+    "minutes": 6,
+    "steps": [
+     {
+      "text": "This is one of the quickest ways to calm your body, and all you do is breathe. You breathe in twice through your nose, and then out slowly through your mouth, for longer.",
+      "pause": 3,
+      "pacer": false
+     },
+     {
+      "text": "Let's do one together. Breathe in through your nose... then a second, smaller sip of air on top... and now let it all go, slowly, through your mouth.",
+      "pause": 4,
+      "pacer": false
+     },
+     {
+      "text": "That second sip opens your lungs a little more, and the long breath out tells your body it is safe to settle. Now keep going at this pace. The circle and the soft tones will guide you.",
+      "pause": 60,
+      "pacer": true
+     },
+     {
+      "text": "If you feel light-headed, slow down, or breathe normally for a few breaths. There is no right way to feel.",
+      "pause": 60,
+      "pacer": true
+     },
+     {
+      "text": "Let each long breath out soften something: your jaw... your shoulders... your hands.",
+      "pause": 60,
+      "pacer": true
+     },
+     {
+      "text": "A little longer. You're doing nothing wrong if your mind wanders. The breath brings you back.",
+      "pause": 60,
+      "pacer": true
+     },
+     {
+      "text": "Now let your breathing find its own pace again... and notice how you feel, compared with five minutes ago.",
+      "pause": 8,
+      "pacer": false
+     },
+     {
+      "text": "Even on good days, these five minutes teach your body the way back to calm, so it finds it faster when you need it.",
+      "pause": 0,
+      "pacer": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "six-breaths",
+  "title": "Slow breathing at six a minute",
+  "category": "calm",
+  "type": "meditation",
+  "pacer": [
+   [
+    "in",
+    5
+   ],
+   [
+    "out",
+    5
+   ]
+  ],
+  "evidence": "Strong: slow breathing near six breaths a minute (resonance breathing) reduced stress and anxiety across many trials (meta-analysis, Goessl and others, 2017).",
+  "when": "For stress, anxiety, or before something hard. Ten minutes, mostly in calm silence.",
+  "versions": {
+   "short": {
+    "minutes": 10,
+    "steps": [
+     {
+      "text": "For the next ten minutes, you'll breathe at about six breaths a minute: in for five, out for five. At this pace, your heart and your breathing fall into a steady rhythm together, and your body settles.",
+      "pause": 3,
+      "pacer": false
+     },
+     {
+      "text": "The rising tone means breathe in, the falling tone means breathe out. Breathe gently, through your nose if you can, into your belly. Not too deep.",
+      "pause": 2,
+      "pacer": false
+     },
+     {
+      "text": "Just follow.",
+      "pause": 120,
+      "pacer": true
+     },
+     {
+      "text": "If your mind wanders, that's fine. The tones bring you back.",
+      "pause": 120,
+      "pacer": true
+     },
+     {
+      "text": "Let the breath be soft and quiet, as if you were breathing next to someone asleep.",
+      "pause": 120,
+      "pacer": true
+     },
+     {
+      "text": "Stay with the rhythm.",
+      "pause": 120,
+      "pacer": true
+     },
+     {
+      "text": "Last minute.",
+      "pause": 60,
+      "pacer": true
+     },
+     {
+      "text": "Now let go of the rhythm, and breathe however your body wants to... Notice the steadiness that's here. It's yours, and it comes back more easily each time.",
+      "pause": 0,
+      "pacer": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "surf-the-wave",
+  "title": "Riding a wave of panic",
+  "category": "calm",
+  "type": "tool",
+  "pacer": [
+   [
+    "in",
+    2
+   ],
+   [
+    "and in again",
+    1
+   ],
+   [
+    "slowly out",
+    6
+   ]
+  ],
+  "evidence": "Well established: panic peaks and passes; staying with it rather than escaping weakens it, and long out-breaths calm the body.",
+  "when": "During a panic attack, or when panic is starting.",
+  "versions": {
+   "short": {
+    "minutes": 3,
+    "steps": [
+     {
+      "text": "You're having a wave of panic. It feels awful, and it will pass. Panic always rises, peaks and falls.",
+      "pause": 3,
+      "pacer": false
+     },
+     {
+      "text": "Your racing heart and tight chest are uncomfortable, and they are not dangerous. Your body is doing an alarm drill. You don't need to fight it.",
+      "pause": 3,
+      "pacer": false
+     },
+     {
+      "text": "Breathe in twice through your nose, then out slowly through your mouth. Follow the circle.",
+      "pause": 40,
+      "pacer": true
+     },
+     {
+      "text": "Feel your feet on the floor. You are still here, still breathing.",
+      "pause": 40,
+      "pacer": true
+     },
+     {
+      "text": "Notice: is the wave the same, higher, or a little lower now?",
+      "pause": 30,
+      "pacer": true
+     },
+     {
+      "text": "Every time you ride a wave instead of running from it, the next one has less power.",
+      "pause": 0,
+      "pacer": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "grounding-54321",
+  "title": "5-4-3-2-1: back to the present",
+  "category": "calm",
+  "type": "tool",
+  "evidence": "A standard grounding skill used in trauma and anxiety care.",
+  "when": "When you feel overwhelmed, flooded by a memory, or not quite here.",
+  "versions": {
+   "short": {
+    "minutes": 2,
+    "steps": [
+     {
+      "text": "Let's bring you back to right here, right now. Keep your eyes open.",
+      "pause": 2,
+      "pacer": false
+     },
+     {
+      "text": "Look around and find five things you can see.",
+      "pause": 15,
+      "pacer": false
+     },
+     {
+      "text": "Four things you can feel: your feet in your shoes, the chair under you, your clothes.",
+      "pause": 15,
+      "pacer": false
+     },
+     {
+      "text": "Three things you can hear.",
+      "pause": 15,
+      "pacer": false
+     },
+     {
+      "text": "Two things you can smell, or two smells you like.",
+      "pause": 12,
+      "pacer": false
+     },
+     {
+      "text": "One thing you can taste.",
+      "pause": 10,
+      "pacer": false
+     },
+     {
+      "text": "Press your feet into the floor. Today is a new day, and you are here.",
+      "pause": 0,
+      "pacer": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "morning-lift",
+  "title": "Morning lift",
+  "category": "morning",
+  "type": "meditation",
+  "pacer": [
+   [
+    "in",
+    2
+   ],
+   [
+    "and in again",
+    1
+   ],
+   [
+    "slowly out",
+    6
+   ]
+  ],
+  "evidence": "Combines a breathing pattern with strong evidence and vivid rehearsal of a real moment today; just listen. Your focus for the day comes from what you have told the app.",
+  "when": "Each morning, before the day takes over. Nothing to do but listen.",
+  "versions": {
+   "short": {
+    "minutes": 4,
+    "steps": [
+     {
+      "text": "Good morning. Before the day starts, let's give your body and mind a good beginning. There's nothing to do but listen.",
+      "pause": 3,
+      "pacer": false
+     },
+     {
+      "text": "Three slow sighs together: in through the nose, a second sip on top, and a long breath out.",
+      "pause": 51,
+      "pacer": true
+     },
+     {
+      "text": "Feel the day ahead without rushing into it yet. Whatever it holds, you can meet it one moment at a time.",
+      "pause": 6,
+      "pacer": false
+     },
+     {
+      "text": "Today, let this guide you: {value|what matters most to you}.",
+      "pause": 6,
+      "pacer": false
+     },
+     {
+      "text": "Picture one moment later today when you act from that. It can be small. See where you are... who's there... what you do... and how it feels in your body to do it.",
+      "pause": 51,
+      "pacer": false
+     },
+     {
+      "text": "If there's one thing to move forward today, let it be this: {today_focus|one small step towards the life you want}. Imagine the first minute of doing it... how simple that first minute is.",
+      "pause": 43,
+      "pacer": false
+     },
+     {
+      "text": "And whatever the day brings, here are words to carry with you: {kind_phrase|I'm doing my best, and that is enough for today}.",
+      "pause": 8,
+      "pacer": false
+     },
+     {
+      "text": "One more long breath out... and go gently into your day.",
+      "pause": 0,
+      "pacer": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "compassionate-companion",
+  "title": "The compassionate companion",
+  "category": "kindness",
+  "type": "meditation",
+  "evidence": "Moderate: compassion-focused imagery and related practices reduce self-criticism, shame and low mood (meta-analysis, Kirby and others, 2017).",
+  "when": "When the inner critic is loud, or you feel not good enough.",
+  "versions": {
+   "short": {
+    "minutes": 10,
+    "steps": [
+     {
+      "text": "Sit or lie comfortably. Let your breathing slow down a little, just slightly slower than usual, soothing and even.",
+      "pause": 44,
+      "pacer": false
+     },
+     {
+      "text": "Let your face soften into a gentle, friendly expression, the way you'd look at someone you're fond of.",
+      "pause": 22,
+      "pacer": false
+     },
+     {
+      "text": "Now imagine a presence coming to be with you. A compassionate companion: wise, strong, warm, and completely on your side. It doesn't have to be a person. It can be a figure, a light, an animal, whatever feels right.",
+      "pause": 44,
+      "pacer": false
+     },
+     {
+      "text": "Notice how they look at you. There's no judgement in their eyes. Only understanding, and a deep wish for you to be well.",
+      "pause": 44,
+      "pacer": false
+     },
+     {
+      "text": "They know about {struggle|what has been hard for you lately}. They know how hard you've been trying, including the parts nobody sees.",
+      "pause": 44,
+      "pacer": false
+     },
+     {
+      "text": "Let them come a little closer. Notice their voice, calm and kind. Listen to what they want to say to you.",
+      "pause": 88,
+      "pacer": false
+     },
+     {
+      "text": "They say: {kind_phrase|You don't have to be perfect to deserve kindness}. Let the words land, even if part of you doesn't believe them yet.",
+      "pause": 55,
+      "pacer": false
+     },
+     {
+      "text": "They remind you that your care about {value|the things that matter to you} is not a weakness. It's one of the best things about you.",
+      "pause": 44,
+      "pacer": false
+     },
+     {
+      "text": "Breathe in their warmth. Breathe out anything you've been carrying alone.",
+      "pause": 88,
+      "pacer": false
+     },
+     {
+      "text": "This companion isn't really outside you. It's a part of you that you're learning to hear. You can come back to it any time.",
+      "pause": 22,
+      "pacer": false
+     },
+     {
+      "text": "Let the image fade, take a slow breath, and come back to the room.",
+      "pause": 0,
+      "pacer": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "loving-kindness",
+  "title": "Loving-kindness",
+  "category": "kindness",
+  "type": "meditation",
+  "evidence": "Moderate: increases warm, positive feelings towards yourself and others across trials.",
+  "when": "When you feel harsh, lonely or disconnected.",
+  "versions": {
+   "short": {
+    "minutes": 6,
+    "steps": [
+     {
+      "text": "Sit comfortably, and let your breathing settle. You might put a hand on your heart.",
+      "pause": 21,
+      "pacer": false
+     },
+     {
+      "text": "Bring to mind someone who makes you smile easily: a friend, a grandparent, even a pet.",
+      "pause": 26,
+      "pacer": false
+     },
+     {
+      "text": "Offer them these wishes: may you be safe... may you be well... may you be at ease.",
+      "pause": 54,
+      "pacer": false
+     },
+     {
+      "text": "Now imagine them offering the same wishes back to you: may you be safe... may you be well... may you be at ease.",
+      "pause": 64,
+      "pacer": false
+     },
+     {
+      "text": "And offer them to yourself, in your own voice. If it feels strange, that's all right. Say them anyway.",
+      "pause": 86,
+      "pacer": false
+     },
+     {
+      "text": "Finally, let the wishes spread to everyone you'll meet today.",
+      "pause": 64,
+      "pacer": false
+     },
+     {
+      "text": "Gently open your eyes.",
+      "pause": 0,
+      "pacer": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "future-self",
+  "title": "A visit from your future self",
+  "category": "direction",
+  "type": "meditation",
+  "evidence": "Moderate: vividly imagining your future self strengthens motivation and wiser choices today, and imagining a best possible future lifts mood (Peters and others, 2010).",
+  "when": "When you feel lost, stuck, or unsure what to do next.",
+  "versions": {
+   "short": {
+    "minutes": 8,
+    "steps": [
+     {
+      "text": "Close your eyes or rest them on one spot, and take a slow breath.",
+      "pause": 6,
+      "pacer": false
+     },
+     {
+      "text": "Imagine a door opening, and through it walks you... a year from now. This is the you who has spent the year living a little more by {value|what matters most to you}, week by week.",
+      "pause": 45,
+      "pacer": false
+     },
+     {
+      "text": "Notice how they stand. Their face. Their eyes. There's something settled about them.",
+      "pause": 45,
+      "pacer": false
+     },
+     {
+      "text": "They have moved towards {goal|the life you want}. Not perfectly, but really.",
+      "pause": 34,
+      "pacer": false
+     },
+     {
+      "text": "They look at you with real understanding. They remember exactly how today feels, because they were you.",
+      "pause": 45,
+      "pacer": false
+     },
+     {
+      "text": "Ask them: what helped you get here? Then listen.",
+      "pause": 91,
+      "pacer": false
+     },
+     {
+      "text": "Ask them: what's one thing I could do today? Listen again. It's probably simpler than you expect.",
+      "pause": 91,
+      "pacer": false
+     },
+     {
+      "text": "Before they go, they give you something small to remember this by: a word, an object, a gesture. Notice what it is.",
+      "pause": 45,
+      "pacer": false
+     },
+     {
+      "text": "They leave, and the door closes softly. They're not a stranger. They're who you're becoming.",
+      "pause": 8,
+      "pacer": false
+     },
+     {
+      "text": "Take a breath, and come back.",
+      "pause": 0,
+      "pacer": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "letting-go-bridge",
+  "title": "Letting go: the bridge",
+  "category": "let_go",
+  "type": "meditation",
+  "evidence": "Moderate: learning to step back from thoughts (defusion, from ACT) reduces their grip, and acceptance reduces the struggle that keeps them going.",
+  "when": "When the same thoughts keep going round, or you're stuck in the past.",
+  "versions": {
+   "short": {
+    "minutes": 8,
+    "steps": [
+     {
+      "text": "Let your body settle. Feel what's supporting you, the chair, the bed, the floor.",
+      "pause": 20,
+      "pacer": false
+     },
+     {
+      "text": "Imagine you're standing on a bridge over a slow, wide river. The air is fresh. You lean on the railing.",
+      "pause": 30,
+      "pacer": false
+     },
+     {
+      "text": "Below you, things are floating past on the water: leaves, small boats, branches.",
+      "pause": 20,
+      "pacer": false
+     },
+     {
+      "text": "As thoughts come, imagine each one placed on something floating by. Words, pictures, memories, worries. Even the old loop about {struggle|what's been weighing on you}.",
+      "pause": 40,
+      "pacer": false
+     },
+     {
+      "text": "You don't need to push them along, or pull them out. You simply watch them pass beneath you.",
+      "pause": 81,
+      "pacer": false
+     },
+     {
+      "text": "If you find yourself in the water, caught up in a thought, that's fine. Notice it, and climb back onto the bridge.",
+      "pause": 81,
+      "pacer": false
+     },
+     {
+      "text": "Letting go isn't forgetting, and it isn't pretending it didn't matter. It's loosening your grip, so your hands are free for what's in front of you.",
+      "pause": 61,
+      "pacer": false
+     },
+     {
+      "text": "Breathe out slowly, and let your shoulders drop.",
+      "pause": 40,
+      "pacer": false
+     },
+     {
+      "text": "Now turn away from the river and look at the path ahead. Somewhere along it is {value|what matters to you}.",
+      "pause": 30,
+      "pacer": false
+     },
+     {
+      "text": "Take a breath, and come back to the room.",
+      "pause": 0,
+      "pacer": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "rain",
+  "title": "RAIN for a difficult feeling",
+  "category": "let_go",
+  "type": "meditation",
+  "evidence": "A widely used mindfulness approach to strong feelings; early but encouraging evidence.",
+  "when": "When a strong feeling like shame, fear or anger takes hold.",
+  "versions": {
+   "short": {
+    "minutes": 7,
+    "steps": [
+     {
+      "text": "This practice helps you meet a difficult feeling instead of being swept away by it.",
+      "pause": 3,
+      "pacer": false
+     },
+     {
+      "text": "Recognise: notice what you're feeling, and name it simply. This is fear. This is shame. This is sadness.",
+      "pause": 46,
+      "pacer": false
+     },
+     {
+      "text": "Allow: let it be here, just for now. You don't have to like it. It's okay to feel this.",
+      "pause": 69,
+      "pacer": false
+     },
+     {
+      "text": "Investigate, kindly: where do you feel it in your body? What does this feeling believe? What does it need?",
+      "pause": 92,
+      "pacer": false
+     },
+     {
+      "text": "Nurture: offer yourself what you need. A hand on your heart. The words a good friend would say.",
+      "pause": 92,
+      "pacer": false
+     },
+     {
+      "text": "Rest for a moment as someone who can hold this feeling with care.",
+      "pause": 69,
+      "pacer": false
+     },
+     {
+      "text": "Notice how the feeling is now. It often softens a little, even if it's still there.",
+      "pause": 0,
+      "pacer": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "calm-body-hypnosis",
+  "title": "Deep calm (guided hypnosis)",
+  "category": "deep",
+  "type": "meditation",
+  "evidence": "Good: hypnosis reduced anxiety substantially compared with control conditions across studies (meta-analysis, Valentine and others, 2019). Works through deep relaxation, imagery and suggestion. Not if you have psychosis or often lose touch with your surroundings. Never while driving.",
+  "when": "For anxiety and tension, when you have fifteen undisturbed minutes.",
+  "versions": {
+   "long": {
+    "minutes": 15,
+    "steps": [
+     {
+      "text": "Find a position where your body is fully supported. Make sure you won't be disturbed. You'll stay aware the whole time, and you can open your eyes whenever you like.",
+      "pause": 6,
+      "pacer": false
+     },
+     {
+      "text": "Look at one spot slightly above eye level. Keep looking... and notice your eyelids becoming heavier... and when they want to close, let them.",
+      "pause": 67,
+      "pacer": false
+     },
+     {
+      "text": "Take a deep breath in... and as you breathe out, let a wave of relaxation flow down from the top of your head.",
+      "pause": 34,
+      "pacer": false
+     },
+     {
+      "text": "Down over your forehead... your eyes... your cheeks and jaw... down your neck... and across your shoulders, which grow heavy and loose.",
+      "pause": 67,
+      "pacer": false
+     },
+     {
+      "text": "Down your arms, to your hands... down through your chest and belly... your back... your hips... your legs, all the way down to your feet.",
+      "pause": 84,
+      "pacer": false
+     },
+     {
+      "text": "Now I'll count down from ten to one. With each number, you drift twice as deep into calm. Ten... nine... eight...",
+      "pause": 34,
+      "pacer": false
+     },
+     {
+      "text": "Seven... six... five... deeper and calmer...",
+      "pause": 34,
+      "pacer": false
+     },
+     {
+      "text": "Four... three... two... one. Deeply relaxed, and safe.",
+      "pause": 67,
+      "pacer": false
+     },
+     {
+      "text": "In this calm state, your mind is open to helpful ideas. Each breath out reminds your body how to be calm.",
+      "pause": 67,
+      "pacer": false
+     },
+     {
+      "text": "And you may notice that in the moments that used to wind you up, especially {struggle_situation|the situations that make you tense}, a quiet steadiness begins to appear. Not forced. It simply shows up, a little more each time.",
+      "pause": 84,
+      "pacer": false
+     },
+     {
+      "text": "You can feel more at ease in your body... more confident in yourself... more able to meet things as they come. These changes grow on their own, day by day.",
+      "pause": 84,
+      "pacer": false
+     },
+     {
+      "text": "Now, gently press your thumb and first finger together, and silently say your calm word: {calm_word|steady}. Feel this calm, and link it to that touch and that word.",
+      "pause": 67,
+      "pacer": false
+     },
+     {
+      "text": "From now on, whenever you press your thumb and finger together and say {calm_word|steady}, some of this calm will come back. The more you practise, the stronger the link.",
+      "pause": 50,
+      "pacer": false
+     },
+     {
+      "text": "In a moment, I'll count from one to five. At five, you'll open your eyes, feeling refreshed, alert and calm. One... two... energy coming back into your body...",
+      "pause": 6,
+      "pacer": false
+     },
+     {
+      "text": "Three... four... feeling awake and clear... five. Eyes open, fully alert, and calm.",
+      "pause": 0,
+      "pacer": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "deep-rest",
+  "title": "Deep rest",
+  "category": "deep",
+  "type": "meditation",
+  "evidence": "Early but encouraging: guided deep-rest practices (yoga nidra) improve sleep, stress and fatigue.",
+  "when": "When you're drained, or for an afternoon reset. Lie down.",
+  "versions": {
+   "long": {
+    "minutes": 12,
+    "steps": [
+     {
+      "text": "Lie down on your back if you can, arms by your sides, and let your body be heavy. There's nothing to do and nowhere to be.",
+      "pause": 22,
+      "pacer": false
+     },
+     {
+      "text": "Bring to mind a simple intention, in a few words, as if it's already true. For example: {intention|I am safe, and I am enough}. Say it to yourself three times.",
+      "pause": 45,
+      "pacer": false
+     },
+     {
+      "text": "Now your attention will move quickly through the body. Just let it be where I say. Right hand thumb... first finger... middle finger... ring finger... little finger... palm... wrist...",
+      "pause": 6,
+      "pacer": false
+     },
+     {
+      "text": "Right elbow... shoulder... right side of the waist... hip... knee... ankle... the sole of the right foot...",
+      "pause": 6,
+      "pacer": false
+     },
+     {
+      "text": "Left hand thumb... first finger... middle finger... ring finger... little finger... palm... wrist... elbow... shoulder... waist... hip... knee... ankle... the sole of the left foot...",
+      "pause": 8,
+      "pacer": false
+     },
+     {
+      "text": "The back of the head... the whole back... the forehead... the eyes... the cheeks... the lips... the chest... the belly... the whole body, all at once.",
+      "pause": 33,
+      "pacer": false
+     },
+     {
+      "text": "Now count your breaths backwards from twenty-seven, silently. Twenty-seven, breathing in and out... twenty-six... If you lose count, start again at twenty-seven.",
+      "pause": 150,
+      "pacer": false
+     },
+     {
+      "text": "Let the counting go. Feel your body becoming heavy... heavy as stone, sinking into the ground...",
+      "pause": 45,
+      "pacer": false
+     },
+     {
+      "text": "And now light... light as a feather, as if you could float.",
+      "pause": 45,
+      "pacer": false
+     },
+     {
+      "text": "Feel warmth, like sun on your skin...",
+      "pause": 33,
+      "pacer": false
+     },
+     {
+      "text": "And coolness, like a breeze...",
+      "pause": 33,
+      "pacer": false
+     },
+     {
+      "text": "Now just rest, aware, in deep quiet.",
+      "pause": 150,
+      "pacer": false
+     },
+     {
+      "text": "Bring back your intention, and say it to yourself three times: {intention|I am safe, and I am enough}.",
+      "pause": 45,
+      "pacer": false
+     },
+     {
+      "text": "Slowly come back. Move your fingers and toes. Stretch. When you're ready, roll to one side, and sit up.",
+      "pause": 0,
+      "pacer": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "sleep-shuffle",
+  "title": "Drifting to sleep",
+  "category": "sleep",
+  "type": "meditation",
+  "evidence": "Early evidence: imagining a stream of unrelated, peaceful images (the cognitive shuffle) mimics how the mind drifts at sleep onset and crowds out worry.",
+  "when": "In bed, when your mind won't stop.",
+  "versions": {
+   "long": {
+    "minutes": 11,
+    "steps": [
+     {
+      "text": "Lie comfortably and let your body be heavy. You don't need to try to sleep. Just rest, and picture what I say, one thing at a time.",
+      "pause": 16,
+      "pacer": false
+     },
+     {
+      "text": "A lemon... bright yellow, cool in your hand.",
+      "pause": 16,
+      "pacer": false
+     },
+     {
+      "text": "A lighthouse... on a calm evening.",
+      "pause": 16,
+      "pacer": false
+     },
+     {
+      "text": "A wooden ladder... leaning against a wall.",
+      "pause": 16,
+      "pacer": false
+     },
+     {
+      "text": "A lamb... in soft grass.",
+      "pause": 16,
+      "pacer": false
+     },
+     {
+      "text": "A lantern... glowing warm.",
+      "pause": 16,
+      "pacer": false
+     },
+     {
+      "text": "A leaf... floating on a pond.",
+      "pause": 19,
+      "pacer": false
+     },
+     {
+      "text": "A blue cup... with steam rising.",
+      "pause": 19,
+      "pacer": false
+     },
+     {
+      "text": "A bicycle... resting by a gate.",
+      "pause": 19,
+      "pacer": false
+     },
+     {
+      "text": "A blanket... folded on a chair.",
+      "pause": 19,
+      "pacer": false
+     },
+     {
+      "text": "A bird... on a quiet branch.",
+      "pause": 22,
+      "pacer": false
+     },
+     {
+      "text": "A boat... still on the water.",
+      "pause": 22,
+      "pacer": false
+     },
+     {
+      "text": "A candle... flickering slowly.",
+      "pause": 26,
+      "pacer": false
+     },
+     {
+      "text": "A cloud... drifting.",
+      "pause": 29,
+      "pacer": false
+     },
+     {
+      "text": "A cat... curled up asleep.",
+      "pause": 32,
+      "pacer": false
+     },
+     {
+      "text": "A cushion... soft and deep.",
+      "pause": 32,
+      "pacer": false
+     },
+     {
+      "text": "A path... through a garden.",
+      "pause": 40,
+      "pacer": false
+     },
+     {
+      "text": "A pebble... smooth and grey.",
+      "pause": 40,
+      "pacer": false
+     },
+     {
+      "text": "A pillow... and you sinking into it.",
+      "pause": 48,
+      "pacer": false
+     },
+     {
+      "text": "Keep picturing simple, peaceful things of your own, one after another, letting each one fade.",
+      "pause": 150,
+      "pacer": false
+     },
+     {
+      "text": "I'll be quiet now. Goodnight.",
+      "pause": 0,
+      "pacer": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "body-scan",
+  "title": "Body scan",
+  "category": "sleep",
+  "type": "meditation",
+  "evidence": "Moderate: part of mindfulness programmes with good evidence for stress and preventing relapse in depression.",
+  "when": "For tension, rest, or before sleep.",
+  "versions": {
+   "long": {
+    "minutes": 12,
+    "steps": [
+     {
+      "text": "Lie or sit comfortably. If anything feels too much at any point, open your eyes and look around the room.",
+      "pause": 6,
+      "pacer": false
+     },
+     {
+      "text": "Take three slow breaths, letting each out-breath be a little longer.",
+      "pause": 34,
+      "pacer": false
+     },
+     {
+      "text": "Bring your attention to your feet. Notice whatever is there: warmth, coolness, tingling, or nothing. All of it is fine.",
+      "pause": 69,
+      "pacer": false
+     },
+     {
+      "text": "Slowly up through your lower legs... your knees... your thighs. If you find tension, breathe into it, and let it be.",
+      "pause": 86,
+      "pacer": false
+     },
+     {
+      "text": "Your hips... your belly, rising and falling... your lower back... your upper back.",
+      "pause": 86,
+      "pacer": false
+     },
+     {
+      "text": "Your chest... your shoulders... down your arms to your hands and fingers.",
+      "pause": 86,
+      "pacer": false
+     },
+     {
+      "text": "Your neck... your jaw, letting your teeth part slightly... your face... the top of your head.",
+      "pause": 86,
+      "pacer": false
+     },
+     {
+      "text": "Now feel your whole body at once, breathing.",
+      "pause": 103,
+      "pacer": false
+     },
+     {
+      "text": "Rest here.",
+      "pause": 103,
+      "pacer": false
+     },
+     {
+      "text": "When you're ready, wriggle your fingers and toes, and open your eyes. Or let yourself drift into sleep.",
+      "pause": 0,
+      "pacer": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "savouring",
+  "title": "Savouring a good moment",
+  "category": "feel_good",
+  "type": "meditation",
+  "evidence": "Moderate: recalling a good memory in detail lifts mood and reduced the stress response in lab studies (Speer and Delgado, 2017).",
+  "when": "When the day feels grey, or you want to end it well.",
+  "versions": {
+   "short": {
+    "minutes": 6,
+    "steps": [
+     {
+      "text": "Settle in, and let your breathing slow a little.",
+      "pause": 8,
+      "pacer": false
+     },
+     {
+      "text": "Bring to mind a moment that went well recently: {good_moment|a moment when you felt at ease, or proud, or close to someone}.",
+      "pause": 34,
+      "pacer": false
+     },
+     {
+      "text": "Step back into it. Where are you? What can you see around you... the light, the colours?",
+      "pause": 56,
+      "pacer": false
+     },
+     {
+      "text": "What can you hear? Who's there?",
+      "pause": 45,
+      "pacer": false
+     },
+     {
+      "text": "What were you feeling in your body at that moment? Let that feeling come back now.",
+      "pause": 56,
+      "pacer": false
+     },
+     {
+      "text": "Stay with the good feeling for a few breaths. Let it grow a little, and spread through your chest.",
+      "pause": 67,
+      "pacer": false
+     },
+     {
+      "text": "Notice your part in this moment. It happened partly because of you.",
+      "pause": 45,
+      "pacer": false
+     },
+     {
+      "text": "Keep a little of this feeling with you as you come back.",
+      "pause": 0,
+      "pacer": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "calm-place",
+  "title": "Your calm place",
+  "category": "safe",
+  "type": "meditation",
+  "evidence": "A standard stabilising practice in trauma care: building a feeling of safety you can return to.",
+  "when": "To build a sense of safety, especially after hard memories.",
+  "versions": {
+   "short": {
+    "minutes": 6,
+    "steps": [
+     {
+      "text": "Keep your eyes open or closed, whatever feels safer. You can stop at any time.",
+      "pause": 4,
+      "pacer": false
+     },
+     {
+      "text": "Bring to mind a place where you feel calm and safe. Real, remembered, or imagined.",
+      "pause": 38,
+      "pacer": false
+     },
+     {
+      "text": "Look around. Notice the colours and the light.",
+      "pause": 63,
+      "pacer": false
+     },
+     {
+      "text": "What can you hear there?",
+      "pause": 50,
+      "pacer": false
+     },
+     {
+      "text": "What does the air feel like on your skin?",
+      "pause": 50,
+      "pacer": false
+     },
+     {
+      "text": "Notice how your body feels here. Let that feeling grow a little.",
+      "pause": 75,
+      "pacer": false
+     },
+     {
+      "text": "Choose a word that brings you back here. Whenever you need it, say the word and return, even for a few seconds.",
+      "pause": 38,
+      "pacer": false
+     },
+     {
+      "text": "Now come back to the room. Feel your feet, and look around you.",
+      "pause": 0,
+      "pacer": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "container",
+  "title": "The container",
+  "category": "safe",
+  "type": "tool",
+  "evidence": "A standard stabilising skill in trauma care for putting intrusive memories aside until the right time.",
+  "when": "When a memory or worry keeps intruding and now is not the time.",
+  "versions": {
+   "short": {
+    "minutes": 2,
+    "steps": [
+     {
+      "text": "This helps you put something aside safely, until the right time to look at it.",
+      "pause": 3,
+      "pacer": false
+     },
+     {
+      "text": "Imagine a strong container: a box, a safe, a chest. As solid as you need.",
+      "pause": 20,
+      "pacer": false
+     },
+     {
+      "text": "Place the memory, feeling or worry inside. As an image, a word, or a colour.",
+      "pause": 30,
+      "pacer": false
+     },
+     {
+      "text": "Close it firmly. Lock it if you like.",
+      "pause": 15,
+      "pacer": false
+     },
+     {
+      "text": "Put it somewhere safe and out of the way. It will be there when you choose to come back to it.",
+      "pause": 20,
+      "pacer": false
+     },
+     {
+      "text": "Take a slow breath, feel your feet, and look around the room.",
+      "pause": 0,
+      "pacer": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "muscle-relaxation",
+  "title": "Progressive muscle relaxation",
+  "category": "deep",
+  "type": "meditation",
+  "evidence": "Strong: tensing and releasing muscle groups reduces anxiety and improves sleep across many trials. It teaches your body the difference between tension and letting go.",
+  "when": "For tension, anxiety, or trouble sleeping. Skip any area that is injured or painful.",
+  "versions": {
+   "long": {
+    "minutes": 12,
+    "steps": [
+     {
+      "text": "Sit or lie comfortably. You'll gently tense one part of your body for about five seconds, then let go and notice the difference. Tense to about half your strength, never to the point of pain.",
+      "pause": 4,
+      "pacer": false
+     },
+     {
+      "text": "Start with your hands and arms. Make fists and tighten your arms... hold... and let go. Feel the warmth and heaviness flowing in.",
+      "pause": 63,
+      "pacer": false
+     },
+     {
+      "text": "Now your face. Scrunch it up: eyes, nose, forehead... hold... and release. Let your jaw hang loose.",
+      "pause": 63,
+      "pacer": false
+     },
+     {
+      "text": "Your neck and shoulders. Lift your shoulders up towards your ears... hold... and let them drop.",
+      "pause": 63,
+      "pacer": false
+     },
+     {
+      "text": "Your chest and back. Take a breath and gently squeeze your shoulder blades together... hold... and let go as you breathe out.",
+      "pause": 63,
+      "pacer": false
+     },
+     {
+      "text": "Your belly. Tighten your stomach muscles... hold... and let them soften completely.",
+      "pause": 63,
+      "pacer": false
+     },
+     {
+      "text": "Your legs. Press your knees together and tighten your thighs... hold... and release.",
+      "pause": 63,
+      "pacer": false
+     },
+     {
+      "text": "Your feet. Curl your toes downwards... hold... and let go.",
+      "pause": 63,
+      "pacer": false
+     },
+     {
+      "text": "Now let your attention travel from your feet to your head, and wherever you find a little tension left, breathe out and let it melt.",
+      "pause": 94,
+      "pacer": false
+     },
+     {
+      "text": "Rest in this heaviness. Your body knows how to let go now, and it gets easier each time you practise.",
+      "pause": 94,
+      "pacer": false
+     },
+     {
+      "text": "Take your time to come back, or let yourself drift towards sleep.",
+      "pause": 0,
+      "pacer": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "urge-surfing",
+  "title": "Urge surfing",
+  "category": "urges",
+  "type": "meditation",
+  "evidence": "Good: from mindfulness-based relapse prevention, which reduced relapse in trials (Bowen and others, 2014). Urges rise, peak and fall like waves; riding one without acting weakens the next.",
+  "when": "When you feel the pull to drink, check, scroll, smoke, ask for reassurance, or anything you want to do less.",
+  "versions": {
+   "short": {
+    "minutes": 6,
+    "steps": [
+     {
+      "text": "You're feeling an urge. You don't have to act on it, and you don't have to fight it. For the next few minutes, we'll just watch it, like watching a wave.",
+      "pause": 3,
+      "pacer": false
+     },
+     {
+      "text": "Notice where you feel the urge in your body. Your chest? Your hands? Your mouth? Your stomach?",
+      "pause": 28,
+      "pacer": false
+     },
+     {
+      "text": "Describe it to yourself: is it tight, warm, buzzing, pulling? How strong is it, from 0 to 10?",
+      "pause": 28,
+      "pacer": false
+     },
+     {
+      "text": "Now breathe with it. As you breathe in, notice the urge. As you breathe out, make a little space around it.",
+      "pause": 57,
+      "pacer": false
+     },
+     {
+      "text": "Urges are like waves. They build, they peak, and they fall. You're on your board, riding it.",
+      "pause": 57,
+      "pacer": false
+     },
+     {
+      "text": "If it gets stronger, that's the wave rising. Stay with your breath. You don't need to do anything.",
+      "pause": 57,
+      "pacer": false
+     },
+     {
+      "text": "Notice it now. Has it changed shape, moved, or eased a little?",
+      "pause": 38,
+      "pacer": false
+     },
+     {
+      "text": "Each time you ride a wave without acting on it, the next one is a little smaller. That's how habits loosen.",
+      "pause": 19,
+      "pacer": false
+     },
+     {
+      "text": "Now choose one small thing to do instead, something kind to yourself, and do it now.",
+      "pause": 0,
+      "pacer": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "breathing-space",
+  "title": "Three-minute breathing space",
+  "category": "calm",
+  "type": "meditation",
+  "evidence": "Strong for the programme it comes from: mindfulness-based cognitive therapy reduces the risk of depression coming back (meta-analysis, Kuyken and others, 2016).",
+  "when": "A quick reset in a busy or difficult moment. Use it often.",
+  "versions": {
+   "short": {
+    "minutes": 3,
+    "steps": [
+     {
+      "text": "Wherever you are, pause. Sit or stand a little taller, in a way that feels dignified and awake.",
+      "pause": 3,
+      "pacer": false
+     },
+     {
+      "text": "First, what's here right now? Notice your thoughts... your feelings... the sensations in your body. Just notice them, without trying to change anything.",
+      "pause": 48,
+      "pacer": false
+     },
+     {
+      "text": "Now gather your attention onto the breath, low in your belly. Feel each breath in and each breath out.",
+      "pause": 48,
+      "pacer": false
+     },
+     {
+      "text": "Now let your attention widen to your whole body, breathing. Your posture, your face, the space around you.",
+      "pause": 43,
+      "pacer": false
+     },
+     {
+      "text": "Take this steadiness with you into the next moment.",
+      "pause": 0,
+      "pacer": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "sounds-and-thoughts",
+  "title": "Sounds and thoughts",
+  "category": "let_go",
+  "type": "meditation",
+  "evidence": "From mindfulness-based cognitive therapy (strong evidence for keeping depression from returning): learning to see thoughts as passing events, not facts.",
+  "when": "When thoughts feel loud, convincing, or stuck on repeat.",
+  "versions": {
+   "short": {
+    "minutes": 10,
+    "steps": [
+     {
+      "text": "Sit comfortably, and let your eyes close or rest on one spot.",
+      "pause": 6,
+      "pacer": false
+     },
+     {
+      "text": "Start by listening. Let sounds come to you: near sounds, far sounds, loud and quiet ones. You don't need to name them or like them. Just notice them arriving... and passing.",
+      "pause": 106,
+      "pacer": false
+     },
+     {
+      "text": "Notice the gaps between sounds too. Sounds come and go on their own.",
+      "pause": 79,
+      "pacer": false
+     },
+     {
+      "text": "Now, in the same way, turn your attention to your thoughts. Notice them arriving, like sounds in the mind... staying a while... and passing.",
+      "pause": 79,
+      "pacer": false
+     },
+     {
+      "text": "You might picture thoughts as clouds moving across the sky, or as words on a screen. You don't need to follow them or push them away.",
+      "pause": 106,
+      "pacer": false
+     },
+     {
+      "text": "Sometimes you'll be carried off by a thought. That's what minds do. When you notice, gently come back to watching.",
+      "pause": 106,
+      "pacer": false
+     },
+     {
+      "text": "Thoughts are events in the mind, not facts about you or the world. Even the loud ones.",
+      "pause": 53,
+      "pacer": false
+     },
+     {
+      "text": "Let go of the practice, take a breath, and open your eyes.",
+      "pause": 0,
+      "pacer": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "name-it",
+  "title": "Name it to tame it",
+  "category": "let_go",
+  "type": "meditation",
+  "evidence": "Good: putting a feeling into words calms the brain's alarm response (Lieberman and others, 2007); noting practice turns that into a habit.",
+  "when": "When a strong feeling takes over: anxiety, anger, shame, sadness.",
+  "versions": {
+   "short": {
+    "minutes": 8,
+    "steps": [
+     {
+      "text": "Settle into a comfortable position, and take one slow breath out.",
+      "pause": 6,
+      "pacer": false
+     },
+     {
+      "text": "Notice what you're feeling right now. Then name it, softly, in one word: fear... anger... sadness... shame... worry. Whatever fits.",
+      "pause": 51,
+      "pacer": false
+     },
+     {
+      "text": "Find where it lives in your body, and name that too: tight chest... hot face... knot in the stomach.",
+      "pause": 61,
+      "pacer": false
+     },
+     {
+      "text": "Now, as thoughts come, give each one a gentle label: planning... worrying... judging... remembering. Then let it go.",
+      "pause": 92,
+      "pacer": false
+     },
+     {
+      "text": "Keep noting whatever comes, a word at a time, in a calm, friendly voice inside. Feeling... thinking... hearing...",
+      "pause": 122,
+      "pacer": false
+     },
+     {
+      "text": "Notice what happens to the feeling when you name it. Often it loosens its grip a little.",
+      "pause": 61,
+      "pacer": false
+     },
+     {
+      "text": "You don't have to get rid of the feeling. Naming it means you're the one noticing it, not the one drowning in it.",
+      "pause": 31,
+      "pacer": false
+     },
+     {
+      "text": "Take a slow breath, and come back.",
+      "pause": 0,
+      "pacer": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "mindful-walk",
+  "title": "A mindful walk",
+  "category": "feel_good",
+  "type": "meditation",
+  "evidence": "Good: walking is one of the most effective exercises for depression in a large review (Noetel and others, 2024), and time outdoors adds to wellbeing. This adds calm attention to it.",
+  "when": "Outdoors, on any walk. Keep your eyes open and stay aware of traffic.",
+  "versions": {
+   "long": {
+    "minutes": 15,
+    "steps": [
+     {
+      "text": "Start walking at a comfortable pace, a little slower than usual. There's nowhere you need to be.",
+      "pause": 21,
+      "pacer": false
+     },
+     {
+      "text": "Feel your feet: the heel touching the ground, the roll forward, the push off. Left... right...",
+      "pause": 84,
+      "pacer": false
+     },
+     {
+      "text": "Notice the rhythm of your arms swinging, and your breath finding its own pace with your steps.",
+      "pause": 84,
+      "pacer": false
+     },
+     {
+      "text": "Now look around. Notice colours: three different greens, or the colour of the sky right now.",
+      "pause": 95,
+      "pacer": false
+     },
+     {
+      "text": "Notice the light: where it falls, where the shadows are.",
+      "pause": 84,
+      "pacer": false
+     },
+     {
+      "text": "Listen: birds, wind, traffic, voices. Let sounds come and go.",
+      "pause": 95,
+      "pacer": false
+     },
+     {
+      "text": "Feel the air on your face and hands. Is it cool, warm, still, moving?",
+      "pause": 84,
+      "pacer": false
+     },
+     {
+      "text": "Find one thing that's beautiful or interesting, however small. Let your eyes rest on it for a few breaths.",
+      "pause": 95,
+      "pacer": false
+     },
+     {
+      "text": "Try matching your breath to your steps: in for three or four steps, out for four to six.",
+      "pause": 126,
+      "pacer": false
+     },
+     {
+      "text": "Notice how your body feels now compared with when you set off.",
+      "pause": 63,
+      "pacer": false
+     },
+     {
+      "text": "Carry on walking in your own way. Thank your body for carrying you.",
+      "pause": 0,
+      "pacer": false
+     }
+    ]
+   }
+  }
+ },
+ {
+  "id": "wheel-of-life",
+  "title": "Wheel of life",
+  "category": "tools",
+  "type": "interactive",
+  "minutes": 10,
+  "practice_name": "wheel of life",
+  "when": "To see where life feels balanced and where you'd like change.",
+  "about": "With your therapist: name your own life areas, rate them, and choose one to raise."
+ },
+ {
+  "id": "ikigai",
+  "title": "Ikigai: your reason for being",
+  "category": "tools",
+  "type": "interactive",
+  "minutes": 15,
+  "practice_name": "ikigai questions",
+  "when": "When you're searching for direction or meaning.",
+  "about": "With your therapist: what you love, what you're good at, what the world needs, what sustains you."
+ },
+ {
+  "id": "values-compass",
+  "title": "Values compass",
+  "category": "tools",
+  "type": "interactive",
+  "minutes": 10,
+  "practice_name": "values compass",
+  "when": "When you feel stuck or unsure what to do next.",
+  "about": "With your therapist: what matters most in one area of life, and one step towards it."
+ },
+ {
+  "id": "nightmare-rescripting",
+  "title": "Rewriting a nightmare",
+  "category": "tools",
+  "type": "interactive",
+  "minutes": 15,
+  "practice_name": "nightmare rescripting",
+  "when": "For a nightmare that keeps coming back.",
+  "about": "With your therapist: change the dream into a new, safer version (without going back through the old one in detail), then rehearse the new version for a few minutes each day. A recommended treatment for nightmares (imagery rehearsal)."
+ },
+ {
+  "id": "habit-design",
+  "title": "Designing a habit",
+  "category": "tools",
+  "type": "interactive",
+  "minutes": 10,
+  "practice_name": "habit design",
+  "when": "To start a habit that lasts.",
+  "about": "With your therapist: start tiny, link it to a routine, plan for missed days."
+ }
+]

@@ -1,0 +1,1 @@
+[{"name": "gemma26b", "backend": "openai", "url": "http://localhost:8000", "model": "gemma26b"}]

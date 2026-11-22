@@ -1,0 +1,1 @@
+[{"name": "gptoss", "backend": "openai", "url": "http://localhost:8000", "model": "gptoss"}]

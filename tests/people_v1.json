@@ -1,0 +1,305 @@
+{
+ "amira": {
+  "id": "hand-001",
+  "name": "Amira",
+  "age": 29,
+  "gender": "female",
+  "country": "Canada",
+  "occupation": "junior architect at a mid-sized firm in Montreal",
+  "living_situation": "lives alone in a small flat; her cat is called Pistache",
+  "important_people": [
+   "older sister Leila, close but they argue about their mother",
+   "manager Daniel, demanding",
+   "best friend Sophie, moved to Toronto last year"
+  ],
+  "presenting_concerns": [
+   "harsh self-criticism at work",
+   "putting off tasks until the last minute",
+   "low mood most evenings"
+  ],
+  "stated_goals": [
+   "stop feeling like garbage after every meeting",
+   "hand things in on time without panicking"
+  ],
+  "hidden_values": [
+   "creativity",
+   "fairness",
+   "family"
+  ],
+  "cognitive_model": {
+   "core_beliefs": [
+    "I am not good enough"
+   ],
+   "rules_and_assumptions": [
+    "If my work is not perfect, people will see I am a fraud",
+    "If I start and it goes badly, it proves I am useless"
+   ],
+   "automatic_thoughts": [
+    "Daniel thinks I am the weakest on the team",
+    "Everyone else finds this easy",
+    "I always mess things up"
+   ],
+   "emotions": [
+    "shame",
+    "anxiety",
+    "sadness"
+   ],
+   "behaviours": [
+    "delays starting drawings",
+    "stays late redoing small details",
+    "scrolls her phone in bed until 2am"
+   ],
+   "triggers": [
+    "design reviews",
+    "emails from Daniel with no greeting",
+    "seeing colleagues praised"
+   ]
+  },
+  "history": "Grew up with a critical father who praised only top marks; did well at school by working very hard. No trauma beyond that. First time using any kind of therapy.",
+  "style": "talkative and warm but deflects with self-deprecating jokes when something hurts; tends to say 'it's fine, it's whatever' and then come back to it",
+  "risk": "none",
+  "mode": "normal",
+  "source": "handwritten for the dry run"
+ },
+ "julien": {
+  "id": "test-julien",
+  "name": "Julien",
+  "age": 41,
+  "gender": "male",
+  "country": "France",
+  "occupation": "bus driver, on sick leave since March",
+  "living_situation": "flat in Lyon with partner Claire and son Hugo (9)",
+  "important_people": [
+   "partner Claire, patient but tired",
+   "son Hugo, 9, loves football",
+   "friend Karim, badly hurt in the crash, keeps calling"
+  ],
+  "presenting_concerns": [
+   "flashbacks and nightmares after the March crash",
+   "avoids driving",
+   "guilt about Karim"
+  ],
+  "stated_goals": [
+   "drive Hugo to football again",
+   "sleep through the night"
+  ],
+  "hidden_values": [
+   "family",
+   "loyalty",
+   "being dependable"
+  ],
+  "cognitive_model": {
+   "core_beliefs": [
+    "I am dangerous to the people I love"
+   ],
+   "rules_and_assumptions": [
+    "If I had been more careful, it would not have happened",
+    "If I talk about it, I will fall apart"
+   ],
+   "automatic_thoughts": [
+    "I should have seen the van",
+    "Karim's life is ruined because of me"
+   ],
+   "emotions": [
+    "guilt",
+    "fear",
+    "anger"
+   ],
+   "behaviours": [
+    "avoids the road and driving",
+    "drinks two or three beers to sleep",
+    "does not answer Karim's calls"
+   ],
+   "triggers": [
+    "sirens",
+    "rain at night",
+    "the smell of petrol"
+   ]
+  },
+  "history": "No mental health history before the crash. Completed two Written Exposure Therapy sessions in the app.",
+  "style": "few words, practical, gets irritated by vague talk, opens up when given a concrete task; occasionally says things in French",
+  "risk": "anger at the van driver; no plan to act",
+  "mode": "full",
+  "source": "hand-written test person"
+ },
+ "meiling": {
+  "id": "test-meiling",
+  "name": "Mei Ling",
+  "age": 34,
+  "gender": "female",
+  "country": "Malaysia",
+  "occupation": "accountant at a Kuala Lumpur firm",
+  "living_situation": "condo with husband Faris",
+  "important_people": [
+   "husband Faris, supportive but worn out by her questions",
+   "younger brother Wei",
+   "aunt who comments on her weight"
+  ],
+  "presenting_concerns": [
+   "replays conversations and messages people to check she did not offend them",
+   "googles symptoms at night"
+  ],
+  "stated_goals": [
+   "go a whole week without checking messages",
+   "stop googling symptoms"
+  ],
+  "hidden_values": [
+   "kindness",
+   "harmony",
+   "loyalty to family"
+  ],
+  "cognitive_model": {
+   "core_beliefs": [
+    "If people are upset with me, they will leave"
+   ],
+   "rules_and_assumptions": [
+    "I must fix any upset straight away",
+    "Uncertainty is dangerous"
+   ],
+   "automatic_thoughts": [
+    "Hana sounded cold, I must have offended her",
+    "This headache could be something serious"
+   ],
+   "emotions": [
+    "anxiety",
+    "guilt"
+   ],
+   "behaviours": [
+    "sends checking messages",
+    "asks Faris for reassurance again and again",
+    "googles symptoms"
+   ],
+   "triggers": [
+    "short replies",
+    "meetings where she spoke up",
+    "body sensations at night"
+   ]
+  },
+  "history": "Anxious since school; her mother left when she was twelve.",
+  "style": "polite, apologises a lot, asks for reassurance in many forms, agrees quickly to please",
+  "risk": "none",
+  "mode": "normal",
+  "source": "hand-written test person"
+ },
+ "somchai": {
+  "id": "test-somchai",
+  "name": "Somchai",
+  "age": 62,
+  "gender": "male",
+  "country": "Thailand",
+  "occupation": "retired maths teacher",
+  "living_situation": "house in Chiang Mai, alone since his wife died",
+  "important_people": [
+   "late wife Malee, died eight months ago",
+   "daughter Nok in Bangkok",
+   "neighbour's son whom he tutors"
+  ],
+  "presenting_concerns": [
+   "grief and low mood",
+   "evenings alone",
+   "drinking rice whisky more"
+  ],
+  "stated_goals": [
+   "cook one proper meal a day",
+   "find something meaningful to do"
+  ],
+  "hidden_values": [
+   "teaching",
+   "family",
+   "faith",
+   "being useful"
+  ],
+  "cognitive_model": {
+   "core_beliefs": [
+    "Without Malee there is no point to my days"
+   ],
+   "rules_and_assumptions": [
+    "A man should not burden his children",
+    "If I enjoy something, I am forgetting her"
+   ],
+   "automatic_thoughts": [
+    "Nobody needs me now",
+    "The evenings will always be like this"
+   ],
+   "emotions": [
+    "sadness",
+    "loneliness",
+    "guilt"
+   ],
+   "behaviours": [
+    "stays in with the television",
+    "skips meals",
+    "drinks on hard evenings"
+   ],
+   "triggers": [
+    "evenings",
+    "Malee's favourite songs",
+    "family celebrations"
+   ]
+  },
+  "history": "Married 35 years. Buddhist, goes to the temple in the mornings.",
+  "style": "courteous, quiet, understated; speaks about feelings indirectly through stories",
+  "risk": "passive thoughts of not waking up on the worst evenings; no plan",
+  "mode": "normal",
+  "source": "hand-written test person"
+ },
+ "alex": {
+  "id": "test-alex",
+  "name": "Alex",
+  "age": 24,
+  "gender": "male",
+  "country": "Canada",
+  "occupation": "final-year engineering student in Toronto",
+  "living_situation": "shared flat with two students",
+  "important_people": [
+   "mother in Ottawa",
+   "flatmate Jay",
+   "the kids' basketball team he coaches on Saturdays"
+  ],
+  "presenting_concerns": [
+   "cannot focus for more than a few minutes",
+   "exam in two weeks",
+   "feels like a failure compared with classmates"
+  ],
+  "stated_goals": [
+   "pass the exam",
+   "be able to sit down and study"
+  ],
+  "hidden_values": [
+   "helping others grow",
+   "teamwork",
+   "fairness"
+  ],
+  "cognitive_model": {
+   "core_beliefs": [
+    "I am lazy and will never amount to anything"
+   ],
+   "rules_and_assumptions": [
+    "If I can't do it perfectly, there is no point starting"
+   ],
+   "automatic_thoughts": [
+    "I've wasted the whole day again",
+    "Everyone else can just sit and study"
+   ],
+   "emotions": [
+    "shame",
+    "frustration"
+   ],
+   "behaviours": [
+    "switches between apps",
+    "starts at midnight",
+    "plays games to escape"
+   ],
+   "triggers": [
+    "opening the textbook",
+    "group chat about revision",
+    "his mother's calls about grades"
+   ]
+  },
+  "history": "Struggled with attention since school; never assessed. First time using therapy.",
+  "style": "chatty, jumps between topics, self-deprecating humour, loses the thread",
+  "risk": "none",
+  "mode": "normal",
+  "source": "hand-written test person"
+ }
+}

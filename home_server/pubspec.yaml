@@ -1,0 +1,16 @@
+name: solace_home
+description: Solace Home, the gateway in front of llama-server that lets a person's phone use the therapist model on
+  their own computer (docs/HOME_SERVER.md). Compiled with `dart compile exe` into one file.
+publish_to: none
+version: 1.0.0
+
+environment:
+  sdk: ^3.10.0
+
+dependencies:
+  # the same version the app locks (app/pubspec.lock): the gateway reuses the app's own model trust check
+  # (app/lib/core/model_manifest.dart) and pairing protocol (app/home/home_protocol.dart)
+  cryptography: 2.9.0
+
+dev_dependencies:
+  test: ^1.31.0

@@ -1,0 +1,960 @@
+{
+ "render": [
+  {
+   "name": "amira_w2",
+   "plans": {
+    "steps": [
+     {
+      "text": "Ask Daniel for ten minutes to agree what done means for Lavoie",
+      "day": "2026-11-18",
+      "time": "10:00",
+      "ifthen": "When I've got my coffee, I will walk to his desk and ask",
+      "quote": "I could ask him on Wednesday after coffee",
+      "added": "2026-11-09"
+     }
+    ],
+    "habits": [
+     {
+      "text": "25-minute start before email",
+      "cue": "coffee at my desk",
+      "tiny": "five minutes",
+      "quote": "if I just start before I open email",
+      "start": "2026-11-04",
+      "kept": [
+       "2026-11-05",
+       "2026-11-06",
+       "2026-11-09",
+       "2026-11-11",
+       "2026-11-12",
+       "2026-11-13",
+       "2026-11-16"
+      ],
+      "missed": [
+       "2026-11-10",
+       "2026-11-17"
+      ]
+     }
+    ],
+    "goals": [
+     {
+      "text": "Hand in drawings on time without an all-nighter",
+      "next_step": "a 25-minute start each weekday morning",
+      "quote": "I want to stop living at the office",
+      "added": "2026-11-02",
+      "last_progress": "2026-11-16"
+     },
+     {
+      "text": "Ask Daniel for clearer feedback",
+      "next_step": "ask for ten minutes on Wednesday",
+      "quote": "I never know what he actually wants",
+      "added": "2026-11-02",
+      "last_progress": "2026-11-09"
+     }
+    ],
+    "values": [
+     {
+      "text": "creativity",
+      "quote": "I feel like myself when I sketch",
+      "added": "2026-11-09"
+     }
+    ],
+    "pictures": []
+   },
+   "today": "2026-11-18",
+   "text": "Plans kept by the app (the person can change them):\nToday's plan: 10:00 Ask Daniel for ten minutes to agree what done means for Lavoie (When I've got my coffee, I will walk to his desk and ask)\nHabits: 25-minute start before email (after coffee at my desk; tiny version: five minutes): kept 4 of 5 days in the last week (yes, yes, yes, -, -, yes, no)\nGoals: Hand in drawings on time without an all-nighter, next step: a 25-minute start each weekday morning, last progress Monday 16 November; Ask Daniel for clearer feedback, next step: ask for ten minutes on Wednesday, last progress Monday 9 November\nValues: creativity\nVision board: none\nNoticed by the app: 25-minute start before email was missed on the last two Tuesdays",
+   "noticed": [
+    "25-minute start before email was missed on the last two Tuesdays"
+   ]
+  },
+  {
+   "name": "julien_w3",
+   "plans": {
+    "steps": [],
+    "habits": [],
+    "goals": [
+     {
+      "text": "Drive Hugo to football again",
+      "next_step": "sit in the parked car for five minutes",
+      "quote": "I just want to take Hugo to football",
+      "added": "2026-11-02",
+      "last_progress": "2026-11-11"
+     },
+     {
+      "text": "Sleep through most nights",
+      "next_step": "",
+      "quote": "I'd give anything to sleep through",
+      "added": "2026-11-02",
+      "last_progress": "2026-11-07"
+     }
+    ],
+    "values": [
+     {
+      "text": "family",
+      "quote": "the kids are everything",
+      "added": "2026-11-02"
+     },
+     {
+      "text": "loyalty",
+      "quote": "you don't leave your mates",
+      "added": "2026-11-07"
+     }
+    ],
+    "pictures": []
+   },
+   "today": "2026-11-14",
+   "text": "Plans kept by the app (the person can change them):\nToday's plan: none\nHabits: none\nGoals: Drive Hugo to football again, next step: sit in the parked car for five minutes, last progress Wednesday 11 November; Sleep through most nights, last progress Saturday 7 November\nValues: family; loyalty\nVision board: none\nNoticed by the app: none",
+   "noticed": []
+  },
+  {
+   "name": "meiling_w2",
+   "plans": {
+    "steps": [],
+    "habits": [
+     {
+      "text": "Wait 30 minutes before checking messages",
+      "cue": "the urge to check",
+      "tiny": "wait five minutes",
+      "quote": "maybe I can wait before I check",
+      "start": "2026-11-05",
+      "kept": [
+       "2026-11-05",
+       "2026-11-06",
+       "2026-11-08",
+       "2026-11-09"
+      ],
+      "missed": [
+       "2026-11-07",
+       "2026-11-10"
+      ]
+     }
+    ],
+    "goals": [
+     {
+      "text": "Go a whole week without checking messages",
+      "next_step": "wait 30 minutes before checking",
+      "quote": "I want a week where I don't check",
+      "added": "2026-11-04",
+      "last_progress": "2026-11-05"
+     }
+    ],
+    "values": [
+     {
+      "text": "kindness",
+      "quote": "I just want to be kind to people",
+      "added": "2026-11-04"
+     }
+    ],
+    "pictures": []
+   },
+   "today": "2026-11-11",
+   "text": "Plans kept by the app (the person can change them):\nToday's plan: none\nHabits: Wait 30 minutes before checking messages (after the urge to check; tiny version: wait five minutes): kept 4 of 6 days in the last week (-, yes, yes, no, yes, yes, no)\nGoals: Go a whole week without checking messages, next step: wait 30 minutes before checking, last progress Thursday 5 November\nValues: kindness\nVision board: none\nNoticed by the app: Wait 30 minutes before checking messages was missed yesterday",
+   "noticed": [
+    "Wait 30 minutes before checking messages was missed yesterday"
+   ]
+  },
+  {
+   "name": "somchai_w4",
+   "plans": {
+    "steps": [
+     {
+      "text": "Phone the temple school about helping with Thai lessons",
+      "day": "",
+      "time": "",
+      "ifthen": "",
+      "quote": "maybe I could ring the temple school",
+      "added": "2026-11-21",
+      "moves": 0
+     }
+    ],
+    "habits": [],
+    "goals": [
+     {
+      "text": "Cook one proper meal every day",
+      "next_step": "cook rice soup on Monday",
+      "quote": "I used to cook every day",
+      "added": "2026-11-02",
+      "last_progress": "2026-11-25"
+     },
+     {
+      "text": "Find something meaningful to do with his days",
+      "next_step": "phone the temple school",
+      "quote": "I need something to get up for",
+      "added": "2026-11-02",
+      "last_progress": "2026-11-10"
+     }
+    ],
+    "values": [
+     {
+      "text": "teaching",
+      "quote": "I taught for thirty years",
+      "added": "2026-11-02"
+     },
+     {
+      "text": "family",
+      "quote": "my grandchildren",
+      "added": "2026-11-02"
+     },
+     {
+      "text": "faith",
+      "quote": "the temple keeps me steady",
+      "added": "2026-11-09"
+     }
+    ],
+    "pictures": [
+     {
+      "title": "Teaching Thai to my grandchildren",
+      "wish": "Teach the grandchildren to read Thai",
+      "outcome": "Feeling useful and close to them",
+      "obstacle": "Thinking I am too old to be interesting",
+      "plan": "If I think I am too old, then I will prepare one short lesson anyway",
+      "quote": "I would love to teach them to read Thai",
+      "added": "2026-10-26",
+      "last_action": ""
+     }
+    ]
+   },
+   "today": "2026-11-28",
+   "text": "Plans kept by the app (the person can change them):\nToday's plan: none\nThis week, no day set: Phone the temple school about helping with Thai lessons\nHabits: none\nGoals: Cook one proper meal every day, next step: cook rice soup on Monday, last progress Wednesday 25 November; Find something meaningful to do with his days, next step: phone the temple school, last progress Tuesday 10 November\nValues: teaching; family; faith\nVision board: Teaching Thai to my grandchildren (plan: If I think I am too old, then I will prepare one short lesson anyway)\nNoticed by the app: goal \"Find something meaningful to do with his days\": no progress in 18 days; vision board \"Teaching Thai to my grandchildren\": nothing done in 33 days",
+   "noticed": [
+    "goal \"Find something meaningful to do with his days\": no progress in 18 days",
+    "vision board \"Teaching Thai to my grandchildren\": nothing done in 33 days"
+   ]
+  },
+  {
+   "name": "somchai_after",
+   "plans": {
+    "steps": [
+     {
+      "text": "Phone the temple school about helping with Thai lessons",
+      "day": "",
+      "time": "",
+      "ifthen": "",
+      "quote": "maybe I could ring the temple school",
+      "added": "2026-11-21",
+      "moves": 0
+     }
+    ],
+    "habits": [],
+    "goals": [
+     {
+      "text": "Cook one proper meal every day",
+      "next_step": "cook rice soup on Monday",
+      "quote": "I used to cook every day",
+      "added": "2026-11-02",
+      "last_progress": "2026-11-25"
+     },
+     {
+      "text": "Find something meaningful to do with his days",
+      "next_step": "phone the temple school",
+      "quote": "I need something to get up for",
+      "added": "2026-11-02",
+      "last_progress": "2026-11-10"
+     }
+    ],
+    "values": [
+     {
+      "text": "teaching",
+      "quote": "I taught for thirty years",
+      "added": "2026-11-02"
+     },
+     {
+      "text": "family",
+      "quote": "my grandchildren",
+      "added": "2026-11-02"
+     },
+     {
+      "text": "faith",
+      "quote": "the temple keeps me steady",
+      "added": "2026-11-09"
+     }
+    ],
+    "pictures": [
+     {
+      "title": "Teaching Thai to my grandchildren",
+      "wish": "Teach the grandchildren to read Thai",
+      "outcome": "Feeling useful and close to them",
+      "obstacle": "Thinking I am too old to be interesting",
+      "plan": "If I think I am too old, then I will prepare one short lesson anyway",
+      "quote": "I would love to teach them to read Thai",
+      "added": "2026-10-26",
+      "last_action": ""
+     }
+    ]
+   },
+   "today": "2026-11-30",
+   "text": "Plans kept by the app (the person can change them):\nToday's plan: none\nThis week, no day set: Phone the temple school about helping with Thai lessons\nHabits: none\nGoals: Cook one proper meal every day, next step: cook rice soup on Monday, last progress Wednesday 25 November; Find something meaningful to do with his days, next step: phone the temple school, last progress Tuesday 10 November\nValues: teaching; family; faith\nVision board: Teaching Thai to my grandchildren (plan: If I think I am too old, then I will prepare one short lesson anyway)\nNoticed by the app: goal \"Find something meaningful to do with his days\": no progress in 20 days; vision board \"Teaching Thai to my grandchildren\": nothing done in 35 days",
+   "noticed": [
+    "goal \"Find something meaningful to do with his days\": no progress in 20 days",
+    "vision board \"Teaching Thai to my grandchildren\": nothing done in 35 days"
+   ]
+  },
+  {
+   "name": "habits",
+   "plans": {
+    "steps": [],
+    "habits": [
+     {
+      "text": "A",
+      "cue": "",
+      "tiny": "",
+      "quote": "",
+      "start": "2026-11-01",
+      "kept": [],
+      "missed": [
+       "2026-11-10",
+       "2026-11-17"
+      ]
+     },
+     {
+      "text": "B",
+      "cue": "lunch",
+      "tiny": "",
+      "quote": "",
+      "start": "2026-11-01",
+      "kept": [],
+      "missed": [
+       "2026-11-17"
+      ]
+     },
+     {
+      "text": "C",
+      "cue": "",
+      "tiny": "one page",
+      "quote": "",
+      "start": "2026-11-01",
+      "kept": [
+       "2026-11-04",
+       "2026-11-05",
+       "2026-11-06",
+       "2026-11-07",
+       "2026-11-08",
+       "2026-11-09",
+       "2026-11-10",
+       "2026-11-11",
+       "2026-11-12",
+       "2026-11-13",
+       "2026-11-14",
+       "2026-11-15",
+       "2026-11-16",
+       "2026-11-17"
+      ],
+      "missed": []
+     }
+    ],
+    "goals": [],
+    "values": [],
+    "pictures": []
+   },
+   "today": "2026-11-18",
+   "text": "Plans kept by the app (the person can change them):\nToday's plan: none\nHabits: A: kept 0 of 1 days in the last week (-, -, -, -, -, -, no); B (after lunch): kept 0 of 1 days in the last week (-, -, -, -, -, -, no); C (tiny version: one page): kept 7 of 7 days in the last week (yes, yes, yes, yes, yes, yes, yes)\nGoals: none\nValues: none\nVision board: none\nNoticed by the app: A was missed on the last two Tuesdays; B was missed yesterday; C was kept on 14 of the last 14 days",
+   "noticed": [
+    "A was missed on the last two Tuesdays",
+    "B was missed yesterday",
+    "C was kept on 14 of the last 14 days"
+   ]
+  },
+  {
+   "name": "steps",
+   "plans": {
+    "steps": [
+     {
+      "text": "S",
+      "day": "2026-11-19",
+      "time": "",
+      "ifthen": "",
+      "quote": "",
+      "added": "",
+      "status": "open",
+      "moves": 3
+     },
+     {
+      "text": "T",
+      "day": "2026-11-18",
+      "time": "09:00",
+      "ifthen": "",
+      "quote": "",
+      "added": "",
+      "status": "done",
+      "moves": 0
+     },
+     {
+      "text": "U",
+      "day": "2026-11-18",
+      "time": "",
+      "ifthen": "",
+      "quote": "",
+      "added": "",
+      "status": "open",
+      "moves": 0
+     },
+     {
+      "text": "V",
+      "day": "2026-11-12",
+      "time": "",
+      "ifthen": "When x, I will y",
+      "quote": "",
+      "added": "",
+      "status": "open",
+      "moves": 0
+     },
+     {
+      "text": "W",
+      "day": "2026-11-11",
+      "time": "",
+      "ifthen": "",
+      "quote": "",
+      "added": "",
+      "status": "open",
+      "moves": 0
+     },
+     {
+      "text": "X",
+      "day": "2026-11-10",
+      "time": "",
+      "ifthen": "",
+      "quote": "",
+      "added": "",
+      "status": "open",
+      "moves": 1
+     },
+     {
+      "text": "Y",
+      "day": "2026-11-09",
+      "time": "",
+      "ifthen": "",
+      "quote": "",
+      "added": "",
+      "status": "open",
+      "moves": 0
+     },
+     {
+      "text": "Z",
+      "day": "",
+      "time": "",
+      "ifthen": "",
+      "quote": "",
+      "added": "",
+      "status": "open",
+      "moves": 0
+     },
+     {
+      "text": "D",
+      "day": "2026-11-18",
+      "time": "",
+      "ifthen": "",
+      "quote": "",
+      "added": "",
+      "status": "dropped",
+      "moves": 0
+     },
+     {
+      "text": "E",
+      "day": "2026-11-16",
+      "time": "",
+      "ifthen": "",
+      "quote": "",
+      "added": "",
+      "status": "done",
+      "moves": 0
+     },
+     {
+      "text": "F",
+      "day": "2026-11-11",
+      "time": "",
+      "ifthen": "",
+      "quote": "",
+      "added": "",
+      "status": "done",
+      "moves": 0
+     },
+     {
+      "text": "H",
+      "day": "2026-11-10",
+      "time": "",
+      "ifthen": "",
+      "quote": "",
+      "added": "",
+      "status": "done",
+      "moves": 0
+     }
+    ],
+    "habits": [],
+    "goals": [
+     {
+      "text": "G",
+      "next_step": "call",
+      "quote": "",
+      "added": "",
+      "last_progress": "2026-11-01"
+     }
+    ],
+    "values": [
+     {
+      "text": "kindness",
+      "quote": "",
+      "added": ""
+     }
+    ],
+    "pictures": [
+     {
+      "title": "P",
+      "wish": "",
+      "outcome": "",
+      "obstacle": "",
+      "plan": "If a, then b",
+      "quote": "",
+      "added": "2026-10-10",
+      "last_action": ""
+     }
+    ]
+   },
+   "today": "2026-11-18",
+   "text": "Plans kept by the app (the person can change them):\nToday's plan: 09:00 T, done; U\nDone in the last 7 days: Wednesday 11 November F, done; Monday 16 November E, done\nComing up: Thursday 19 November S, moved 3 times\nMissed and not re-planned: Tuesday 10 November X, moved 1 time; Wednesday 11 November W; Thursday 12 November V (When x, I will y)\nThis week, no day set: Z\nHabits: none\nGoals: G, next step: call, last progress Sunday 1 November\nValues: kindness\nVision board: P (plan: If a, then b)\nNoticed by the app: \"S\" has been moved 3 times; goal \"G\": no progress in 17 days; vision board \"P\": nothing done in 39 days",
+   "noticed": [
+    "\"S\" has been moved 3 times",
+    "goal \"G\": no progress in 17 days",
+    "vision board \"P\": nothing done in 39 days"
+   ]
+  },
+  {
+   "name": "empty",
+   "plans": {
+    "steps": [],
+    "habits": [],
+    "goals": [],
+    "values": [],
+    "pictures": []
+   },
+   "today": "2026-11-18",
+   "text": "Plans kept by the app (the person can change them):\nToday's plan: none\nHabits: none\nGoals: none\nValues: none\nVision board: none\nNoticed by the app: none",
+   "noticed": []
+  }
+ ],
+ "apply": [
+  {
+   "before": {
+    "steps": [],
+    "habits": [],
+    "goals": [],
+    "values": [],
+    "pictures": []
+   },
+   "note": "Plan steps:\n- when: Sunday 10:00 | step: Sketch at the cafe for 20 minutes | if-then: When I finish breakfast, I will take the sketchbook | they said: \"maybe on Sunday mornings\"\n- when: today | step: Buy a new sketchbook | they said: \"I need a new notebook\"\n- when: tomorrow 7.30 | they said: \"after coffee I could start\"\nHabits: habit: Ten minutes of sketching | cue: after coffee | tiny version: one doodle | they said: \"after coffee I could start\"\nGoals: goal: \"Draw for fun again\" | next step: buy pencils | they said: “I'd like to sketch again”\nValues: value: creativity | they said: \"I'd like to sketch again\"\n- value: Creativity | they said: \"ọ dị mma\"\nVision board: picture: Sundays with a sketchbook | wish: sketch weekly | outcome: feel like myself | obstacle: scrolling | plan: If I reach for the phone, then I will open the sketchbook | they said: \"on Sunday mornings\"\nSafety: no concerns",
+   "today": "2026-11-18",
+   "person": "Honestly? I'd like to SKETCH again, maybe on Sunday mornings.\nYeah, after coffee I could start. Ọ dị mma.",
+   "log": [
+    {
+     "heading": "Plan steps",
+     "kind": "when",
+     "item": "Sunday 10:00",
+     "quote": "maybe on Sunday mornings",
+     "added": true,
+     "why": ""
+    },
+    {
+     "heading": "Plan steps",
+     "kind": "when",
+     "item": "today",
+     "quote": "I need a new notebook",
+     "added": false,
+     "why": "quote not found in what they said"
+    },
+    {
+     "heading": "Plan steps",
+     "kind": "when",
+     "item": "tomorrow 7.30",
+     "quote": "after coffee I could start",
+     "added": false,
+     "why": "no item"
+    },
+    {
+     "heading": "Habits",
+     "kind": "habit",
+     "item": "Ten minutes of sketching",
+     "quote": "after coffee I could start",
+     "added": true,
+     "why": ""
+    },
+    {
+     "heading": "Goals",
+     "kind": "goal",
+     "item": "Draw for fun again",
+     "quote": "I'd like to sketch again",
+     "added": true,
+     "why": ""
+    },
+    {
+     "heading": "Values",
+     "kind": "value",
+     "item": "creativity",
+     "quote": "I'd like to sketch again",
+     "added": true,
+     "why": ""
+    },
+    {
+     "heading": "Values",
+     "kind": "value",
+     "item": "Creativity",
+     "quote": "ọ dị mma",
+     "added": true,
+     "why": ""
+    },
+    {
+     "heading": "Vision board",
+     "kind": "picture",
+     "item": "Sundays with a sketchbook",
+     "quote": "on Sunday mornings",
+     "added": true,
+     "why": ""
+    }
+   ],
+   "after": {
+    "steps": [
+     {
+      "text": "Sketch at the cafe for 20 minutes",
+      "day": "2026-11-22",
+      "time": "10:00",
+      "ifthen": "When I finish breakfast, I will take the sketchbook",
+      "quote": "maybe on Sunday mornings",
+      "added": "2026-11-18",
+      "status": "open",
+      "moves": 0
+     }
+    ],
+    "habits": [
+     {
+      "text": "Ten minutes of sketching",
+      "cue": "after coffee",
+      "tiny": "one doodle",
+      "quote": "after coffee I could start",
+      "start": "2026-11-18",
+      "kept": [],
+      "missed": []
+     }
+    ],
+    "goals": [
+     {
+      "text": "Draw for fun again",
+      "next_step": "buy pencils",
+      "quote": "I'd like to sketch again",
+      "added": "2026-11-18",
+      "last_progress": "2026-11-18"
+     }
+    ],
+    "values": [
+     {
+      "text": "creativity",
+      "quote": "I'd like to sketch again",
+      "added": "2026-11-18"
+     }
+    ],
+    "pictures": [
+     {
+      "title": "Sundays with a sketchbook",
+      "wish": "sketch weekly",
+      "outcome": "feel like myself",
+      "obstacle": "scrolling",
+      "plan": "If I reach for the phone, then I will open the sketchbook",
+      "quote": "on Sunday mornings",
+      "added": "2026-11-18",
+      "last_action": ""
+     }
+    ]
+   },
+   "text": "Plans kept by the app (the person can change them):\nToday's plan: none\nComing up: Sunday 22 November 10:00 Sketch at the cafe for 20 minutes (When I finish breakfast, I will take the sketchbook)\nHabits: Ten minutes of sketching (after coffee; tiny version: one doodle): new\nGoals: Draw for fun again, next step: buy pencils, last progress Wednesday 18 November\nValues: creativity\nVision board: Sundays with a sketchbook (plan: If I reach for the phone, then I will open the sketchbook)\nNoticed by the app: none"
+  },
+  {
+   "before": {
+    "steps": [
+     {
+      "text": "sketch at the cafe for 20 minutes",
+      "day": "2026-11-15",
+      "time": "",
+      "ifthen": "",
+      "quote": "",
+      "added": "2026-11-11",
+      "status": "open",
+      "moves": 0
+     }
+    ],
+    "habits": [],
+    "goals": [
+     {
+      "text": "Draw for fun again",
+      "next_step": "find a sketchbook",
+      "quote": "",
+      "added": "",
+      "last_progress": "2026-11-04"
+     }
+    ],
+    "values": [],
+    "pictures": []
+   },
+   "note": "Plan steps:\n- when: Sunday 10:00 | step: Sketch at the cafe for 20 minutes | if-then: When I finish breakfast, I will take the sketchbook | they said: \"maybe on Sunday mornings\"\n- when: today | step: Buy a new sketchbook | they said: \"I need a new notebook\"\n- when: tomorrow 7.30 | they said: \"after coffee I could start\"\nHabits: habit: Ten minutes of sketching | cue: after coffee | tiny version: one doodle | they said: \"after coffee I could start\"\nGoals: goal: \"Draw for fun again\" | next step: buy pencils | they said: “I'd like to sketch again”\nValues: value: creativity | they said: \"I'd like to sketch again\"\n- value: Creativity | they said: \"ọ dị mma\"\nVision board: picture: Sundays with a sketchbook | wish: sketch weekly | outcome: feel like myself | obstacle: scrolling | plan: If I reach for the phone, then I will open the sketchbook | they said: \"on Sunday mornings\"\nSafety: no concerns",
+   "today": "2026-11-18",
+   "person": "Honestly? I'd like to SKETCH again, maybe on Sunday mornings.\nYeah, after coffee I could start. Ọ dị mma.",
+   "log": [
+    {
+     "heading": "Plan steps",
+     "kind": "when",
+     "item": "Sunday 10:00",
+     "quote": "maybe on Sunday mornings",
+     "added": true,
+     "why": ""
+    },
+    {
+     "heading": "Plan steps",
+     "kind": "when",
+     "item": "today",
+     "quote": "I need a new notebook",
+     "added": false,
+     "why": "quote not found in what they said"
+    },
+    {
+     "heading": "Plan steps",
+     "kind": "when",
+     "item": "tomorrow 7.30",
+     "quote": "after coffee I could start",
+     "added": false,
+     "why": "no item"
+    },
+    {
+     "heading": "Habits",
+     "kind": "habit",
+     "item": "Ten minutes of sketching",
+     "quote": "after coffee I could start",
+     "added": true,
+     "why": ""
+    },
+    {
+     "heading": "Goals",
+     "kind": "goal",
+     "item": "Draw for fun again",
+     "quote": "I'd like to sketch again",
+     "added": true,
+     "why": ""
+    },
+    {
+     "heading": "Values",
+     "kind": "value",
+     "item": "creativity",
+     "quote": "I'd like to sketch again",
+     "added": true,
+     "why": ""
+    },
+    {
+     "heading": "Values",
+     "kind": "value",
+     "item": "Creativity",
+     "quote": "ọ dị mma",
+     "added": true,
+     "why": ""
+    },
+    {
+     "heading": "Vision board",
+     "kind": "picture",
+     "item": "Sundays with a sketchbook",
+     "quote": "on Sunday mornings",
+     "added": true,
+     "why": ""
+    }
+   ],
+   "after": {
+    "steps": [
+     {
+      "text": "sketch at the cafe for 20 minutes",
+      "day": "2026-11-22",
+      "time": "10:00",
+      "ifthen": "When I finish breakfast, I will take the sketchbook",
+      "quote": "",
+      "added": "2026-11-11",
+      "status": "open",
+      "moves": 1
+     }
+    ],
+    "habits": [
+     {
+      "text": "Ten minutes of sketching",
+      "cue": "after coffee",
+      "tiny": "one doodle",
+      "quote": "after coffee I could start",
+      "start": "2026-11-18",
+      "kept": [],
+      "missed": []
+     }
+    ],
+    "goals": [
+     {
+      "text": "Draw for fun again",
+      "next_step": "buy pencils",
+      "quote": "",
+      "added": "",
+      "last_progress": "2026-11-18"
+     }
+    ],
+    "values": [
+     {
+      "text": "creativity",
+      "quote": "I'd like to sketch again",
+      "added": "2026-11-18"
+     }
+    ],
+    "pictures": [
+     {
+      "title": "Sundays with a sketchbook",
+      "wish": "sketch weekly",
+      "outcome": "feel like myself",
+      "obstacle": "scrolling",
+      "plan": "If I reach for the phone, then I will open the sketchbook",
+      "quote": "on Sunday mornings",
+      "added": "2026-11-18",
+      "last_action": ""
+     }
+    ]
+   },
+   "text": "Plans kept by the app (the person can change them):\nToday's plan: none\nComing up: Sunday 22 November 10:00 sketch at the cafe for 20 minutes (When I finish breakfast, I will take the sketchbook), moved 1 time\nHabits: Ten minutes of sketching (after coffee; tiny version: one doodle): new\nGoals: Draw for fun again, next step: buy pencils, last progress Wednesday 18 November\nValues: creativity\nVision board: Sundays with a sketchbook (plan: If I reach for the phone, then I will open the sketchbook)\nNoticed by the app: none"
+  }
+ ],
+ "when": [
+  [
+   "today 10:00",
+   "2026-11-18",
+   "2026-11-18",
+   "10:00"
+  ],
+  [
+   "Tonight 9.30",
+   "2026-11-18",
+   "2026-11-18",
+   "09:30"
+  ],
+  [
+   "tomorrow",
+   "2026-11-18",
+   "2026-11-19",
+   ""
+  ],
+  [
+   "Friday 18:30",
+   "2026-11-18",
+   "2026-11-20",
+   "18:30"
+  ],
+  [
+   "Wednesday 8:05",
+   "2026-11-18",
+   "2026-11-25",
+   "08:05"
+  ],
+  [
+   "monday",
+   "2026-11-22",
+   "2026-11-23",
+   ""
+  ],
+  [
+   "this week",
+   "2026-11-18",
+   "",
+   ""
+  ],
+  [
+   "Sunday 25:00",
+   "2026-11-18",
+   "2026-11-22",
+   ""
+  ],
+  [
+   "at 7h15 on Saturday",
+   "2026-11-16",
+   "2026-11-21",
+   "07:15"
+  ]
+ ],
+ "grounded": [
+  [
+   "I'd like to sketch again",
+   "Honestly? I'd like to SKETCH again, maybe on Sunday mornings.\nYeah, after coffee I could start. Ọ dị mma.",
+   true
+  ],
+  [
+   "sketch",
+   "Honestly? I'd like to SKETCH again, maybe on Sunday mornings.\nYeah, after coffee I could start. Ọ dị mma.",
+   false
+  ],
+  [
+   "I love sketching",
+   "Honestly? I'd like to SKETCH again, maybe on Sunday mornings.\nYeah, after coffee I could start. Ọ dị mma.",
+   false
+  ],
+  [
+   "",
+   "Honestly? I'd like to SKETCH again, maybe on Sunday mornings.\nYeah, after coffee I could start. Ọ dị mma.",
+   false
+  ],
+  [
+   "je voudrais dessiner le dimanche",
+   "Oui, je voudrais dessiner le dimanche matin au café.",
+   true
+  ],
+  [
+   "le café",
+   "le cafe",
+   false
+  ],
+  [
+   "ọ dị mma",
+   "Honestly? I'd like to SKETCH again, maybe on Sunday mornings.\nYeah, after coffee I could start. Ọ dị mma.",
+   true
+  ],
+  [
+   "After coffee,  I could START",
+   "Honestly? I'd like to SKETCH again, maybe on Sunday mornings.\nYeah, after coffee I could start. Ọ dị mma.",
+   true
+  ],
+  [
+   "I'd like to... Sunday mornings",
+   "Honestly? I'd like to SKETCH again, maybe on Sunday mornings.\nYeah, after coffee I could start. Ọ dị mma.",
+   true
+  ],
+  [
+   "Sunday mornings... I'd like to",
+   "Honestly? I'd like to SKETCH again, maybe on Sunday mornings.\nYeah, after coffee I could start. Ọ dị mma.",
+   false
+  ],
+  [
+   "... yes ...",
+   "yes",
+   false
+  ],
+  [
+   "SKETCH again… maybe on Sunday",
+   "Honestly? I'd like to SKETCH again, maybe on Sunday mornings.\nYeah, after coffee I could start. Ọ dị mma.",
+   true
+  ]
+ ],
+ "split": [
+  [
+   "1. Open the file | 2 min\n2) Trace the grid | 8 min\nnot a step\n3. Stop|5 min",
+   [
+    [
+     "Open the file",
+     2
+    ],
+    [
+     "Trace the grid",
+     8
+    ],
+    [
+     "Stop",
+     5
+    ]
+   ]
+  ],
+  [
+   "none",
+   []
+  ]
+ ],
+ "split_instruction": "Split this task into three to six small steps for someone who finds starting hard. The first step must take about two minutes. Use their own words for things where you can. Write one step per line as  1. <step> | <minutes> min  and nothing else.\nTask: Lavoie details\n"
+}

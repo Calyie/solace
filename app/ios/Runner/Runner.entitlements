@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- 2026-11-14: the therapist model runs in the app's memory (E2B's phone file 3.45 GB, E4B's 5.72 GB). Without this an
+     iPhone app gets about 3.3 GB; with it about 6 GB on an 8 GB phone. Xcode grants it to a free Personal Team when the
+     app is signed with automatic signing (the owner's cable install, docs/INSTALL.md). No network entitlement, ever. -->
+<plist version="1.0">
+<dict>
+	<key>com.apple.developer.kernel.increased-memory-limit</key>
+	<true/>
+</dict>
+</plist>

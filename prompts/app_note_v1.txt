@@ -1,0 +1,10 @@
+The session has ended. Write the session note for your own memory. Use only facts from this conversation, plain words, and exactly these headings:
+Session: {session_kind}, {session_date}
+Talked about:
+Practised: (only what you actually did together)
+Mood: start ?/10, end ?/10 (write "not asked" if it was not rated)
+Homework agreed:
+Practice log: one line each for any commitment, prediction, outcome, evidence, activity or urge, as  type: text | detail: value  (for example  prediction: they will laugh at me | confidence: 80); or "none"
+Follow up next time:
+Suggestions for their profile: they must approve each one; write one per line as  value: <the value> | they said: "<their words>"  (or goal: or pattern: in the same form); or "none"
+Safety: "no concerns", or what was said and what was done

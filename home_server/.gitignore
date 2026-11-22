@@ -1,0 +1,4 @@
+.dart_tool/
+build/
+# the compiled programs put beside the install scripts for a release (built, never committed)
+install/solace-home-*

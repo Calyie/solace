@@ -1,0 +1,14 @@
+/.gradle
+/captures/
+/local.properties
+GeneratedPluginRegistrant.java
+.cxx/
+
+# Remember to never publicly share your keystore.
+# See https://flutter.dev/to/reference-keystore
+key.properties
+**/*.keystore
+**/*.jks
+
+# Gradle's own 9.3.1 wrapper is committed (security review SUP-4, 2026-11-14): Flutter's stand-in wrapper jar is
+# Gradle 2.10's, which ignores distributionSha256Sum. android.yml checks the jar against Gradle's published SHA-256.
